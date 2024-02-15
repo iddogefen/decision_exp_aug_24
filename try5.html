@@ -740,15 +740,15 @@ var trial_16 = {
     timeline.push(trial_16);
 
     /* start the experiment */
-    jsPsych.run(timeline);
-
     var trial_17 = {
   type: jsPsychSurveyText,
   questions: [
     {prompt: 'please insert The completion code'},]
 }
 timeline.push(trial_17);
-    
+
+jsPsych.run(timeline);
+
 
   </script>
 </html>
