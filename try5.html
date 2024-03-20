@@ -524,7 +524,7 @@ timeline_variables: [
 // Function to randomly select one of the specified options
 function chooseRandomOption() {
     const options = [
-[paris_story_nonlinear, market_no_story_nonlinear]
+[paris_story_nonlinear, market_no_story_nonlinear],
 [paris_no_story_nonlinear, market_story_nonlinear],
     ];
     // Randomly select one option
@@ -743,8 +743,8 @@ if (selectedOption && selectedOption.length >= 2) {
     // Handle the case when selectedOption is undefined or doesn't have enough elements
 }
 var shuffledArray = jsPsych.randomization.repeat(myArray, 1);
-//timeline.push(shuffledArray[0],trial_10, shuffledArray[1],trial_12);
-timeline.push(paris_story_nonlinear,trial_10, market_story_linear,trial_12);
+timeline.push(shuffledArray[0],trial_10, shuffledArray[1],trial_12);
+//timeline.push(paris_story_nonlinear,trial_10, market_story_linear,trial_12);
 
 /* 
     var trial_14 = {
