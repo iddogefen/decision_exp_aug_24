@@ -73,10 +73,10 @@ function chooseRandomItems(list, condition, count) {
     }
 }
 var list0 = [
-    'images/schemes/movie_scheme/movie_1.png',
-    'images/schemes/movie_scheme/movie_2.png',
-    'images/schemes/movie_scheme/movie_3.png',
-    'images/schemes/movie_scheme/movie_4.png',
+    'images/instructions/movie_1.png',
+    'images/instructions/movie_2.png',
+    'images/instructions/movie_3.png',
+    'images/instructions/movie_4.png',
 ];
 
 var audio_id = [];
@@ -92,40 +92,50 @@ jsPsych.data.addProperties({
     /* preload images */
     var preload = {
       type: jsPsychPreload,
-      images:['images/schemes/movie_scheme/movie_1.png',
- 'images/schemes/movie_scheme/movie_2.png',
- 'images/schemes/movie_scheme/movie_3.png',
- 'images/schemes/movie_scheme/movie_4.png',
- 'images/schemes/restaurant_scheme/restaurant_1.png',
- 'images/schemes/restaurant_scheme/restaurant_2.png',
- 'images/schemes/restaurant_scheme/restaurant_3.png',
- 'images/schemes/restaurant_scheme/restaurant_4.png',
- 'images/schemes/restaurant_scheme/restaurant_5.png',
- 'images/schemes/restaurant_scheme/restaurant_6.png',
- 'images/schemes/restaurant_scheme/restaurant_7.png',
- 'images/schemes/restaurant_scheme/restaurant_8.png',
- 'images/schemes/restaurant_scheme/restaurant_9.png',
- 'images/schemes/restaurant_scheme/restaurant_10.png',
- 'images/schemes/supermarket_scheme/supermarket_1.png',
- 'images/schemes/supermarket_scheme/supermarket_2.png',
- 'images/schemes/supermarket_scheme/supermarket_3.png',
- 'images/schemes/supermarket_scheme/supermarket_4.png',
- 'images/schemes/supermarket_scheme/supermarket_5.png',
- 'images/schemes/supermarket_scheme/supermarket_6.png',
- 'images/schemes/supermarket_scheme/supermarket_7.png',
- 'images/schemes/supermarket_scheme/supermarket_8.png',
- 'images/schemes/supermarket_scheme/supermarket_9.png',
- 'images/schemes/supermarket_scheme/supermarket_10.png',
- 'images/schemes/flight_scheme/flight_1.png',
- 'images/schemes/flight_scheme/flight_2.png',
- 'images/schemes/flight_scheme/flight_3.png',
- 'images/schemes/flight_scheme/flight_4.png',
- 'images/schemes/flight_scheme/flight_5.png',
- 'images/schemes/flight_scheme/flight_6.png',
- 'images/schemes/flight_scheme/flight_7.png',
- 'images/schemes/flight_scheme/flight_8.png',
- 'images/schemes/flight_scheme/flight_9.png',
- 'images/schemes/flight_scheme/flight_10.png'
+      images:['images/instructions/movie_1.png',
+ 'images/instructions/movie_2.png',
+ 'images/instructions/movie_3.png',
+ 'images/instructions/movie_4.png',
+ 'images/stories/market_no_story/market_no_story_1.png',
+ 'images/stories/market_no_story/market_no_story_2.png',
+ 'images/stories/market_no_story/market_no_story_3.png',
+ 'images/stories/market_no_story/market_no_story_4.png',
+ 'images/stories/market_no_story/market_no_story_5.png',
+ 'images/stories/market_no_story/market_no_story_6.png',
+ 'images/stories/market_no_story/market_no_story_7.png',
+ 'images/stories/market_no_story/market_no_story_8.png',
+ 'images/stories/market_no_story/market_no_story_9.png',
+ 'images/stories/market_no_story/market_no_story_10.png',
+ 'images/stories/market_story/market_story_1.png',
+ 'images/stories/market_story/market_story_2.png',
+ 'images/stories/market_story/market_story_3.png',
+ 'images/stories/market_story/market_story_4.png',
+ 'images/stories/market_story/market_story_5.png',
+ 'images/stories/market_story/market_story_6.png',
+ 'images/stories/market_story/market_story_7.png',
+ 'images/stories/market_story/market_story_8.png',
+ 'images/stories/market_story/market_story_9.png',
+ 'images/stories/market_story/market_story_10.png',
+ 'images/stories/paris_no_story/paris_no_story_1.png',
+ 'images/stories/paris_no_story/paris_no_story_2.png',
+ 'images/stories/paris_no_story/paris_no_story_3.png',
+ 'images/stories/paris_no_story/paris_no_story_4.png',
+ 'images/stories/paris_no_story/paris_no_story_5.png',
+ 'images/stories/paris_no_story/paris_no_story_6.png',
+ 'images/stories/paris_no_story/paris_no_story_7.png',
+ 'images/stories/paris_no_story/paris_no_story_8.png',
+ 'images/stories/paris_no_story/paris_no_story_9.png',
+ 'images/stories/paris_no_story/paris_no_story_10.png',
+ 'images/stories/paris_story/paris_story_1.png',
+ 'images/stories/paris_story/paris_story_2.png',
+ 'images/stories/paris_story/paris_story_3.png',
+ 'images/stories/paris_story/paris_story_4.png',
+ 'images/stories/paris_story/paris_story_5.png',
+ 'images/stories/paris_story/paris_story_6.png',
+ 'images/stories/paris_story/paris_story_7.png',
+ 'images/stories/paris_story/paris_story_8.png',
+ 'images/stories/paris_story/paris_story_9.png',
+ 'images/stories/paris_story/paris_story_10.png'
 ]
 };
     timeline.push(preload);
@@ -144,7 +154,7 @@ timeline.push(trial_01);
     };
     timeline.push(trial_02);
 
-    var restaurant_linear = {
+    var market_no_story_linear = {
     timeline: [
 
     {
@@ -177,23 +187,23 @@ timeline.push(trial_01);
 
 
 timeline_variables: [
-{face: 'images/schemes/restaurant_scheme/restaurant_1.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_2.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_3.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_4.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_5.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_6.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_7.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_8.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_9.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_10.png'},
+{face: 'images/stories/market_no_story/market_no_story_1.png'},
+    {face: 'images/stories/market_no_story/market_no_story_2.png'},
+    {face: 'images/stories/market_no_story/market_no_story_3.png'},
+    {face: 'images/stories/market_no_story/market_no_story_4.png'},
+    {face: 'images/stories/market_no_story/market_no_story_5.png'},
+    {face: 'images/stories/market_no_story/market_no_story_6.png'},
+    {face: 'images/stories/market_no_story/market_no_story_7.png'},
+    {face: 'images/stories/market_no_story/market_no_story_8.png'},
+    {face: 'images/stories/market_no_story/market_no_story_9.png'},
+    {face: 'images/stories/market_no_story/market_no_story_10.png'},
     ],
     randomize_order: false,
 
 
 }
 
-var restaurant_nonlinear = {
+var market_no_story_nonlinear = {
     timeline: [
 
     {
@@ -226,22 +236,22 @@ var restaurant_nonlinear = {
 
 
 timeline_variables: [
-{face: 'images/schemes/restaurant_scheme/restaurant_1.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_2.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_3.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_4.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_5.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_6.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_7.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_8.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_9.png'},
-    {face: 'images/schemes/restaurant_scheme/restaurant_10.png'},
+{face: 'images/stories/market_no_story/market_no_story_1.png'},
+    {face: 'images/stories/market_no_story/market_no_story_2.png'},
+    {face: 'images/stories/market_no_story/market_no_story_3.png'},
+    {face: 'images/stories/market_no_story/market_no_story_4.png'},
+    {face: 'images/stories/market_no_story/market_no_story_5.png'},
+    {face: 'images/stories/market_no_story/market_no_story_6.png'},
+    {face: 'images/stories/market_no_story/market_no_story_7.png'},
+    {face: 'images/stories/market_no_story/market_no_story_8.png'},
+    {face: 'images/stories/market_no_story/market_no_story_9.png'},
+    {face: 'images/stories/market_no_story/market_no_story_10.png'},
     ],
     randomize_order: true,
 
 }
 
- var supermarket_linear = {
+ var market_story_linear = {
     timeline: [
 
     {
@@ -272,21 +282,21 @@ timeline_variables: [
   }
 ],
 timeline_variables: [
-    {face: 'images/schemes/supermarket_scheme/supermarket_1.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_2.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_3.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_4.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_5.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_6.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_7.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_8.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_9.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_10.png'}
+    {face: 'images/stories/market_story/market_story_1.png'},
+    {face: 'images/stories/market_story/market_story_2.png'},
+    {face: 'images/stories/market_story/market_story_3.png'},
+    {face: 'images/stories/market_story/market_story_4.png'},
+    {face: 'images/stories/market_story/market_story_5.png'},
+    {face: 'images/stories/market_story/market_story_6.png'},
+    {face: 'images/stories/market_story/market_story_7.png'},
+    {face: 'images/stories/market_story/market_story_8.png'},
+    {face: 'images/stories/market_story/market_story_9.png'},
+    {face: 'images/stories/market_story/market_story_10.png'}
 ],
     randomize_order: false,
 }
 
-    var supermarket_nonlinear = {
+    var market_story_nonlinear = {
     timeline: [
 
     {
@@ -317,21 +327,21 @@ timeline_variables: [
   }
 ],
 timeline_variables: [
-    {face: 'images/schemes/supermarket_scheme/supermarket_1.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_2.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_3.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_4.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_5.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_6.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_7.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_8.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_9.png'},
-    {face: 'images/schemes/supermarket_scheme/supermarket_10.png'}
+    {face: 'images/stories/market_story/market_story_1.png'},
+    {face: 'images/stories/market_story/market_story_2.png'},
+    {face: 'images/stories/market_story/market_story_3.png'},
+    {face: 'images/stories/market_story/market_story_4.png'},
+    {face: 'images/stories/market_story/market_story_5.png'},
+    {face: 'images/stories/market_story/market_story_6.png'},
+    {face: 'images/stories/market_story/market_story_7.png'},
+    {face: 'images/stories/market_story/market_story_8.png'},
+    {face: 'images/stories/market_story/market_story_9.png'},
+    {face: 'images/stories/market_story/market_story_10.png'}
 ],
     randomize_order: true,
 }
 
- var flight_linear = {
+ var paris_no_story_linear = {
     timeline: [
 
     {
@@ -362,21 +372,21 @@ timeline_variables: [
   }
 ],
 timeline_variables: [
-{face: 'images/schemes/flight_scheme/flight_1.png'},
-    {face: 'images/schemes/flight_scheme/flight_2.png'},
-    {face: 'images/schemes/flight_scheme/flight_3.png'},
-    {face: 'images/schemes/flight_scheme/flight_4.png'},
-    {face: 'images/schemes/flight_scheme/flight_5.png'},
-    {face: 'images/schemes/flight_scheme/flight_6.png'},
-    {face: 'images/schemes/flight_scheme/flight_7.png'},
-    {face: 'images/schemes/flight_scheme/flight_8.png'},
-    {face: 'images/schemes/flight_scheme/flight_9.png'},
-    {face: 'images/schemes/flight_scheme/flight_10.png'},
+{face: 'images/stories/paris_no_story/paris_no_story_1.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_2.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_3.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_4.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_5.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_6.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_7.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_8.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_9.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_10.png'},
     ],
     randomize_order: false,
 }
 
-    var flight_nonlinear = {
+    var paris_no_story_nonlinear = {
     timeline: [
 
     {
@@ -407,35 +417,115 @@ timeline_variables: [
   }
 ],
 timeline_variables: [
-{face: 'images/schemes/flight_scheme/flight_1.png'},
-    {face: 'images/schemes/flight_scheme/flight_2.png'},
-    {face: 'images/schemes/flight_scheme/flight_3.png'},
-    {face: 'images/schemes/flight_scheme/flight_4.png'},
-    {face: 'images/schemes/flight_scheme/flight_5.png'},
-    {face: 'images/schemes/flight_scheme/flight_6.png'},
-    {face: 'images/schemes/flight_scheme/flight_7.png'},
-    {face: 'images/schemes/flight_scheme/flight_8.png'},
-    {face: 'images/schemes/flight_scheme/flight_9.png'},
-    {face: 'images/schemes/flight_scheme/flight_10.png'},
+{face: 'images/stories/paris_no_story/paris_no_story_1.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_2.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_3.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_4.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_5.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_6.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_7.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_8.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_9.png'},
+    {face: 'images/stories/paris_no_story/paris_no_story_10.png'},
     ],
     randomize_order: true,
 }
 
+
+var paris_story_linear = {
+    timeline: [
+
+    {
+    type: jsPsychImageButtonResponse,
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300' ,
+    choices: [],
+    prompt: "",
+    trial_duration: "4500"
+
+    },
+    {
+    type: jsPsychImageButtonResponse,
+    prompt: '<p></p>',
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300',
+    trial_duration: "2700",
+    choices: ['yes', 'no'],
+    prompt: "<p>Is there a person in the picture?</p>",  },
+  {
+    type: jsPsychImageButtonResponse,
+    stimulus: [],
+    choices: [],
+    prompt: "",
+    trial_duration: "1800"
+  }
+],
+timeline_variables: [
+{face: 'images/stories/paris_story/paris_story_1.png'},
+    {face: 'images/stories/paris_story/paris_story_2.png'},
+    {face: 'images/stories/paris_story/paris_story_3.png'},
+    {face: 'images/stories/paris_story/paris_story_4.png'},
+    {face: 'images/stories/paris_story/paris_story_5.png'},
+    {face: 'images/stories/paris_story/paris_story_6.png'},
+    {face: 'images/stories/paris_story/paris_story_7.png'},
+    {face: 'images/stories/paris_story/paris_story_8.png'},
+    {face: 'images/stories/paris_story/paris_story_9.png'},
+    {face: 'images/stories/paris_story/paris_story_10.png'},
+    ],
+    randomize_order: false,
+}
+
+    var paris_story_nonlinear = {
+    timeline: [
+
+    {
+    type: jsPsychImageButtonResponse,
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300' ,
+    choices: [],
+    prompt: "",
+    trial_duration: "4500"
+
+    },
+    {
+    type: jsPsychImageButtonResponse,
+    prompt: '<p></p>',
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300',
+    trial_duration: "2700",
+    choices: ['yes', 'no'],
+    prompt: "<p>Is there a person in the picture?</p>",  },
+  {
+    type: jsPsychImageButtonResponse,
+    stimulus: [],
+    choices: [],
+    prompt: "",
+    trial_duration: "1800"
+  }
+],
+timeline_variables: [
+{face: 'images/stories/paris_story/paris_story_1.png'},
+    {face: 'images/stories/paris_story/paris_story_2.png'},
+    {face: 'images/stories/paris_story/paris_story_3.png'},
+    {face: 'images/stories/paris_story/paris_story_4.png'},
+    {face: 'images/stories/paris_story/paris_story_5.png'},
+    {face: 'images/stories/paris_story/paris_story_6.png'},
+    {face: 'images/stories/paris_story/paris_story_7.png'},
+    {face: 'images/stories/paris_story/paris_story_8.png'},
+    {face: 'images/stories/paris_story/paris_story_9.png'},
+    {face: 'images/stories/paris_story/paris_story_10.png'},
+    ],
+    randomize_order: true,
+}
 // Function to randomly select one of the specified options
 function chooseRandomOption() {
     const options = [
-[supermarket_nonlinear, flight_nonlinear, restaurant_linear],
-[flight_nonlinear, supermarket_nonlinear, restaurant_linear],
-[flight_nonlinear, restaurant_linear, supermarket_nonlinear],
-[supermarket_nonlinear, flight_linear, restaurant_nonlinear],
-[flight_linear, supermarket_nonlinear, restaurant_nonlinear],
-[flight_linear, restaurant_nonlinear, supermarket_nonlinear],
-[supermarket_nonlinear, restaurant_linear, flight_nonlinear],
-[restaurant_linear, supermarket_nonlinear, flight_nonlinear],
-[restaurant_linear, flight_nonlinear, supermarket_nonlinear],
-[supermarket_linear, flight_nonlinear, restaurant_nonlinear],
-[flight_nonlinear, supermarket_linear, restaurant_nonlinear],
-[flight_nonlinear, restaurant_nonlinear, supermarket_linear],
+[paris_story_nonlinear, market_no_story_nonlinear]
+[paris_no_story_nonlinear, market_story_nonlinear],
     ];
     // Randomly select one option
     const selectedOption = jsPsych.randomization.shuffle(options)[0];
@@ -496,10 +586,10 @@ console.log("Selected Option:", selectedOption);
   }
 ],
 timeline_variables: [
-        {face: 'images/schemes/movie_scheme/movie_1.png'},
-        {face: 'images/schemes/movie_scheme/movie_2.png'},
-        {face: 'images/schemes/movie_scheme/movie_3.png'},
-        {face: 'images/schemes/movie_scheme/movie_4.png'},
+        {face: 'images/instructions/movie_1.png'},
+        {face: 'images/instructions/movie_2.png'},
+        {face: 'images/instructions/movie_3.png'},
+        {face: 'images/instructions/movie_4.png'},
         
 
 
@@ -646,10 +736,16 @@ timeline.push(trial_06);
     }
 };
 
-var myArray = [selectedOption[0], selectedOption[1], selectedOption[2]];
+if (selectedOption && selectedOption.length >= 2) {
+    var myArray = [selectedOption[0], selectedOption[1]];
+    // Proceed with further operations using myArray
+} else {
+    // Handle the case when selectedOption is undefined or doesn't have enough elements
+}
 var shuffledArray = jsPsych.randomization.repeat(myArray, 1);
-timeline.push(shuffledArray[0],trial_10, shuffledArray[1],trial_12,shuffledArray[2]);
+timeline.push(shuffledArray[0],trial_10, shuffledArray[1],trial_12);
 
+// 
     var trial_14 = {
         type: jsPsychHtmlAudioResponse,
     stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING</span>
@@ -684,6 +780,8 @@ timeline.push(shuffledArray[0],trial_10, shuffledArray[1],trial_12,shuffledArray
         });
     }
 };
+
+
  timeline.push(trial_14);
 
     
