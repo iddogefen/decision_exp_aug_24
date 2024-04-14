@@ -96,36 +96,6 @@ jsPsych.data.addProperties({
  'images/instructions/movie_2.png',
  'images/instructions/movie_3.png',
  'images/instructions/movie_4.png',
- 'images/stories/market_no_story/market_no_story_1.png',
- 'images/stories/market_no_story/market_no_story_2.png',
- 'images/stories/market_no_story/market_no_story_3.png',
- 'images/stories/market_no_story/market_no_story_4.png',
- 'images/stories/market_no_story/market_no_story_5.png',
- 'images/stories/market_no_story/market_no_story_6.png',
- 'images/stories/market_no_story/market_no_story_7.png',
- 'images/stories/market_no_story/market_no_story_8.png',
- 'images/stories/market_no_story/market_no_story_9.png',
- 'images/stories/market_no_story/market_no_story_10.png',
- 'images/stories/market_story/market_story_1.png',
- 'images/stories/market_story/market_story_2.png',
- 'images/stories/market_story/market_story_3.png',
- 'images/stories/market_story/market_story_4.png',
- 'images/stories/market_story/market_story_5.png',
- 'images/stories/market_story/market_story_6.png',
- 'images/stories/market_story/market_story_7.png',
- 'images/stories/market_story/market_story_8.png',
- 'images/stories/market_story/market_story_9.png',
- 'images/stories/market_story/market_story_10.png',
- 'images/stories/paris_no_story/paris_no_story_1.png',
- 'images/stories/paris_no_story/paris_no_story_2.png',
- 'images/stories/paris_no_story/paris_no_story_3.png',
- 'images/stories/paris_no_story/paris_no_story_4.png',
- 'images/stories/paris_no_story/paris_no_story_5.png',
- 'images/stories/paris_no_story/paris_no_story_6.png',
- 'images/stories/paris_no_story/paris_no_story_7.png',
- 'images/stories/paris_no_story/paris_no_story_8.png',
- 'images/stories/paris_no_story/paris_no_story_9.png',
- 'images/stories/paris_no_story/paris_no_story_10.png',
  'images/stories/paris_story/paris_story_1.png',
  'images/stories/paris_story/paris_story_2.png',
  'images/stories/paris_story/paris_story_3.png',
@@ -135,7 +105,50 @@ jsPsych.data.addProperties({
  'images/stories/paris_story/paris_story_7.png',
  'images/stories/paris_story/paris_story_8.png',
  'images/stories/paris_story/paris_story_9.png',
- 'images/stories/paris_story/paris_story_10.png'
+ 'images/stories/paris_story/paris_story_10.png',
+ 'images/celebs/timeline_1/2_Julie_Andrews.png',
+ 'images/celebs/timeline_1/3_Patrick_Stewart.png',
+ 'images/celebs/timeline_1/4_Stevie_Wonder.png',
+ 'images/celebs/timeline_1/5_Sean_Penn.png',
+ 'images/celebs/timeline_1/6__Brooke_Shields.png',
+ 'images/celebs/timeline_1/7_Tina_Fey.png',
+ 'images/celebs/timeline_1/8__Pedro_Pascal.png',
+ 'images/celebs/timeline_1/9_Kristen_Bell.png',
+ 'images/celebs/timeline_1/10_Jennifer_Lawrence.png',
+ 'images/celebs/timeline_1/11_Timothee_Chalamet.png',
+ 'images/celebs/timeline_1/12_Halle_Bailey.png',
+ 'images/celebs/timeline_2/1_Muhammad_Ali.png',
+ 'images/celebs/timeline_2/2_Paul_Simon.png',
+ 'images/celebs/timeline_2/3_Dolly_Parton.png',
+ 'images/celebs/timeline_2/4_Robin_Williams.png',
+ 'images/celebs/timeline_2/5_Eddie_Murphy.png',
+ 'images/celebs/timeline_2/6_Halle_Berry.png',
+ 'images/celebs/timeline_2/7_Amy_Poehler.png',
+ 'images/celebs/timeline_2/8_Cillian_Murphy.png',
+ 'images/celebs/timeline_2/9_Jessica_Alba.png',
+ 'images/celebs/timeline_2/10_Robert_Pattinson.png',
+ 'images/celebs/timeline_2/11_Emma_Robert.png',
+ 'images/celebs/timeline_2/12_Billie_Eilish.png',
+ 'images/schemes/restaurant_scheme/restaurant_1.png',
+ 'images/schemes/restaurant_scheme/restaurant_2.png',
+ 'images/schemes/restaurant_scheme/restaurant_3.png',
+ 'images/schemes/restaurant_scheme/restaurant_4.png',
+ 'images/schemes/restaurant_scheme/restaurant_5.png',
+ 'images/schemes/restaurant_scheme/restaurant_6.png',
+ 'images/schemes/restaurant_scheme/restaurant_7.png',
+ 'images/schemes/restaurant_scheme/restaurant_8.png',
+ 'images/schemes/restaurant_scheme/restaurant_9.png',
+ 'images/schemes/restaurant_scheme/restaurant_10.png',
+ 'images/schemes/flight_scheme/flight_1.png',
+ 'images/schemes/flight_scheme/flight_2.png',
+ 'images/schemes/flight_scheme/flight_3.png',
+ 'images/schemes/flight_scheme/flight_4.png',
+ 'images/schemes/flight_scheme/flight_5.png',
+ 'images/schemes/flight_scheme/flight_6.png',
+ 'images/schemes/flight_scheme/flight_7.png',
+ 'images/schemes/flight_scheme/flight_8.png',
+ 'images/schemes/flight_scheme/flight_9.png',
+ 'images/schemes/flight_scheme/flight_10.png'
 ]
 };
     timeline.push(preload);
@@ -154,7 +167,8 @@ timeline.push(trial_01);
     };
     timeline.push(trial_02);
 
-    var market_no_story_linear = {
+    
+    var timeline_1_l = {
     timeline: [
 
     {
@@ -174,8 +188,8 @@ timeline.push(trial_01);
     stimulus_width:"300",
     stimulus_height:'300',
     trial_duration: "2700",
-    choices: ['yes', 'no'],
-    prompt: "<p>Is there a person in the picture?</p>",  },
+    choices: ['odd', 'even'],
+    prompt: "<p>Is the year of birth odd or even?</p>",  },
   {
     type: jsPsychImageButtonResponse,
     stimulus: [],
@@ -187,23 +201,171 @@ timeline.push(trial_01);
 
 
 timeline_variables: [
-{face: 'images/stories/market_no_story/market_no_story_1.png'},
-    {face: 'images/stories/market_no_story/market_no_story_2.png'},
-    {face: 'images/stories/market_no_story/market_no_story_3.png'},
-    {face: 'images/stories/market_no_story/market_no_story_4.png'},
-    {face: 'images/stories/market_no_story/market_no_story_5.png'},
-    {face: 'images/stories/market_no_story/market_no_story_6.png'},
-    {face: 'images/stories/market_no_story/market_no_story_7.png'},
-    {face: 'images/stories/market_no_story/market_no_story_8.png'},
-    {face: 'images/stories/market_no_story/market_no_story_9.png'},
-    {face: 'images/stories/market_no_story/market_no_story_10.png'},
+        {face: 'images/celebs/timeline_1/1_Clint_Eastwood.png'},
+        {face: 'images/celebs/timeline_1/2_Julie_Andrews.png'},
+        {face: 'images/celebs/timeline_1/3_Patrick_Stewart.png'},
+        {face: 'images/celebs/timeline_1/4_Stevie_Wonder.png'},
+        {face: 'images/celebs/timeline_1/5_Sean_Penn.png'},
+        {face: 'images/celebs/timeline_1/6__Brooke_Shields.png'},
+        {face: 'images/celebs/timeline_1/7_Tina_Fey.png'},
+        {face: 'images/celebs/timeline_1/8__Pedro_Pascal.png'},
+        {face: 'images/celebs/timeline_1/9_Kristen_Bell.png'},
+        {face: 'images/celebs/timeline_1/10_Jennifer_Lawrence.png'},
+        {face: 'images/celebs/timeline_1/11_Timothee_Chalamet.png'},
+        {face: 'images/celebs/timeline_1/12_Halle_Bailey.png'}
     ],
     randomize_order: false,
 
 
 }
 
-var market_no_story_nonlinear = {
+var timeline_1_r = {
+    timeline: [
+
+    {
+    type: jsPsychImageButtonResponse,
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300' ,
+    choices: [],
+    prompt: "",
+    trial_duration: "4500"
+
+    },
+    {
+    type: jsPsychImageButtonResponse,
+    prompt: '<p></p>',
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300',
+    trial_duration: "2700",
+    choices: ['odd', 'even'],
+    prompt: "<p>Is the year of birth odd or even?</p>",  },
+  {
+    type: jsPsychImageButtonResponse,
+    stimulus: [],
+    choices: [],
+    prompt: "",
+    trial_duration: "1800"
+  },
+],
+
+
+timeline_variables: [
+        {face: 'images/celebs/timeline_1/1_Clint_Eastwood.png'},
+        {face: 'images/celebs/timeline_1/2_Julie_Andrews.png'},
+        {face: 'images/celebs/timeline_1/3_Patrick_Stewart.png'},
+        {face: 'images/celebs/timeline_1/4_Stevie_Wonder.png'},
+        {face: 'images/celebs/timeline_1/5_Sean_Penn.png'},
+        {face: 'images/celebs/timeline_1/6__Brooke_Shields.png'},
+        {face: 'images/celebs/timeline_1/7_Tina_Fey.png'},
+        {face: 'images/celebs/timeline_1/8__Pedro_Pascal.png'},
+        {face: 'images/celebs/timeline_1/9_Kristen_Bell.png'},
+        {face: 'images/celebs/timeline_1/10_Jennifer_Lawrence.png'},
+        {face: 'images/celebs/timeline_1/11_Timothee_Chalamet.png'},
+        {face: 'images/celebs/timeline_1/12_Halle_Bailey.png'}
+    ],
+    randomize_order: true,
+
+}
+
+
+
+ var timeline_2_l = {
+    timeline: [
+
+    {
+    type: jsPsychImageButtonResponse,
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300' ,
+    choices: [],
+    prompt: "",
+    trial_duration: "4500"
+
+    },
+    {
+    type: jsPsychImageButtonResponse,
+    prompt: '<p></p>',
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300',
+    trial_duration: "2700",
+    choices: ['odd', 'even'],
+    prompt: "<p>Is the year of birth odd or even?</p>",  },
+  {
+    type: jsPsychImageButtonResponse,
+    stimulus: [],
+    choices: [],
+    prompt: "",
+    trial_duration: "1800"
+  }
+],
+timeline_variables: [
+{face: 'images/celebs/timeline_2/1_Muhammad_Ali.png'},
+{face: 'images/celebs/timeline_2/2_Paul_Simon.png'},
+{face: 'images/celebs/timeline_2/3_Dolly_Parton.png'},
+{face: 'images/celebs/timeline_2/4_Robin_Williams.png'},
+{face: 'images/celebs/timeline_2/5_Eddie_Murphy.png'},
+{face: 'images/celebs/timeline_2/6_Halle_Berry.png'},
+{face: 'images/celebs/timeline_2/7_Amy_Poehler.png'},
+{face: 'images/celebs/timeline_2/8_Cillian_Murphy.png'},
+{face: 'images/celebs/timeline_2/9_Jessica_Alba.png'},
+{face: 'images/celebs/timeline_2/10_Robert_Pattinson.png'},
+{face: 'images/celebs/timeline_2/11_Emma_Robert.png'},
+{face: 'images/celebs/timeline_2/12_Billie_Eilish.png'},
+    ],
+    randomize_order: false,
+}
+
+    var timeline_2_r = {
+    timeline: [
+
+    {
+    type: jsPsychImageButtonResponse,
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300' ,
+    choices: [],
+    prompt: "",
+    trial_duration: "4500"
+
+    },
+    {
+    type: jsPsychImageButtonResponse,
+    prompt: '<p></p>',
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300',
+    trial_duration: "2700",
+    choices: ['odd', 'even'],
+    prompt: "<p>Is the year of birth odd or even?</p>",  },
+  {
+    type: jsPsychImageButtonResponse,
+    stimulus: [],
+    choices: [],
+    prompt: "",
+    trial_duration: "1800"
+  }
+],
+timeline_variables: [
+{face: 'images/celebs/timeline_2/1_Muhammad_Ali.png'},
+{face: 'images/celebs/timeline_2/2_Paul_Simon.png'},
+{face: 'images/celebs/timeline_2/3_Dolly_Parton.png'},
+{face: 'images/celebs/timeline_2/4_Robin_Williams.png'},
+{face: 'images/celebs/timeline_2/5_Eddie_Murphy.png'},
+{face: 'images/celebs/timeline_2/6_Halle_Berry.png'},
+{face: 'images/celebs/timeline_2/7_Amy_Poehler.png'},
+{face: 'images/celebs/timeline_2/8_Cillian_Murphy.png'},
+{face: 'images/celebs/timeline_2/9_Jessica_Alba.png'},
+{face: 'images/celebs/timeline_2/10_Robert_Pattinson.png'},
+{face: 'images/celebs/timeline_2/11_Emma_Robert.png'},
+{face: 'images/celebs/timeline_2/12_Billie_Eilish.png'},
+    ],
+    randomize_order: true,
+}
+
+var restaurant_scheme_l = {
     timeline: [
 
     {
@@ -236,22 +398,162 @@ var market_no_story_nonlinear = {
 
 
 timeline_variables: [
-{face: 'images/stories/market_no_story/market_no_story_1.png'},
-    {face: 'images/stories/market_no_story/market_no_story_2.png'},
-    {face: 'images/stories/market_no_story/market_no_story_3.png'},
-    {face: 'images/stories/market_no_story/market_no_story_4.png'},
-    {face: 'images/stories/market_no_story/market_no_story_5.png'},
-    {face: 'images/stories/market_no_story/market_no_story_6.png'},
-    {face: 'images/stories/market_no_story/market_no_story_7.png'},
-    {face: 'images/stories/market_no_story/market_no_story_8.png'},
-    {face: 'images/stories/market_no_story/market_no_story_9.png'},
-    {face: 'images/stories/market_no_story/market_no_story_10.png'},
+{face: 'images/schemes/restaurant_scheme/restaurant_1.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_2.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_3.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_4.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_5.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_6.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_7.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_8.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_9.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_10.png'},
+    ],
+    randomize_order: false,
+
+
+}
+
+var restaurant_scheme_r = {
+    timeline: [
+
+    {
+    type: jsPsychImageButtonResponse,
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300' ,
+    choices: [],
+    prompt: "",
+    trial_duration: "4500"
+
+    },
+    {
+    type: jsPsychImageButtonResponse,
+    prompt: '<p></p>',
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300',
+    trial_duration: "2700",
+    choices: ['yes', 'no'],
+    prompt: "<p>Is there a person in the picture?</p>",  },
+  {
+    type: jsPsychImageButtonResponse,
+    stimulus: [],
+    choices: [],
+    prompt: "",
+    trial_duration: "1800"
+  },
+],
+
+
+timeline_variables: [
+{face: 'images/schemes/restaurant_scheme/restaurant_1.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_2.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_3.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_4.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_5.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_6.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_7.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_8.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_9.png'},
+    {face: 'images/schemes/restaurant_scheme/restaurant_10.png'},
     ],
     randomize_order: true,
 
 }
 
- var market_story_linear = {
+
+var flight_scheme_l = {
+    timeline: [
+
+    {
+    type: jsPsychImageButtonResponse,
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300' ,
+    choices: [],
+    prompt: "",
+    trial_duration: "4500"
+
+    },
+    {
+    type: jsPsychImageButtonResponse,
+    prompt: '<p></p>',
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300',
+    trial_duration: "2700",
+    choices: ['yes', 'no'],
+    prompt: "<p>Is there a person in the picture?</p>",  },
+  {
+    type: jsPsychImageButtonResponse,
+    stimulus: [],
+    choices: [],
+    prompt: "",
+    trial_duration: "1800"
+  }
+],
+timeline_variables: [
+{face: 'images/schemes/flight_scheme/flight_1.png'},
+    {face: 'images/schemes/flight_scheme/flight_2.png'},
+    {face: 'images/schemes/flight_scheme/flight_3.png'},
+    {face: 'images/schemes/flight_scheme/flight_4.png'},
+    {face: 'images/schemes/flight_scheme/flight_5.png'},
+    {face: 'images/schemes/flight_scheme/flight_6.png'},
+    {face: 'images/schemes/flight_scheme/flight_7.png'},
+    {face: 'images/schemes/flight_scheme/flight_8.png'},
+    {face: 'images/schemes/flight_scheme/flight_9.png'},
+    {face: 'images/schemes/flight_scheme/flight_10.png'},
+    ],
+    randomize_order: false,
+}
+
+    var flight_scheme_r = {
+    timeline: [
+
+    {
+    type: jsPsychImageButtonResponse,
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300' ,
+    choices: [],
+    prompt: "",
+    trial_duration: "4500"
+
+    },
+    {
+    type: jsPsychImageButtonResponse,
+    prompt: '<p></p>',
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300',
+    trial_duration: "2700",
+    choices: ['yes', 'no'],
+    prompt: "<p>Is there a person in the picture?</p>",  },
+  {
+    type: jsPsychImageButtonResponse,
+    stimulus: [],
+    choices: [],
+    prompt: "",
+    trial_duration: "1800"
+  }
+],
+timeline_variables: [
+{face: 'images/schemes/flight_scheme/flight_1.png'},
+    {face: 'images/schemes/flight_scheme/flight_2.png'},
+    {face: 'images/schemes/flight_scheme/flight_3.png'},
+    {face: 'images/schemes/flight_scheme/flight_4.png'},
+    {face: 'images/schemes/flight_scheme/flight_5.png'},
+    {face: 'images/schemes/flight_scheme/flight_6.png'},
+    {face: 'images/schemes/flight_scheme/flight_7.png'},
+    {face: 'images/schemes/flight_scheme/flight_8.png'},
+    {face: 'images/schemes/flight_scheme/flight_9.png'},
+    {face: 'images/schemes/flight_scheme/flight_10.png'},
+    ],
+    randomize_order: true,
+}
+
+ var market_story_l = {
     timeline: [
 
     {
@@ -296,7 +598,7 @@ timeline_variables: [
     randomize_order: false,
 }
 
-    var market_story_nonlinear = {
+    var market_story_r = {
     timeline: [
 
     {
@@ -341,98 +643,7 @@ timeline_variables: [
     randomize_order: true,
 }
 
- var paris_no_story_linear = {
-    timeline: [
-
-    {
-    type: jsPsychImageButtonResponse,
-    stimulus: jsPsych.timelineVariable('face'),
-    stimulus_width:"300",
-    stimulus_height:'300' ,
-    choices: [],
-    prompt: "",
-    trial_duration: "4500"
-
-    },
-    {
-    type: jsPsychImageButtonResponse,
-    prompt: '<p></p>',
-    stimulus: jsPsych.timelineVariable('face'),
-    stimulus_width:"300",
-    stimulus_height:'300',
-    trial_duration: "2700",
-    choices: ['yes', 'no'],
-    prompt: "<p>Is there a person in the picture?</p>",  },
-  {
-    type: jsPsychImageButtonResponse,
-    stimulus: [],
-    choices: [],
-    prompt: "",
-    trial_duration: "1800"
-  }
-],
-timeline_variables: [
-{face: 'images/stories/paris_no_story/paris_no_story_1.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_2.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_3.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_4.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_5.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_6.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_7.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_8.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_9.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_10.png'},
-    ],
-    randomize_order: false,
-}
-
-    var paris_no_story_nonlinear = {
-    timeline: [
-
-    {
-    type: jsPsychImageButtonResponse,
-    stimulus: jsPsych.timelineVariable('face'),
-    stimulus_width:"300",
-    stimulus_height:'300' ,
-    choices: [],
-    prompt: "",
-    trial_duration: "4500"
-
-    },
-    {
-    type: jsPsychImageButtonResponse,
-    prompt: '<p></p>',
-    stimulus: jsPsych.timelineVariable('face'),
-    stimulus_width:"300",
-    stimulus_height:'300',
-    trial_duration: "2700",
-    choices: ['yes', 'no'],
-    prompt: "<p>Is there a person in the picture?</p>",  },
-  {
-    type: jsPsychImageButtonResponse,
-    stimulus: [],
-    choices: [],
-    prompt: "",
-    trial_duration: "1800"
-  }
-],
-timeline_variables: [
-{face: 'images/stories/paris_no_story/paris_no_story_1.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_2.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_3.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_4.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_5.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_6.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_7.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_8.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_9.png'},
-    {face: 'images/stories/paris_no_story/paris_no_story_10.png'},
-    ],
-    randomize_order: true,
-}
-
-
-var paris_story_linear = {
+var paris_story_l = {
     timeline: [
 
     {
@@ -477,7 +688,7 @@ timeline_variables: [
     randomize_order: false,
 }
 
-    var paris_story_nonlinear = {
+    var paris_story_r = {
     timeline: [
 
     {
@@ -524,10 +735,46 @@ timeline_variables: [
 // Function to randomly select one of the specified options
 function chooseRandomOption() {
     const options = [
-[paris_no_story_linear, market_no_story_nonlinear],
-[market_no_story_nonlinear, paris_no_story_linear],
-[paris_no_story_nonlinear, market_no_story_linear],
-[market_no_story_linear, paris_no_story_nonlinear]
+    [timeline_1_l, timeline_2_r, flight_scheme_l, restaurant_scheme_r, paris_story_l, market_story_r],
+    [timeline_2_l, timeline_1_r, flight_scheme_l, restaurant_scheme_r, paris_story_l, market_story_r],
+    [flight_scheme_l, restaurant_scheme_r, timeline_1_r, timeline_2_l, paris_story_l, market_story_r],
+    [restaurant_scheme_l, flight_scheme_r, timeline_1_r, timeline_2_l, paris_story_l, market_story_r],
+    [paris_story_l, market_story_r, timeline_1_r, timeline_2_l, flight_scheme_l, restaurant_scheme_r],
+    [market_story_l, paris_story_r, timeline_1_r, timeline_2_l, flight_scheme_l, restaurant_scheme_r],
+    [flight_scheme_r, restaurant_scheme_l, timeline_1_r, timeline_2_l, paris_story_l, market_story_r],
+    [flight_scheme_r, timeline_1_l, timeline_2_r, restaurant_scheme_l, paris_story_l, market_story_r],
+    [flight_scheme_r, timeline_2_l, timeline_1_r, restaurant_scheme_l, paris_story_l, market_story_r],
+    [flight_scheme_r, timeline_1_l, timeline_2_r, restaurant_scheme_r, paris_story_l, market_story_r],
+    [flight_scheme_r, timeline_2_l, timeline_1_r, restaurant_scheme_r, paris_story_l, market_story_r],
+    [market_story_l, timeline_1_r, timeline_2_l, flight_scheme_r, restaurant_scheme_l, paris_story_r],
+    [market_story_l, timeline_2_r, timeline_1_l, flight_scheme_r, restaurant_scheme_l, paris_story_r],
+    [paris_story_r, timeline_1_l, timeline_2_r, flight_scheme_l, restaurant_scheme_r, market_story_l],
+    [paris_story_r, timeline_2_l, timeline_1_r, flight_scheme_l, restaurant_scheme_r, market_story_l],
+    [flight_scheme_l, timeline_2_r, restaurant_scheme_l, timeline_1_r, paris_story_r, market_story_l],
+    [restaurant_scheme_l, timeline_2_r, flight_scheme_l, timeline_1_r, paris_story_r, market_story_l],
+    [timeline_2_r, flight_scheme_l, timeline_1_r, restaurant_scheme_l, paris_story_r, market_story_l],
+    [timeline_1_l, flight_scheme_r, timeline_2_r, restaurant_scheme_l, paris_story_r, market_story_l],
+    [timeline_2_l, flight_scheme_r, timeline_1_r, restaurant_scheme_l, paris_story_r, market_story_l],
+    [timeline_1_l, timeline_2_r, flight_scheme_r, restaurant_scheme_l, paris_story_r, market_story_l],
+    [timeline_2_l, timeline_1_r, flight_scheme_r, restaurant_scheme_l, paris_story_r, market_story_l],
+    [flight_scheme_l, timeline_2_r, timeline_1_r, restaurant_scheme_r, paris_story_r, market_story_l],
+    [timeline_2_r, timeline_1_l, flight_scheme_l, restaurant_scheme_r, paris_story_r, market_story_l],
+    [flight_scheme_r, restaurant_scheme_l, timeline_1_r, timeline_2_l, paris_story_l, market_story_r],
+    [flight_scheme_r, timeline_1_l, timeline_2_r, restaurant_scheme_r, paris_story_l, market_story_r],
+    [flight_scheme_r, timeline_2_l, timeline_1_r, restaurant_scheme_r, paris_story_l, market_story_r],
+    [market_story_l, timeline_1_r, timeline_2_l, flight_scheme_r, restaurant_scheme_l, paris_story_r],
+    [market_story_l, timeline_2_r, timeline_1_l, flight_scheme_r, restaurant_scheme_l, paris_story_r],
+    [paris_story_r, timeline_1_l, timeline_2_r, flight_scheme_l, restaurant_scheme_r, market_story_l],
+    [paris_story_r, timeline_2_l, timeline_1_r, flight_scheme_l, restaurant_scheme_r, market_story_l],
+    [flight_scheme_l, timeline_2_r, restaurant_scheme_l, timeline_1_r, paris_story_r, market_story_l],
+    [restaurant_scheme_l, timeline_2_r, flight_scheme_l, timeline_1_r, paris_story_r, market_story_l],
+    [timeline_2_r, flight_scheme_l, timeline_1_r, restaurant_scheme_l, paris_story_r, market_story_l],
+    [timeline_1_l, flight_scheme_r, timeline_2_r, restaurant_scheme_l, paris_story_r, market_story_l],
+    [timeline_2_l, flight_scheme_r, timeline_1_r, restaurant_scheme_l, paris_story_r, market_story_l],
+    [timeline_1_l, timeline_2_r, flight_scheme_r, restaurant_scheme_l, paris_story_r, market_story_l],
+    [timeline_2_l, timeline_1_r, flight_scheme_r, restaurant_scheme_l, paris_story_r, market_story_l],
+    [flight_scheme_l, timeline_2_r, timeline_1_r, restaurant_scheme_r, paris_story_r, market_story_l],
+    [timeline_2_r, timeline_1_l, flight_scheme_l, restaurant_scheme_r, paris_story_r, market_story_l]
     ];
     // Randomly select one option
     const selectedOption = jsPsych.randomization.shuffle(options)[0];
@@ -738,17 +985,48 @@ timeline.push(trial_06);
     }
 };
 
-if (selectedOption && selectedOption.length >= 2) {
-    var myArray = [selectedOption[0], selectedOption[1]];
+if (selectedOption && selectedOption.length >= 6) {
+    var myArray = [selectedOption[0], selectedOption[1],selectedOption[2],selectedOption[3],selectedOption[4],selectedOption[5]];
     // Proceed with further operations using myArray
 } else {
     // Handle the case when selectedOption is undefined or doesn't have enough elements
 }
 var shuffledArray = jsPsych.randomization.repeat(myArray, 1);
-timeline.push(shuffledArray[0],trial_10, shuffledArray[1],trial_12);
+timeline.push(shuffledArray[0],trial_10, shuffledArray[1],trial_10,shuffledArray[2], trial_10,shuffledArray[3],trial_10,shuffledArray[4],trial_10,shuffledArray[5] );
+
+
+var trial_10 = {
+    type: jsPsychHtmlAudioResponse,
+    stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING </span>
+        <p>Please say out loud the names of the celebrities you saw. The names can be said in any order.</p>`,
+    recording_duration: 15000,
+    allow_playback: true,
+    on_finish: function(data){
+        fetch('/save-my-data.php', { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ audio_base64: data.response })
+        })
+        .then(response => response.json())
+        .then(responseData => {
+            // Assuming the response contains the generated audio_id
+            var audio_id = responseData.audio_id;
+            
+            // Now you can use the audio_id or perform any other actions
+            console.log("Generated audio ID:", audio_id);
+        })
+        .catch(error => {
+            console.error("Error while saving data:", error);
+        });
+    }
+};
+timeline.push(trial_10);
+
 //timeline.push(paris_story_nonlinear,trial_10, market_story_linear,trial_12);
 
-/* 
+
     var trial_14 = {
         type: jsPsychHtmlAudioResponse,
     stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING</span>
@@ -789,35 +1067,7 @@ timeline.push(shuffledArray[0],trial_10, shuffledArray[1],trial_12);
 
     
 
-    /* var trial_10 = {
-    type: jsPsychHtmlAudioResponse,
-    stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING </span>
-        <p>Please say out loud the names of the celebrities you saw. The names can be said in any order.</p>`,
-    recording_duration: 15000,
-    allow_playback: true,
-    on_finish: function(data){
-        fetch('/save-my-data.php', { 
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ audio_base64: data.response })
-        })
-        .then(response => response.json())
-        .then(responseData => {
-            // Assuming the response contains the generated audio_id
-            var audio_id = responseData.audio_id;
-            
-            // Now you can use the audio_id or perform any other actions
-            console.log("Generated audio ID:", audio_id);
-        })
-        .catch(error => {
-            console.error("Error while saving data:", error);
-        });
-    }
-};
- timeline.push(trial_10); sss*/
-
+   
 
 var trial_15 = {
   type: jsPsychSurveyText,
@@ -833,7 +1083,7 @@ var trial_16 = {
         type: jsPsychInstructions,
         pages: [
 
-        '<span style="color: black; font-size: 24px"> You have completed the experiment.'  +'<br/>'+ 'The completion code is : AJFHBG897' +'<br/>'+  'Thank you for your participation!</span>'
+        '<span style="color: black; font-size: 24px"> You have completed the experiment.'  +'<br/>'+ 'The completion code is : AJFHBG892' +'<br/>'+  'Thank you for your participation!</span> '
 
     ],
     show_clickable_nav: true
@@ -848,7 +1098,20 @@ var trial_16 = {
 }
 timeline.push(trial_17);
 
+var trial_18 = {
+        type: jsPsychInstructions,
+        pages: [
+
+        '<span style="color: black; font-size: 24px"> You can exit the experiment, thanks for participating!</span> '
+    ],
+    show_clickable_nav: false
+    };
+    timeline.push(trial_18);
+
+
 jsPsych.run(timeline);
+
+
 
 
   </script>
