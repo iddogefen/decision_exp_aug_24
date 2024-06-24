@@ -772,7 +772,7 @@ console.log("Selected Option:", selectedOption);
         pages: [
 
         '<span style="color: black; font-size: 24px"> Welcome to the experiment. Click next to begin.</span>',
-    '<span style="color: black; font-size: 24px"> In this experiment, you will see a list of actions that people do on a daily basis.  </span>' +'<br/>'+ '<span style="color: black; font-size: 24px">  </span>'
+    '<span style="color: black; font-size: 24px"> In this experiment, you will see a list of images that people do on a daily basis.  </span>' +'<br/>'+ '<span style="color: black; font-size: 24px">  </span>'
     +'<br/>'+ '<span style="color: black; font-size: 24px"> After the picture is displayed, you will be asked to answer a question related to that image presented. </span>'
     +'<br/>'+ '<span style="color: black; font-size: 24px"> Click "Next" for an example. </span>',
     
@@ -830,7 +830,7 @@ timeline_variables: [
         type: jsPsychInstructions,
         pages: [
 
-        '<span style="color: black; font-size: 24px">At the end of the list, you will be asked to say out loud the actions you saw. The actions can be said in any order.</span>',
+        '<span style="color: black; font-size: 24px">At the end of the list, you will be asked to say out loud the images you saw. The images can be said in any order.</span>',
         '<span style="color: black; font-size: 24px"> Click "Next" for an example. </span>',
     
     ],
@@ -841,7 +841,7 @@ timeline_variables: [
     var trial_06 = {
     type: jsPsychHtmlAudioResponse,
     stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING</span>
-        <p>Please say out loud the list of the actions you saw. The actions can be said in any order.</p>`,
+        <p>Please say out loud the list of the images you saw. The images can be said in any order.</p>`,
     recording_duration: 55000,
     allow_playback: true,
     on_finish: function(data){
@@ -864,7 +864,7 @@ timeline_variables: [
                 // condition: condition_assignment
             });
 
-            // Now you can use the audio_id or perform any other actions
+            // Now you can use the audio_id or perform any other images
             console.log("Generated audio ID:", audio_id);
         })
         .catch(error => {
@@ -892,7 +892,7 @@ timeline.push(trial_06);
     var trial_10 = {
         type: jsPsychHtmlAudioResponse,
     stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING</span>
-        <p>Please say out loud the list of the actions you saw. The actions can be said in any order.</p>`,
+        <p>Please say out loud the list of the images you saw. The images can be said in any order.</p>`,
     recording_duration: 55000,
     allow_playback: true,
     on_finish: function(data){
@@ -918,7 +918,7 @@ timeline.push(trial_06);
                 // condition: condition_assignment
             });
 
-            // Now you can use the audio_id or perform any other actions
+            // Now you can use the audio_id or perform any other images
             console.log("Generated audio ID:", audio_id);
         })
         .catch(error => {
@@ -931,7 +931,7 @@ timeline.push(trial_06);
     var trial_12 = {
         type: jsPsychHtmlAudioResponse,
     stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING</span>
-        <p>Please say out loud the list of the actions you saw. The actions can be said in any order.</p>`,
+        <p>Please say out loud the list of the images you saw. The images can be said in any order.</p>`,
     recording_duration: 55000,
     allow_playback: true,
     on_finish: function(data){
@@ -954,7 +954,7 @@ timeline.push(trial_06);
                 // condition: condition_assignment
             });
 
-            // Now you can use the audio_id or perform any other actions
+            // Now you can use the audio_id or perform any other images
             console.log("Generated audio ID:", audio_id);
         })
         .catch(error => {
@@ -992,7 +992,7 @@ var trial_10 = {
             // Assuming the response contains the generated audio_id
             var audio_id = responseData.audio_id;
             
-            // Now you can use the audio_id or perform any other actions
+            // Now you can use the audio_id or perform any other images
             console.log("Generated audio ID:", audio_id);
         })
         .catch(error => {
@@ -1008,7 +1008,7 @@ var trial_10 = {
     var trial_14 = {
         type: jsPsychHtmlAudioResponse,
     stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING</span>
-        <p>Please say out loud the list of the actions you saw. The actions can be said in any order.</p>`,
+        <p>Please say out loud the list of the images you saw. The images can be said in any order.</p>`,
     recording_duration: 55000,
     allow_playback: true,
     on_finish: function(data){
@@ -1031,7 +1031,7 @@ var trial_10 = {
                 // condition: condition_assignment
             });
 
-            // Now you can use the audio_id or perform any other actions
+            // Now you can use the audio_id or perform any other images
             console.log("Generated audio ID:", audio_id);
         })
         .catch(error => {
