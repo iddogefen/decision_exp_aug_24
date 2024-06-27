@@ -1,5 +1,5 @@
 var jsPsychHtmlAudioResponse = (function (jspsych) {
-    'use strict';
+    'use strict1';
   
     const info = {
         name: "html-audio-response",
@@ -104,6 +104,10 @@ var jsPsychHtmlAudioResponse = (function (jspsych) {
             this.stop_event_handler = () => {
                 const data = new Blob(this.recorded_data_chunks, { type: "audio/webm" });
                 this.audio_url = URL.createObjectURL(data);
+  
+                // Debugging: Log the Blob size and duration
+                console.log("Recorded Blob size:", data.size);
+                console.log("Estimated duration (ms):", data.size / (256 * 1000) * 8);
   
                 const reader = new FileReader();
                 reader.addEventListener("load", () => {
