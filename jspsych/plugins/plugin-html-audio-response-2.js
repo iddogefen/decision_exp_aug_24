@@ -1,5 +1,5 @@
 var jsPsychHtmlAudioResponse = (function (jspsych) {
-    'use strict1';
+    'use strict';
   
     const info = {
         name: "html-audio-response",
