@@ -1,8 +1,8 @@
-var jsPsychHtmlAudioResponse = (function (jspsych) {
+var jsPsychHtmlAudioResponsex = (function (jspsych) {
     'use strict';
   
     const info = {
-        name: "html-audio-response-two",
+        name: "html-audio-responsex",
         parameters: {
             stimulus: {
                 type: jspsych.ParameterType.HTML_STRING,
