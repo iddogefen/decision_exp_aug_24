@@ -1,8 +1,8 @@
-var jsPsychHtmlAudioResponse = (function (jspsych) {
+var jsPsychHtmlAudioResponse2 = (function (jspsych) {
     'use strict';
   
     const info = {
-        name: "html-audio-response",
+        name: "html-audio-response-2",
         parameters: {
             stimulus: {
                 type: jspsych.ParameterType.HTML_STRING,
@@ -43,7 +43,7 @@ var jsPsychHtmlAudioResponse = (function (jspsych) {
         },
     };
   
-    class HtmlAudioResponsePlugin {
+    class HtmlAudioResponse2Plugin {
         constructor(jsPsych) {
             this.jsPsych = jsPsych;
             this.rt = null;
@@ -203,8 +203,8 @@ var jsPsychHtmlAudioResponse = (function (jspsych) {
         }
     }
   
-    HtmlAudioResponsePlugin.info = info;
-    return HtmlAudioResponsePlugin;
+    HtmlAudioResponse2Plugin.info = info;
+    return HtmlAudioResponse2Plugin;
   
   })(jsPsychModule);
   
