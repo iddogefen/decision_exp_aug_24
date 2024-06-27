@@ -1,8 +1,8 @@
-var jsPsychHtmlAudioResponse2 = (function (jspsych) {
+var jsPsychHtmlAudioResponse = (function (jspsych) {
     'use strict';
   
     const info = {
-        name: "html-audio-response-2",
+        name: "html-audio-response",
         parameters: {
             stimulus: {
                 type: jspsych.ParameterType.HTML_STRING,
@@ -43,7 +43,7 @@ var jsPsychHtmlAudioResponse2 = (function (jspsych) {
         },
     };
   
-    class HtmlAudioResponse2Plugin {
+    class HtmlAudioResponsePlugin {
         constructor(jsPsych) {
             this.jsPsych = jsPsych;
             this.rt = null;
@@ -104,10 +104,6 @@ var jsPsychHtmlAudioResponse2 = (function (jspsych) {
             this.stop_event_handler = () => {
                 const data = new Blob(this.recorded_data_chunks, { type: "audio/webm" });
                 this.audio_url = URL.createObjectURL(data);
-  
-                // Debugging: Log the Blob size and duration
-                console.log("Recorded Blob size:", data.size);
-                console.log("Estimated duration (ms):", data.size / (256 * 1000) * 8);
   
                 const reader = new FileReader();
                 reader.addEventListener("load", () => {
@@ -203,8 +199,8 @@ var jsPsychHtmlAudioResponse2 = (function (jspsych) {
         }
     }
   
-    HtmlAudioResponse2Plugin.info = info;
-    return HtmlAudioResponse2Plugin;
+    HtmlAudioResponsePlugin.info = info;
+    return HtmlAudioResponsePlugin;
   
   })(jsPsychModule);
   
