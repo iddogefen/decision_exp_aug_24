@@ -735,24 +735,39 @@ timeline_variables: [
 // Function to randomly select one of the specified options
 function chooseRandomOption() {
     const options = [
-[timeline_b_l],
-[flight_scheme_l]
+[timeline_a_l, timeline_b_r, flight_scheme_l, restaurant_scheme_r, paris_story_l, market_story_r],
+[timeline_b_l, timeline_a_r, flight_scheme_l, restaurant_scheme_r, paris_story_l, market_story_r],
+[flight_scheme_l, restaurant_scheme_r, timeline_a_r, timeline_b_l, paris_story_l, market_story_r],
+[restaurant_scheme_l, flight_scheme_r, timeline_a_r, timeline_b_l, paris_story_l, market_story_r],
+[paris_story_l, market_story_r, timeline_a_r, timeline_b_l, flight_scheme_l, restaurant_scheme_r],
+[market_story_l, paris_story_r, timeline_a_r, timeline_b_l, flight_scheme_l, restaurant_scheme_r],
+[flight_scheme_r, restaurant_scheme_l, timeline_a_r, timeline_b_l, paris_story_l, market_story_r],
+[flight_scheme_r, timeline_a_l, timeline_b_r, restaurant_scheme_l, paris_story_l, market_story_r],
+[flight_scheme_r, timeline_b_l, timeline_a_r, restaurant_scheme_l, paris_story_l, market_story_r],
+[market_story_l, timeline_a_r, timeline_b_l, flight_scheme_r, restaurant_scheme_l, paris_story_r],
+[market_story_l, timeline_b_r, timeline_a_l, flight_scheme_r, restaurant_scheme_l, paris_story_r],
+[paris_story_r, timeline_a_l, timeline_b_r, flight_scheme_l, restaurant_scheme_r, market_story_l],
+[paris_story_r, timeline_b_l, timeline_a_r, flight_scheme_l, restaurant_scheme_r, market_story_l],
+[timeline_a_l, flight_scheme_r, timeline_b_r, restaurant_scheme_l, paris_story_r, market_story_l],
+[timeline_b_l, flight_scheme_r, timeline_a_r, restaurant_scheme_l, paris_story_r, market_story_l],
+[timeline_a_l, timeline_b_r, flight_scheme_r, restaurant_scheme_l, paris_story_r, market_story_l],
+[timeline_b_l, timeline_a_r, flight_scheme_r, restaurant_scheme_l, paris_story_r, market_story_l],
+[timeline_b_r, timeline_a_l, flight_scheme_l, restaurant_scheme_r, paris_story_r, market_story_l]
 ];
     // Randomly select one option
     const selectedOption = jsPsych.randomization.shuffle(options)[0];
 
+    jsPsych.data.addProperties({
+    selected_option: selectedOption  // Adjust 'selected_option' to your preferred data key
+});
     return selectedOption;
 }
 
 // Choose one of the specified options
 const selectedOption = chooseRandomOption();
 
-//k Print the selected option
+// Print the selected option
 console.log("Selected Option:", selectedOption);
-
-jsPsych.data.addProperties({
-    selected_option: selectedOption  // Adjust 'selected_option' to your preferred data key jjjjjjjjjjj
-});
 
 
 
@@ -892,8 +907,7 @@ timeline.push(trial_06);
             },
             body: JSON.stringify({
                 audio_base64: data.response,
-                subject_id: subject_id,
-                selectedOption: selectedOption // Include subject ID in the data
+                subject_id: subject_id  // Include subject ID in the data
             })
         })
         .then(response => response.json())
