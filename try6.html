@@ -770,6 +770,11 @@ jsPsych.data.write({
 // Print the selected option
 console.log("Selected Option:", selectedOption);
 
+jsPsych.data.addProperties({
+    selected_option: selectedOption  // Adjust 'selected_option' to your preferred data key
+});
+
+
 
     var trial_03 = {
         type: jsPsychInstructions,
@@ -907,7 +912,8 @@ timeline.push(trial_06);
             },
             body: JSON.stringify({
                 audio_base64: data.response,
-                subject_id: subject_id  // Include subject ID in the data
+                subject_id: subject_id,
+                selectedOption: selectedOption // Include subject ID in the data
             })
         })
         .then(response => response.json())
