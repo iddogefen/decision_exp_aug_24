@@ -757,19 +757,17 @@ function chooseRandomOption() {
     // Randomly select one option
     const selectedOption = jsPsych.randomization.shuffle(options)[0];
 
-    jsPsych.data.addProperties({
-    selected_option: selectedOption  // Adjust 'selected_option' to your preferred data key
-});
     return selectedOption;
 }
-
 // Choose one of the specified options
 const selectedOption = chooseRandomOption();
 
 // Print the selected option
 console.log("Selected Option:", selectedOption);
 
-
+jsPsych.data.addProperties({
+    selected_option: selectedOption  // Adjust 'selected_option' to your preferred data key
+});
 
     var trial_03 = {
         type: jsPsychInstructions,
