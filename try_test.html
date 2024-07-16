@@ -83,7 +83,7 @@ var list0 = [
 
 var audio_id = [];
 
-  // capture info from Prolific
+  // capture info 
   var subject_id = jsPsych.data.getURLVariable('participantId');
   var study_id = jsPsych.data.getURLVariable('assignmentId');
   var session_id = jsPsych.data.getURLVariable('projectId');
@@ -197,7 +197,9 @@ var trial_15 = {
   type: jsPsychSurveyText,
   questions: [
     {prompt: 'please insert your gender (MALE/ FEMALE/ OTHER)'},
-    {prompt: 'Please insert your age'}
+    {prompt: 'Please insert your age'},
+    {prompt: 'Please insert your Connect ID'}
+
   ]
 }
 timeline.push(trial_15);
