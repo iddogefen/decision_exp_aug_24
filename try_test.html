@@ -83,6 +83,18 @@ var list0 = [
 
 var audio_id = [];
 
+  // capture info from Prolific
+  var subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
+  var study_id = jsPsych.data.getURLVariable('STUDY_ID');
+  var session_id = jsPsych.data.getURLVariable('SESSION_ID');
+
+  jsPsych.data.addProperties({
+    subject_id: subject_id,
+    study_id: study_id,
+    session_id: session_id
+  });
+
+
 // this adds a property called 'subject' and a property called 'condition' to every trial
 jsPsych.data.addProperties({
   subject: subject_id,
