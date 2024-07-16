@@ -50,6 +50,8 @@ var timeline = [];
 
     // generate a random subject ID with 15 characters
 var subject_id = jsPsych.randomization.randomID(15);
+var subject_url = jsPsych.data.urlVariables();
+
 
 // pick a random condition for the subject at the start of the experiment
 //var condition_assignment = jsPsych.randomization.sampleWithoutReplacement(['conditionA', 'conditionB', 'conditionC'], 1)[0];
@@ -84,6 +86,7 @@ var audio_id = [];
 // this adds a property called 'subject' and a property called 'condition' to every trial
 jsPsych.data.addProperties({
   subject: subject_id,
+  subject: subject_url,
 
   //condition: condition_assignment
 });
