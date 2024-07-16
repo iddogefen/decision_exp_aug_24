@@ -88,13 +88,16 @@ var audio_id = [];
   var study_id = jsPsych.data.getURLVariable('assignmentId');
   var session_id = jsPsych.data.getURLVariable('projectId');
   var urlvar = jsPsych.data.urlVariables();
+  const currentUrl = window.location.href;
+
 
 
   jsPsych.data.addProperties({
     subject_id: subject_id,
     study_id: study_id,
     session_id: session_id,
-    urlvar: urlvar
+    urlvar: urlvar,
+    current_url: currentUrl
   });
 
 
