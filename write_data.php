@@ -8,24 +8,21 @@ if (!$post_data) {
     exit;
 }
 
+    // Get the JSON data from the request body
+    $json_data = file_get_contents("php://input");
+
+    // Decode the JSON data
+    $data = json_decode($json_data);
+// Set the subject_id to a fixed value
+$subject_id = $data->subject_id;;
+
 // Retrieve and validate filedata
-$filedata = isset($post_data['filedata']) ? $post_data['filedata'] : null;
-if (!$filedata) {
+$data = isset($post_data['filedata']) ? $post_data['filedata'] : null;
+if (!$data) {
     http_response_code(400);
     echo 'Missing filedata';
     exit;
 }
-
-// Decode the filedata to get the subject_id
-$filedata_decoded = json_decode($filedata, true);
-if (!$filedata_decoded || !isset($filedata_decoded['subject_id'])) {
-    http_response_code(400);
-    echo 'Invalid filedata or missing subject_id';
-    exit;
-}
-
-// Set the subject_id from the decoded filedata
-$subject_id = $filedata_decoded['subject_id'];
 
 // Generate a unique filename with subject_id and the current date
 $file = $subject_id . '-' . date("Y-m-d-H-i-s") . '.csv';
@@ -40,7 +37,7 @@ if (!is_dir($directory) || !is_writable($directory)) {
 
 // Write the file to disk
 $name = "{$directory}/{$file}";
-if (file_put_contents($name, $filedata) === false) {
+if (file_put_contents($name, $data) === false) {
     http_response_code(500);
     echo 'Failed to write file';
     exit;
