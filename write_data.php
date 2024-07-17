@@ -1,18 +1,42 @@
 <?php
 
-// get the data from the POST message
+// Get the data from the POST message
 $post_data = json_decode(file_get_contents('php://input'), true);
-$data = $post_data['filedata'];
+if (!$post_data) {
+    http_response_code(400);
+    echo 'Invalid JSON input';
+    exit;
+}
 
-// retrieve the subject_id from the POST data
-$subject_id = $post_data['subject_id'];
+// Set the subject_id to a fixed value
+$subject_id = 'iddo1992';
 
-// generate a unique filename with subject_id and the current date
-$file = $subject_id . '-' . date("Y-m-d-H-i-s");
+// Retrieve and validate filedata
+$data = isset($post_data['filedata']) ? $post_data['filedata'] : null;
+if (!$data) {
+    http_response_code(400);
+    echo 'Missing filedata';
+    exit;
+}
 
-// the directory "data" must be writable by the server
-$name = "data/{$file}.csv";
+// Generate a unique filename with subject_id and the current date
+$file = $subject_id . '-' . date("Y-m-d-H-i-s") . '.csv';
 
-// write the file to disk
-file_put_contents($name, $data);
+// The directory "data" must be writable by the server
+$directory = 'data';
+if (!is_dir($directory) || !is_writable($directory)) {
+    http_response_code(500);
+    echo 'Directory not writable';
+    exit;
+}
+
+// Write the file to disk
+$name = "{$directory}/{$file}";
+if (file_put_contents($name, $data) === false) {
+    http_response_code(500);
+    echo 'Failed to write file';
+    exit;
+}
+
+echo 'File saved successfully';
 ?>
