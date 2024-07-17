@@ -8,13 +8,13 @@ if (!$post_data) {
     exit;
 }
 
-    // Get the JSON data from the request body
-    $json_data = file_get_contents("php://input");
-
-    // Decode the JSON data
-    $data = json_decode($json_data);
-// Set the subject_id to a fixed value
-$subject_id = $data->subject_id;;
+// Retrieve and validate the subject_id
+$subject_id = isset($post_data['subject_id']) ? $post_data['subject_id'] : null;
+if (!$subject_id) {
+    http_response_code(400);
+    echo 'Missing subject_id';
+    exit;
+}
 
 // Retrieve and validate filedata
 $data = isset($post_data['filedata']) ? $post_data['filedata'] : null;
