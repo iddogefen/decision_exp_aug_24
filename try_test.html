@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-
+<head>
     <style>
         .hide_cursor {
             cursor: none;
         }
-        </style>
-
+    </style>
     <title>My experiment</title>
     <script src="jspsych/plugins/jspsych.js"></script>
-    <!--<script src="jspsych/plugins/jspsych-order.js"></script>-->
     <script src="jspsych/plugins/plugin-instructions.js"></script>
     <script src="jspsych/plugins/plugin-survey-text.js"></script>
     <script src="jspsych/plugins/plugin-html-keyboard-response.js"></script>
@@ -21,213 +18,222 @@
     <script src="jspsych/plugins/plugin-fullscreen.js"></script>
     <script src="jspsych/plugins/plugin-preload.js"></script>
     <script src="jspsych/plugins/plugin-browser-check.js"></script>
-
     <script src="Tools/Functions.js"></script>
-
-
     <link rel="stylesheet" href="jspsych/css/jspsych.css">
-  </head>
-  <body></body>
-  <script>
-
-//var data_folder             = 'data/Individual_data/'
-var data_folder             = 'data/'
-
-var int_data_folder         = 'data/Interactive_data/'
-var tools_folder            = 'Tools'
+</head>
+<body></body>
+<script>
+    var data_folder = 'data/';
+    var int_data_folder = 'data/Interactive_data/';
+    var tools_folder = 'Tools';
 
     /* initialize jsPsych */
     var jsPsych = initJsPsych({
-      on_finish: function() {
-        saveData(data_folder+'All_data/all_data_sub_'+subject_id+".csv", jsPsych.data.get().csv());
-        //jsPsych.data.get().localSave('csv','mydata.csv');
-
-      }
+        on_finish: function() {
+            saveData(data_folder+'All_data/all_data_sub_'+subject_id+".csv", jsPsych.data.get().csv());
+        }
     });
 
     /* create timeline */
-var timeline = [];
+    var timeline = [];
 
     // generate a random subject ID with 15 characters
-var subject_id = jsPsych.randomization.randomID(15);
-var subject_url = jsPsych.data.urlVariables();
+    var subject_id = jsPsych.randomization.randomID(15);
+    var subject_url = jsPsych.data.urlVariables();
 
-
-// pick a random condition for the subject at the start of the experiment
-//var condition_assignment = jsPsych.randomization.sampleWithoutReplacement(['conditionA', 'conditionB', 'conditionC'], 1)[0];
-
-
-function getRandomCondition() {
-    const conditions = ['linear', 'nonlinear', 'noOrder'];
-    const randomIndex = Math.floor(Math.random() * conditions.length);
-    return conditions[randomIndex];
-}
-
-function chooseRandomItems(list, condition, count) {
-    const items = list[condition];
-    if (condition === 'linear') {
-        // If the condition is 'linear', keep the original order
-        return items.slice(0, count).map(item => ({ condition, path: item }));
-    } else {
-        // If the condition is not 'linear', shuffle the items
-        const shuffledItems = items.sort(() => Math.random() - 0.5).slice(0, count);
-        return shuffledItems.map(item => ({ condition, path: item }));
+    function getRandomCondition() {
+        const conditions = ['linear', 'nonlinear', 'noOrder'];
+        const randomIndex = Math.floor(Math.random() * conditions.length);
+        return conditions[randomIndex];
     }
-}
-var list0 = [
-    'images/instructions/movie_1.png',
-    'images/instructions/movie_2.png',
-    'images/instructions/movie_3.png',
-    'images/instructions/movie_4.png',
-];
 
-var audio_id = [];
+    function chooseRandomItems(list, condition, count) {
+        const items = list[condition];
+        if (condition === 'linear') {
+            return items.slice(0, count).map(item => ({ condition, path: item }));
+        } else {
+            const shuffledItems = items.sort(() => Math.random() - 0.5).slice(0, count);
+            return shuffledItems.map(item => ({ condition, path: item }));
+        }
+    }
 
-  // capture info 
-  var subject_id = jsPsych.data.getURLVariable('participantId');
-  var study_id = jsPsych.data.getURLVariable('assignmentId');
-  var session_id = jsPsych.data.getURLVariable('projectId');
-  var urlvar = jsPsych.data.urlVariables();
-  const currentUrl = window.location.href;
+    var list0 = [
+        'images/instructions/movie_1.png',
+        'images/instructions/movie_2.png',
+        'images/instructions/movie_3.png',
+        'images/instructions/movie_4.png',
+    ];
+
+    var audio_id = [];
+
+    // capture info 
+    var subject_id = jsPsych.data.getURLVariable('participantId');
+    var study_id = jsPsych.data.getURLVariable('assignmentId');
+    var session_id = jsPsych.data.getURLVariable('projectId');
+    var urlvar = jsPsych.data.urlVariables();
+    const currentUrl = window.location.href;
+
+    jsPsych.data.addProperties({
+        subject_id: subject_id,
+        study_id: study_id,
+        session_id: session_id,
+        urlvar: urlvar,
+        current_url: currentUrl
+    });
+
+    jsPsych.data.addProperties({
+        subject: subject_id,
+    });
+
+    var trial_0 = {
+        type: jsPsychInstructions,
+        pages: [
+            '<div style="font-family:Arial; background: var(--grey); padding: 100px; padding-top: 5%">' +
+            '<h2>Thank you for participating in this experiment!</h2>' +
+            '<p>By clicking the "Begin Study" button, you will be taken to the study, including complete instructions and an informed consent agreement. Before doing so, you must confirm the following:</p>' +
+            '<p>I hereby confirm that:<br>' +
+            '<input type="checkbox" id="age_checkbox" /> I am over 18 years old.</p>' +
+            '<p>Please close all other browser windows and applications, and plug in if you\'re using a laptop computer. Images in this study will not display properly otherwise.<br>' +
+            '<input type="checkbox" id="close_windows_checkbox" /> I closed all other windows and tabs.</p>' +
+            '<p>Please make sure you are performing this task in a quiet room, without any distractions.<br>' +
+            '<input type="checkbox" id="quiet_checkbox" /> I am in a quiet environment.</p>' +
+            '<p>The study includes several phases, all of which should be completed without extended breaks.<br>' +
+            '<input type="checkbox" id="no_breaks" /> I will perform all phases without extended breaks.</p>' +
+            '<br></p>' 
+        ],
+        show_clickable_nav: true,
+        on_load: function() {
+            document.querySelector('button').onclick = function() {
+                var age = document.getElementById('age_checkbox').checked;
+                var otherWin = document.getElementById('close_windows_checkbox').checked;
+                var quiet = document.getElementById('quiet_checkbox').checked;
+                var no_breaks = document.getElementById('no_breaks').checked;
+                if (age && otherWin && quiet && no_breaks) {
+                    jsPsych.finishTrial();
+                } else {
+                    alert("You cannot proceed without affirming these statements. If they don't apply to you, you will not be able to participate in this experiment. In that case, please return the HIT to Amazon.");
+                }
+            }
+        }
+    };
+    timeline.push(trial_0);
+
+
+    var trial_consent = {
+        type: jsPsychInstructions,
+        pages: [
+            '<div style="text-align:center; font-family:Arial; font-size: 22px; padding-top:20px; padding-bottom:20px">' +
+            '<p>Please carefully read the below consent form before proceeding.</p>' +
+            '<img src="consent_form_2023.png" style="max-width:80%;padding-left:50px;padding-right:50px;padding-top:20px; padding-bottom:20px; position:relative"></img>' +
+            '<p>By starting the experiment, you indicate that, having read and understood the information provided, you have decided to participate</p>' +
+            '<p><a href="try_test.html" target="_blank" style="font-size: 25px; color: red">Click Here to Start the Experiment</a><br></br></p>' +
+            '</div>'
+        ],
+        show_clickable_nav: true
+    };
+    timeline.push(trial_consent);
 
 
 
-  jsPsych.data.addProperties({
-    subject_id: subject_id,
-    study_id: study_id,
-    session_id: session_id,
-    urlvar: urlvar,
-    current_url: currentUrl
-  });
-
-
-// this adds a property called 'subject' and a property called 'condition' to every trial
-jsPsych.data.addProperties({
-  subject: subject_id,
-  //condition: condition_assignment
-});
-
-
-    /* preload images */
     var preload = {
-      type: jsPsychPreload,
-      images:['images/instructions/movie_1.png',
- 'images/instructions/movie_2.png',
- 'images/instructions/movie_3.png',
- 'images/instructions/movie_4.png',
-]
-};
+        type: jsPsychPreload,
+        images:['images/instructions/movie_1.png',
+        'images/instructions/movie_2.png',
+        'images/instructions/movie_3.png',
+        'images/instructions/movie_4.png',
+        ]
+    };
     timeline.push(preload);
 
     var trial_01 = {
-  type: jsPsychFullscreen,
-  fullscreen_mode: true
-}
-
-  /* create timeline */
-timeline.push(trial_01);
-
+        type: jsPsychFullscreen,
+        fullscreen_mode: true
+    };
+    timeline.push(trial_01);
 
     var trial_02 = {
         type: jsPsychInitializeMicrophone
     };
     timeline.push(trial_02);
 
-
     var trial_03 = {
         type: jsPsychInstructions,
         pages: [
-
-        '<span style="color: black; font-size: 24px"> Welcome to the experiment. Click next to begin.</span>',
-    '<span style="color: black; font-size: 24px"> In this experiment, you will see a list of images that people do on a daily basis.  </span>' +'<br/>'+ '<span style="color: black; font-size: 24px">  </span>'
-    +'<br/>'+ '<span style="color: black; font-size: 24px"> After the picture is displayed, you will be asked to answer a question related to that image presented. </span>'
-    +'<br/>'+ '<span style="color: black; font-size: 24px"> Click "Next" for an example. </span>',
-    
-    ],
-    show_clickable_nav: true
+            '<span style="color: black; font-size: 24px"> Welcome to the experiment. Click next to begin.</span>',
+            '<span style="color: black; font-size: 24px"> In this experiment, you will see a list of images that people do on a daily basis.  </span>' +'<br/>'+ '<span style="color: black; font-size: 24px">  </span>'
+            +'<br/>'+ '<span style="color: black; font-size: 24px"> After the picture is displayed, you will be asked to answer a question related to that image presented. </span>'
+            +'<br/>'+ '<span style="color: black; font-size: 24px"> Click "Next" for an example. </span>',
+        ],
+        show_clickable_nav: true
     };
     timeline.push(trial_03);
 
-
     var trial_04 = {
-    timeline: [
-
-    {
-    type: jsPsychImageButtonResponse,
-    stimulus: jsPsych.timelineVariable('face'),
-    stimulus_width:"300",
-    stimulus_height:'300' ,
-    choices: [],
-    prompt: "",
-    trial_duration: "4500"
-
-    },
-    {
-    type: jsPsychImageButtonResponse,
-    prompt: '<p></p>',
-    stimulus: jsPsych.timelineVariable('face'),
-    stimulus_width:"300",
-    stimulus_height:'300',
-    trial_duration: "2700",
-    choices: ['yes', 'no',],
-    prompt: "<p>Is there a person in the picture?</p>",  },
-  {
-    type: jsPsychImageButtonResponse,
-    stimulus: [],
-    choices: [],
-    prompt: "",
-    trial_duration: "1800"
-  }
-],
-timeline_variables: [
-        {face: 'images/instructions/movie_1.png'},
-        {face: 'images/instructions/movie_2.png'},
-        {face: 'images/instructions/movie_3.png'},
-        {face: 'images/instructions/movie_4.png'},
-        
-
-
-    ],
-
-}
+        timeline: [
+            {
+                type: jsPsychImageButtonResponse,
+                stimulus: jsPsych.timelineVariable('face'),
+                stimulus_width:"300",
+                stimulus_height:'300' ,
+                choices: [],
+                prompt: "",
+                trial_duration: "4500"
+            },
+            {
+                type: jsPsychImageButtonResponse,
+                prompt: '<p></p>',
+                stimulus: jsPsych.timelineVariable('face'),
+                stimulus_width:"300",
+                stimulus_height:'300',
+                trial_duration: "2700",
+                choices: ['yes', 'no',],
+                prompt: "<p>Is there a person in the picture?</p>",
+            },
+            {
+                type: jsPsychImageButtonResponse,
+                stimulus: [],
+                choices: [],
+                prompt: "",
+                trial_duration: "1800"
+            }
+        ],
+        timeline_variables: [
+            {face: 'images/instructions/movie_1.png'},
+            {face: 'images/instructions/movie_2.png'},
+            {face: 'images/instructions/movie_3.png'},
+            {face: 'images/instructions/movie_4.png'},
+        ],
+    };
     timeline.push(trial_04);
 
+    var trial_15 = {
+        type: jsPsychSurveyText,
+        questions: [
+            {prompt: 'please insert your gender (MALE/ FEMALE/ OTHER)'},
+            {prompt: 'Please insert your age'},
+            {prompt: 'Please insert your Connect ID'}
+        ]
+    };
+    timeline.push(trial_15);
 
-var trial_15 = {
-  type: jsPsychSurveyText,
-  questions: [
-    {prompt: 'please insert your gender (MALE/ FEMALE/ OTHER)'},
-    {prompt: 'Please insert your age'},
-    {prompt: 'Please insert your Connect ID'}
-
-  ]
-}
-timeline.push(trial_15);
-
-
-var trial_16 = {
+    var trial_16 = {
         type: jsPsychInstructions,
         pages: [
-
-        '<span style="color: black; font-size: 24px"> You have completed the experiment.'  +'<br/>'+ 'The completion code is : AJFHBG892' +'<br/>'+  'Thank you for your participation!</span> '
-
-    ],
-    show_clickable_nav: true
+            '<span style="color: black; font-size: 24px"> You have completed the experiment.'  +'<br/>'+ 'The completion code is : AJFHBG892' +'<br/>'+  'Thank you for your participation!</span>'
+        ],
+        show_clickable_nav: true
     };
     timeline.push(trial_16);
 
-    /* start the experiment */
     var trial_17 = {
-  type: jsPsychSurveyText,
-  questions: [
-    {prompt: 'please insert The completion code'},]
-}
-timeline.push(trial_17);
+        type: jsPsychSurveyText,
+        questions: [
+            {prompt: 'please insert The completion code'},
+        ]
+    };
+    timeline.push(trial_17);
 
-jsPsych.run(timeline);
-
-
-
-
-  </script>
+    /* start the experiment */
+    jsPsych.run(timeline);
+</script>
 </html>
