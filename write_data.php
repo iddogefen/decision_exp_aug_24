@@ -7,7 +7,7 @@ $subject_id = $data->subject_id;
 // generate a unique ID for the file, e.g., session-6feu833950202 
 $file = date("Y-m-d-h-i-sa");
 // the directory "data" must be writable by the server
-$name = "data/{$$subject_id}.csv"; 
+$name = "data/{$subject_id}.csv"; 
 // write the file to disk
 file_put_contents($name, $data);
 ?>
