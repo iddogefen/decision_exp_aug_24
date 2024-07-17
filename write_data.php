@@ -11,15 +11,14 @@ if (isset($post_data['filedata'])) {
 
     // Function to generate a unique ID (replace with your actual implementation)
     function generateUniqueID($subject_id) {
-        return 'session-' . uniqid() . '-' . $subject_id;
+        return 'session-' . uniqid() . '-' . $subject_id . '-' . date('Y-m-d-H-i-s');
     }
 
     // Generate a unique ID for the file
     $file = generateUniqueID($subject_id);
 
-    // Add current date to the file name
-    $current_date = date('Y-m-d-h-m-s'); // Format: YYYY-MM-DD
-    $name = "data/{$file}-{$current_date}.csv";
+    // Define the path to store the file
+    $name = "data/{$file}.csv";
 
     // Encode $filedata to JSON before writing to file
     $json_data = json_encode($filedata);
