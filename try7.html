@@ -50,8 +50,6 @@ var timeline = [];
 
     // generate a random subject ID with 15 characters
 var subject_id = jsPsych.randomization.randomID(15);
-var subject_url = jsPsych.data.urlVariables();
-
 
 // pick a random condition for the subject at the start of the experiment
 //var condition_assignment = jsPsych.randomization.sampleWithoutReplacement(['conditionA', 'conditionB', 'conditionC'], 1)[0];
@@ -86,7 +84,6 @@ var audio_id = [];
 // this adds a property called 'subject' and a property called 'condition' to every trial
 jsPsych.data.addProperties({
   subject: subject_id,
-  subject: subject_url,
 
   //condition: condition_assignment
 });
@@ -109,29 +106,26 @@ jsPsych.data.addProperties({
  'images/stories/paris_story/paris_story_8.png',
  'images/stories/paris_story/paris_story_9.png',
  'images/stories/paris_story/paris_story_ten.png',
- 'images/celebs/timeline_a/2_Julie_Andrews.png',
- 'images/celebs/timeline_a/3_Patrick_Stewart.png',
- 'images/celebs/timeline_a/4_Stevie_Wonder.png',
- 'images/celebs/timeline_a/5_Sean_Penn.png',
- 'images/celebs/timeline_a/6__Brooke_Shields.png',
- 'images/celebs/timeline_a/7_Tina_Fey.png',
- 'images/celebs/timeline_a/8__Pedro_Pascal.png',
- 'images/celebs/timeline_a/9_Kristen_Bell.png',
- 'images/celebs/timeline_a/ten_Jennifer_Lawrence.png',
- 'images/celebs/timeline_a/11_Timothee_Chalamet.png',
- 'images/celebs/timeline_a/12_Halle_Bailey.png',
- 'images/celebs/timeline_b/1_Muhammad_Ali.png',
- 'images/celebs/timeline_b/2_Paul_Simon.png',
- 'images/celebs/timeline_b/3_Dolly_Parton.png',
- 'images/celebs/timeline_b/4_Robin_Williams.png',
- 'images/celebs/timeline_b/5_Eddie_Murphy.png',
- 'images/celebs/timeline_b/6_Halle_Berry.png',
- 'images/celebs/timeline_b/7_Amy_Poehler.png',
- 'images/celebs/timeline_b/8_Cillian_Murphy.png',
- 'images/celebs/timeline_b/9_Jessica_Alba.png',
- 'images/celebs/timeline_b/ten_Robert_Pattinson.png',
- 'images/celebs/timeline_b/11_Emma_Robert.png',
- 'images/celebs/timeline_b/12_Billie_Eilish.png',
+ 'images/celebs/timeline_a/1_Patrick_Stewart.png',
+ 'images/celebs/timeline_a/2_Stevie_Wonder.png',
+ 'images/celebs/timeline_a/3_Sean_Penn.png',
+ 'images/celebs/timeline_a/4__Brooke_Shields.png',
+ 'images/celebs/timeline_a/5_Tina_Fey.png',
+ 'images/celebs/timeline_a/6__Pedro_Pascal.png',
+ 'images/celebs/timeline_a/7_Kristen_Bell.png',
+ 'images/celebs/timeline_a/8_Jennifer_Lawrence.png',
+ 'images/celebs/timeline_a/9_Timothee_Chalamet.png',
+ 'images/celebs/timeline_a/ten_Halle_Bailey.png',
+ 'images/celebs/timeline_b/1_Dolly_Parton.png',
+ 'images/celebs/timeline_b/2_Robin_Williams.png',
+ 'images/celebs/timeline_b/3_Eddie_Murphy.png',
+ 'images/celebs/timeline_b/4_Halle_Berry.png',
+ 'images/celebs/timeline_b/5_Amy_Poehler.png',
+ 'images/celebs/timeline_b/6_Cillian_Murphy.png',
+ 'images/celebs/timeline_b/7_Jessica_Alba.png',
+ 'images/celebs/timeline_b/8_Robert_Pattinson.png',
+ 'images/celebs/timeline_b/9_Emma_Robert.png',
+ 'images/celebs/timeline_b/ten_Billie_Eilish.png',
  'images/schemes/restaurant_scheme/restaurant_1.png',
  'images/schemes/restaurant_scheme/restaurant_2.png',
  'images/schemes/restaurant_scheme/restaurant_3.png',
@@ -155,6 +149,75 @@ jsPsych.data.addProperties({
 ]
 };
     timeline.push(preload);
+
+    
+    // capture info 
+    var subject_id = jsPsych.data.getURLVariable('participantId');
+    var study_id = jsPsych.data.getURLVariable('assignmentId');
+    var session_id = jsPsych.data.getURLVariable('projectId');
+    var urlvar = jsPsych.data.urlVariables();
+    const currentUrl = window.location.href;
+
+    jsPsych.data.addProperties({
+        subject_id: subject_id,
+        study_id: study_id,
+        session_id: session_id,
+        urlvar: urlvar,
+        current_url: currentUrl
+    });
+
+    jsPsych.data.addProperties({
+        subject: subject_id,
+    });
+
+    var trial_0 = {
+    type: jsPsychInstructions,
+    pages: [
+        '<div style="font-family: Arial; background: var(--grey); padding: 100px; padding-top: 5%; text-align: left;">' +
+        '<h2>Thank you for participating in this experiment!</h2>' +
+        '<p>By clicking the "Begin Study" button, you will be taken to the study, including complete instructions and an informed consent agreement. Before doing so, you must confirm the following:</p>' +
+        '<p>I hereby confirm that:<br>' +
+        '<input type="checkbox" id="age_checkbox" /> I am over 18 years old.</p>' +
+        '<p>Please close all other browser windows and applications, and plug in if you\'re using a laptop computer. Images in this study will not display properly otherwise.<br>' +
+        '<input type="checkbox" id="close_windows_checkbox" /> I closed all other windows and tabs.</p>' +
+        '<p>Please make sure you are performing this task in a quiet room, without any distractions.<br>' +
+        '<input type="checkbox" id="quiet_checkbox" /> I am in a quiet environment.</p>' +
+        '<p>The study includes several phases, all of which should be completed without extended breaks.<br>' +
+        '<input type="checkbox" id="no_breaks" /> I will perform all phases without extended breaks.</p>' +
+        '<br></p>' +
+        '</div>'
+    ],
+    show_clickable_nav: true,
+    on_load: function() {
+        document.querySelector('button').onclick = function() {
+            var age = document.getElementById('age_checkbox').checked;
+            var otherWin = document.getElementById('close_windows_checkbox').checked;
+            var quiet = document.getElementById('quiet_checkbox').checked;
+            var no_breaks = document.getElementById('no_breaks').checked;
+            if (age && otherWin && quiet && no_breaks) {
+                jsPsych.finishTrial();
+            } else {
+                alert("You cannot proceed without affirming these statements. If they don't apply to you, you will not be able to participate in this experiment. In that case, please return the HIT to Amazon.");
+            }
+        }
+    }
+};
+timeline.push(trial_0);
+
+
+    var trial_consent = {
+        type: jsPsychInstructions,
+        pages: [
+            '<div style="text-align:center; font-family:Arial; font-size: 22px; padding-top:20px; padding-bottom:20px">' +
+            '<p>Please carefully read the below consent form before proceeding.</p>' +
+            '<img src="consent_form_2023.png" style="max-width:80%;padding-left:50px;padding-right:50px;padding-top:20px; padding-bottom:20px; position:relative"></img>' +
+            '<p>By starting the experiment, you indicate that, having read and understood the information provided, you have decided to participate</p>' +
+            '</div>'
+        ],
+        show_clickable_nav: true
+    };
+    timeline.push(trial_consent);
+
 
     var trial_01 = {
   type: jsPsychFullscreen,
@@ -204,18 +267,16 @@ timeline.push(trial_01);
 
 
 timeline_variables: [
-        {face: 'images/celebs/timeline_a/1_Clint_Eastwood.png'},
-        {face: 'images/celebs/timeline_a/2_Julie_Andrews.png'},
-        {face: 'images/celebs/timeline_a/3_Patrick_Stewart.png'},
-        {face: 'images/celebs/timeline_a/4_Stevie_Wonder.png'},
-        {face: 'images/celebs/timeline_a/5_Sean_Penn.png'},
-        {face: 'images/celebs/timeline_a/6__Brooke_Shields.png'},
-        {face: 'images/celebs/timeline_a/7_Tina_Fey.png'},
-        {face: 'images/celebs/timeline_a/8__Pedro_Pascal.png'},
-        {face: 'images/celebs/timeline_a/9_Kristen_Bell.png'},
-        {face: 'images/celebs/timeline_a/ten_Jennifer_Lawrence.png'},
-        {face: 'images/celebs/timeline_a/11_Timothee_Chalamet.png'},
-        {face: 'images/celebs/timeline_a/12_Halle_Bailey.png'}
+        {face: 'images/celebs/timeline_a/1_Patrick_Stewart.png'},
+        {face: 'images/celebs/timeline_a/2_Stevie_Wonder.png'},
+        {face: 'images/celebs/timeline_a/3_Sean_Penn.png'},
+        {face: 'images/celebs/timeline_a/4__Brooke_Shields.png'},
+        {face: 'images/celebs/timeline_a/5_Tina_Fey.png'},
+        {face: 'images/celebs/timeline_a/6__Pedro_Pascal.png'},
+        {face: 'images/celebs/timeline_a/7_Kristen_Bell.png'},
+        {face: 'images/celebs/timeline_a/8_Jennifer_Lawrence.png'},
+        {face: 'images/celebs/timeline_a/9_Timothee_Chalamet.png'},
+        {face: 'images/celebs/timeline_a/ten_Halle_Bailey.png'}
     ],
     randomize_order: false,
 
@@ -255,18 +316,16 @@ var timeline_a_r = {
 
 
 timeline_variables: [
-        {face: 'images/celebs/timeline_a/1_Clint_Eastwood.png'},
-        {face: 'images/celebs/timeline_a/2_Julie_Andrews.png'},
-        {face: 'images/celebs/timeline_a/3_Patrick_Stewart.png'},
-        {face: 'images/celebs/timeline_a/4_Stevie_Wonder.png'},
-        {face: 'images/celebs/timeline_a/5_Sean_Penn.png'},
-        {face: 'images/celebs/timeline_a/6__Brooke_Shields.png'},
-        {face: 'images/celebs/timeline_a/7_Tina_Fey.png'},
-        {face: 'images/celebs/timeline_a/8__Pedro_Pascal.png'},
-        {face: 'images/celebs/timeline_a/9_Kristen_Bell.png'},
-        {face: 'images/celebs/timeline_a/ten_Jennifer_Lawrence.png'},
-        {face: 'images/celebs/timeline_a/11_Timothee_Chalamet.png'},
-        {face: 'images/celebs/timeline_a/12_Halle_Bailey.png'}
+        {face: 'images/celebs/timeline_a/1_Patrick_Stewart.png'},
+        {face: 'images/celebs/timeline_a/2_Stevie_Wonder.png'},
+        {face: 'images/celebs/timeline_a/3_Sean_Penn.png'},
+        {face: 'images/celebs/timeline_a/4__Brooke_Shields.png'},
+        {face: 'images/celebs/timeline_a/5_Tina_Fey.png'},
+        {face: 'images/celebs/timeline_a/6__Pedro_Pascal.png'},
+        {face: 'images/celebs/timeline_a/7_Kristen_Bell.png'},
+        {face: 'images/celebs/timeline_a/8_Jennifer_Lawrence.png'},
+        {face: 'images/celebs/timeline_a/9_Timothee_Chalamet.png'},
+        {face: 'images/celebs/timeline_a/ten_Halle_Bailey.png'}
     ],
     randomize_order: true,
 
@@ -305,18 +364,16 @@ timeline_variables: [
   }
 ],
 timeline_variables: [
-{face: 'images/celebs/timeline_b/1_Muhammad_Ali.png'},
-{face: 'images/celebs/timeline_b/2_Paul_Simon.png'},
-{face: 'images/celebs/timeline_b/3_Dolly_Parton.png'},
-{face: 'images/celebs/timeline_b/4_Robin_Williams.png'},
-{face: 'images/celebs/timeline_b/5_Eddie_Murphy.png'},
-{face: 'images/celebs/timeline_b/6_Halle_Berry.png'},
-{face: 'images/celebs/timeline_b/7_Amy_Poehler.png'},
-{face: 'images/celebs/timeline_b/8_Cillian_Murphy.png'},
-{face: 'images/celebs/timeline_b/9_Jessica_Alba.png'},
-{face: 'images/celebs/timeline_b/ten_Robert_Pattinson.png'},
-{face: 'images/celebs/timeline_b/11_Emma_Robert.png'},
-{face: 'images/celebs/timeline_b/12_Billie_Eilish.png'},
+{face: 'images/celebs/timeline_b/1_Dolly_Parton.png'},
+{face: 'images/celebs/timeline_b/2_Robin_Williams.png'},
+{face: 'images/celebs/timeline_b/3_Eddie_Murphy.png'},
+{face: 'images/celebs/timeline_b/4_Halle_Berry.png'},
+{face: 'images/celebs/timeline_b/5_Amy_Poehler.png'},
+{face: 'images/celebs/timeline_b/6_Cillian_Murphy.png'},
+{face: 'images/celebs/timeline_b/7_Jessica_Alba.png'},
+{face: 'images/celebs/timeline_b/8_Robert_Pattinson.png'},
+{face: 'images/celebs/timeline_b/9_Emma_Robert.png'},
+{face: 'images/celebs/timeline_b/ten_Billie_Eilish.png'},
     ],
     randomize_order: false,
 }
@@ -352,18 +409,16 @@ timeline_variables: [
   }
 ],
 timeline_variables: [
-{face: 'images/celebs/timeline_b/1_Muhammad_Ali.png'},
-{face: 'images/celebs/timeline_b/2_Paul_Simon.png'},
-{face: 'images/celebs/timeline_b/3_Dolly_Parton.png'},
-{face: 'images/celebs/timeline_b/4_Robin_Williams.png'},
-{face: 'images/celebs/timeline_b/5_Eddie_Murphy.png'},
-{face: 'images/celebs/timeline_b/6_Halle_Berry.png'},
-{face: 'images/celebs/timeline_b/7_Amy_Poehler.png'},
-{face: 'images/celebs/timeline_b/8_Cillian_Murphy.png'},
-{face: 'images/celebs/timeline_b/9_Jessica_Alba.png'},
-{face: 'images/celebs/timeline_b/ten_Robert_Pattinson.png'},
-{face: 'images/celebs/timeline_b/11_Emma_Robert.png'},
-{face: 'images/celebs/timeline_b/12_Billie_Eilish.png'},
+{face: 'images/celebs/timeline_b/1_Dolly_Parton.png'},
+{face: 'images/celebs/timeline_b/2_Robin_Williams.png'},
+{face: 'images/celebs/timeline_b/3_Eddie_Murphy.png'},
+{face: 'images/celebs/timeline_b/4_Halle_Berry.png'},
+{face: 'images/celebs/timeline_b/5_Amy_Poehler.png'},
+{face: 'images/celebs/timeline_b/6_Cillian_Murphy.png'},
+{face: 'images/celebs/timeline_b/7_Jessica_Alba.png'},
+{face: 'images/celebs/timeline_b/8_Robert_Pattinson.png'},
+{face: 'images/celebs/timeline_b/9_Emma_Robert.png'},
+{face: 'images/celebs/timeline_b/ten_Billie_Eilish.png'},
     ],
     randomize_order: true,
 }
@@ -762,13 +817,15 @@ function chooseRandomOption() {
 
     return selectedOption;
 }
-
 // Choose one of the specified options
 const selectedOption = chooseRandomOption();
 
 // Print the selected option
 console.log("Selected Option:", selectedOption);
 
+jsPsych.data.addProperties({
+    selected_option: selectedOption  // Adjust 'selected_option' to your preferred data key
+});
 
     var trial_03 = {
         type: jsPsychInstructions,
@@ -833,7 +890,7 @@ timeline_variables: [
         type: jsPsychInstructions,
         pages: [
 
-        '<span style="color: blue; font-size: 24px">At the end of the list, you will be asked to say out loud the images you saw. The images can be said in any order.</span>',
+        '<span style="color: black; font-size: 24px">At the end of the list, you will be asked to say out loud the specific images you saw, as many as you can remember. The images can be said in any order.</span>',
         '<span style="color: black; font-size: 24px"> Click "Next" for an example. </span>',
     
     ],
@@ -844,7 +901,7 @@ timeline_variables: [
     var trial_06 = {
     type: jsPsychHtmlAudioResponse,
     stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING</span>
-        <p>Please say out loud the list of the images you saw. The images can be said in any order.</p>`,
+        <p>Please say out loud all the images you saw, as many as you can remember. The images can be said in any order.</p>`,
     recording_duration: 55000,
     allow_playback: true,
     on_finish: function(data){
@@ -895,7 +952,7 @@ timeline.push(trial_06);
     var trial_10 = {
         type: jsPsychHtmlAudioResponse,
     stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING</span>
-        <p>Please say out loud the list of the images you saw. The images can be said in any order.</p>`,
+        <p>PPlease say out loud all the images you saw, as many as you can remember. The images can be said in any order.</p>`,
     recording_duration: 55000,
     allow_playback: true,
     on_finish: function(data){
@@ -934,7 +991,7 @@ timeline.push(trial_06);
     var trial_12 = {
         type: jsPsychHtmlAudioResponse,
     stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING</span>
-        <p>Please say out loud the list of the images you saw. The images can be said in any order.</p>`,
+        <p>Please say out loud all the images you saw, as many as you can remember. The images can be said in any order.</p>`,
     recording_duration: 55000,
     allow_playback: true,
     on_finish: function(data){
@@ -979,7 +1036,7 @@ timeline.push(shuffledArray[0],trial_10, shuffledArray[1],trial_10,shuffledArray
 var trial_10 = {
     type: jsPsychHtmlAudioResponse,
     stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING </span>
-        <p>Please say out loud the names of the celebrities you saw. The names can be said in any order.</p>`,
+        <p>Please say out loud all the images you saw, as many as you can remember. The images can be said in any order.</p>`,
     recording_duration: 15000,
     allow_playback: true,
     on_finish: function(data){
@@ -1011,7 +1068,7 @@ var trial_10 = {
     var trial_14 = {
         type: jsPsychHtmlAudioResponse,
     stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING</span>
-        <p>Please say out loud the list of the images you saw. The images can be said in any order.</p>`,
+        <p>Please say out loud all the images you saw, as many as you can remember. The images can be said in any order.</p>`,
     recording_duration: 55000,
     allow_playback: true,
     on_finish: function(data){
