@@ -968,19 +968,23 @@ jsPsych.data.addProperties({
     selected_option: selectedOption  // Adjust 'selected_option' to your preferred data key
 });
 
-    var trial_03 = {
-        type: jsPsychInstructions,
-        pages: [
-
-        '<span style="color: black; font-size: 24px"> Welcome to the experiment. Click next to begin.</span>',
-    '<span style="color: black; font-size: 24px"> In this experiment, you will see a list of images that people do on a daily basis.  </span>' +'<br/>'+ '<span style="color: black; font-size: 24px">  </span>'
-    +'<br/>'+ '<span style="color: black; font-size: 24px"> After the picture is displayed, you will be asked to answer a question related to that image presented. </span>'
-    +'<br/>'+ '<span style="color: black; font-size: 24px"> Click "Next" for an example. </span>',
-    
+var trial_03 = {
+    type: jsPsychInstructions,
+    pages: [
+        '<div style="text-align: left;">' +
+        '<span style="color: black; font-size: 24px;">Welcome to part 1 of the experiment.</span><br/>' +
+        '<span style="color: black; font-size: 24px;">Part 2 of the experiment will appear in an hour via Connect.</span><br/>' +
+        '<span style="color: red; font-size: 24px;"> Please do not continue with the experiment if you cannot participate in part 2.</span><br/>' + '<br/>' +
+        '<span style="color: black; font-size: 24px;">Click next to begin.</span><br/>',
+        '<span style="color: black; font-size: 24px;">In part 1 of the experiment, you will see a list of images that people do on a daily basis.</span><br/>' +
+        '<span style="color: black; font-size: 24px;">After the picture is displayed, you will be asked to answer a question related to that image presented.</span><br/>' +
+        '<span style="color: black; font-size: 24px;">Click "Next" for an example.</span>' +
+        '</div>',
     ],
     show_clickable_nav: true
-    };
-    timeline.push(trial_03);
+};
+timeline.push(trial_03);
+
 
     
 var trial_035 = {
@@ -1275,15 +1279,19 @@ timeline.push(trial_15);
 
 
 var trial_16 = {
-        type: jsPsychInstructions,
-        pages: [
-
-        '<span style="color: black; font-size: 24px"> You have completed the experiment.'  +'<br/>'+ 'The completion code is : AJFHBG892' +'<br/>'+  'Thank you for your participation!</span> '
-
+    type: jsPsychInstructions,
+    pages: [
+        '<div style="text-align: left;">' +
+        '<span style="color: black; font-size: 24px;">You have completed this part of the experiment.<br/>' +
+        'The completion code is: AJFHBG890<br/>' +
+        'Thank you for your participation in part 1 of the experiment!</span><br/>' +
+        '<span style="color: red; font-size: 24px;">Please come back for part 2 of the experiment in a few hours through Connect.</span>' +
+        '</div>',
     ],
     show_clickable_nav: true
-    };
-    timeline.push(trial_16);
+};
+timeline.push(trial_16);
+
 
     /* start the experiment */
     var trial_17 = {
