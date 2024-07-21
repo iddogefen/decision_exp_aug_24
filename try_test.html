@@ -170,51 +170,62 @@ timeline.push(trial_0);
     };
     timeline.push(trial_03);
 
-    // Ensure the first image is always movie_0.png and randomize the rest
-    var first_image = {face: 'images/instructions/movie_0.png'};
-    var other_images = [
+    var trial_035 = {
+        type: jsPsychImageButtonResponse,
+        stimulus:'images/instructions/movie_0.png',
+    choices: [],
+    prompt: "",
+    stimulus_width:"600",
+    stimulus_height:'600',
+    trial_duration: "4500"
+
+
+    };
+    timeline.push(trial_035);
+
+    var trial_04 = {
+    timeline: [
+
+    {
+    type: jsPsychImageButtonResponse,
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300' ,
+    choices: [],
+    prompt: "",
+    trial_duration: "4500"
+
+    },
+    {
+    type: jsPsychImageButtonResponse,
+    prompt: '<p></p>',
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300',
+    trial_duration: "2700",
+    choices: ['yes', 'no',],
+    prompt: "<p>Is there a person in the picture?</p>",  },
+  {
+    type: jsPsychImageButtonResponse,
+    stimulus: [],
+    choices: [],
+    prompt: "",
+    trial_duration: "1800"
+  }
+],
+timeline_variables: [
         {face: 'images/instructions/movie_1.png'},
         {face: 'images/instructions/movie_2.png'},
         {face: 'images/instructions/movie_3.png'},
         {face: 'images/instructions/movie_4.png'},
-    ];
+        
 
-    var shuffled_images = jsPsych.randomization.shuffle(other_images);
-    var all_images = [first_image].concat(shuffled_images);
 
-    var trial_04 = {
-        timeline: [
-            {
-                type: jsPsychImageButtonResponse,
-                stimulus: jsPsych.timelineVariable('face'),
-                stimulus_width:"300",
-                stimulus_height:'300' ,
-                choices: [],
-                prompt: "",
-                trial_duration: "4500"
-            },
-            {
-                type: jsPsychImageButtonResponse,
-                prompt: '<p></p>',
-                stimulus: jsPsych.timelineVariable('face'),
-                stimulus_width:"300",
-                stimulus_height:'300',
-                trial_duration: "2700",
-                choices: ['yes', 'no',],
-                prompt: "<p>Is there a person in the picture?</p>",
-            },
-            {
-                type: jsPsychImageButtonResponse,
-                stimulus: [],
-                choices: [],
-                prompt: "",
-                trial_duration: "1800"
-            }
-        ],
-        timeline_variables: all_images,
-        randomize_order: false,  // disable randomize_order to maintain the custom order
-    };
+    ],
+
+}
     timeline.push(trial_04);
+
 
     var trial_15 = {
         type: jsPsychSurveyText,
