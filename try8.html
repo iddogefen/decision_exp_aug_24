@@ -976,7 +976,7 @@ var trial_03 = {
         '<span style="color: black; font-size: 24px;">Part 2 of the experiment will appear 24 hours from now via Connect.</span><br/>' +
         '<span style="color: red; font-size: 24px;"> Please do not continue with the experiment if you cannot participate in part 2.</span><br/>' + '<br/>' +
         '<span style="color: black; font-size: 24px;">Click next to begin.</span><br/>',
-        '<span style="color: black; font-size: 24px;">In part 1 of the experiment, you will see a list of images that people do on a daily basis.</span><br/>' +
+        '<span style="color: black; font-size: 24px;">In part 1 of the experiment, you will see series of images depicting activities that people do on a daily basis.</span><br/>' +
         '<span style="color: black; font-size: 24px;">After the picture is displayed, you will be asked to answer a question related to that image presented.</span><br/>' +
         '<span style="color: black; font-size: 24px;">Click "Next" for an example.</span>' +
         '</div>',
@@ -1051,7 +1051,7 @@ timeline_variables: [
         type: jsPsychInstructions,
         pages: [
 
-        '<span style="color: black; font-size: 24px">At the end of the list, you will be asked to say out loud the specific images you saw, as many as you can remember. The images can be said in any order.</span>',
+        '<span style="color: black; font-size: 24px">At the end of the series, you will be asked to say out loud all the specific images you saw, as many as you can remember. The images can be said in any order.</span>',
         '<span style="color: black; font-size: 24px"> Click "Next" for an example. </span>',
     
     ],
@@ -1113,7 +1113,7 @@ timeline.push(trial_06);
     var trial_10 = {
         type: jsPsychHtmlAudioResponse,
     stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING</span>
-        <p>PPlease say out loud all the images you saw, as many as you can remember. The images can be said in any order.</p>`,
+        <p>Please say out loud all the images you saw, as many as you can remember. The images can be said in any order.</p>`,
     recording_duration: 55000,
     allow_playback: true,
     on_finish: function(data){
