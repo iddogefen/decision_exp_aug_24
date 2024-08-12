@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <style>
+        .hide_cursor {
+            cursor: none;
+        }
+        </style>
+
+    <title>My experiment</title>
+    <script src="jspsych/plugins/jspsych.js"></script>
+    <!--<script src="jspsych/plugins/jspsych-order.js"></script>-->
+    <script src="jspsych/plugins/plugin-instructions.js"></script>
+    <script src="jspsych/plugins/plugin-survey-text.js"></script>
+    <script src="jspsych/plugins/plugin-html-keyboard-response.js"></script>
+    <script src="jspsych/plugins/plugin-image-button-response.js"></script>
+    <script src="jspsych/plugins/plugin-image-keyboard-response.js"></script>
+    <script src="jspsych/plugins/plugin-html-audio-response.js"></script>
+    <script src="jspsych/plugins/plugin-initialize-microphone.js"></script>
+    <script src="jspsych/plugins/plugin-fullscreen.js"></script>
+    <script src="jspsych/plugins/plugin-preload.js"></script>
+    <script src="jspsych/plugins/plugin-browser-check.js"></script>
+
+    <script src="Tools/Functions.js"></script>
+
+
+    <link rel="stylesheet" href="jspsych/css/jspsych.css">
+  </head>
+  <body></body>
+  <script>
+
+//var data_folder             = 'data/Individual_data/'
+var data_folder             = 'data/'
+
+var int_data_folder         = 'data/Interactive_data/'
+var tools_folder            = 'Tools'
+
+    /* initialize jsPsych */
+    var jsPsych = initJsPsych({
+      on_finish: function() {
+        saveData(data_folder+'All_data/all_data_sub_'+subject_id+".csv", jsPsych.data.get().csv());
+        //jsPsych.data.get().localSave('csv','mydata.csv');
+
+      }
+    });
+
+    /* create timeline */
+var timeline = [];
+
+    // generate a random subject ID with 15 characters
+var subject_id = jsPsych.randomization.randomID(15);
+
+// pick a random condition for the subject at the start of the experiment
+//var condition_assignment = jsPsych.randomization.sampleWithoutReplacement(['conditionA', 'conditionB', 'conditionC'], 1)[0];
+
+
+function getRandomCondition() {
+    const conditions = ['linear', 'nonlinear', 'noOrder'];
+    const randomIndex = Math.floor(Math.random() * conditions.length);
+    return conditions[randomIndex];
+}
+
+function chooseRandomItems(list, condition, count) {
+    const items = list[condition];
+    if (condition === 'linear') {
+        // If the condition is 'linear', keep the original order
+        return items.slice(0, count).map(item => ({ condition, path: item }));
+    } else {
+        // If the condition is not 'linear', shuffle the items
+        const shuffledItems = items.sort(() => Math.random() - 0.5).slice(0, count);
+        return shuffledItems.map(item => ({ condition, path: item }));
+    }
+}
+var list0 = [
+    'images/instructions/movie_1.png',
+    'images/instructions/movie_2.png',
+    'images/instructions/movie_3.png',
+    'images/instructions/movie_4.png',
+];
+
+var audio_id = [];
+
+// this adds a property called 'subject' and a property called 'condition' to every trial
+jsPsych.data.addProperties({
+  subject: subject_id,
+
+  //condition: condition_assignment
+});
+
+
+    /* preload images */
+    var preload = {
+      type: jsPsychPreload,
+      images:
+['images/instructions/movie_0.png',
+ 'images/instructions/movie_1.png',
+ 'images/instructions/movie_2.png',
+ 'images/instructions/movie_3.png',
+ 'images/instructions/movie_4.png',
+ 'images/stories/paris_story/paris_story_0.png',
+ 'images/stories/paris_story/paris_story_1.png',
+ 'images/stories/paris_story/paris_story_2.png',
+ 'images/stories/paris_story/paris_story_3.png',
+ 'images/stories/paris_story/paris_story_4.png',
+ 'images/stories/paris_story/paris_story_5.png',
+ 'images/stories/paris_story/paris_story_6.png',
+ 'images/stories/paris_story/paris_story_7.png',
+ 'images/stories/paris_story/paris_story_8.png',
+ 'images/stories/paris_story/paris_story_9.png',
+ 'images/stories/paris_story/paris_story_ten.png',
+ 'images/celebs/timeline_a/0_celebs_a.png',
+ 'images/celebs/timeline_a/1_Patrick_Stewart.png',
+ 'images/celebs/timeline_a/2_Stevie_Wonder.png',
+ 'images/celebs/timeline_a/3_Sean_Penn.png',
+ 'images/celebs/timeline_a/4__Brooke_Shields.png',
+ 'images/celebs/timeline_a/5_Tina_Fey.png',
+ 'images/celebs/timeline_a/6__Pedro_Pascal.png',
+ 'images/celebs/timeline_a/7_Kristen_Bell.png',
+ 'images/celebs/timeline_a/8_Jennifer_Lawrence.png',
+ 'images/celebs/timeline_a/9_Timothee_Chalamet.png',
+ 'images/celebs/timeline_a/ten_Halle_Bailey.png',
+ 'images/celebs/timeline_b/0_celebs_b.png',
+ 'images/celebs/timeline_b/1_Dolly_Parton.png',
+ 'images/celebs/timeline_b/2_Robin_Williams.png',
+ 'images/celebs/timeline_b/3_Eddie_Murphy.png',
+ 'images/celebs/timeline_b/4_Halle_Berry.png',
+ 'images/celebs/timeline_b/5_Amy_Poehler.png',
+ 'images/celebs/timeline_b/6_Cillian_Murphy.png',
+ 'images/celebs/timeline_b/7_Jessica_Alba.png',
+ 'images/celebs/timeline_b/8_Robert_Pattinson.png',
+ 'images/celebs/timeline_b/9_Emma_Robert.png',
+ 'images/celebs/timeline_b/ten_Billie_Eilish.png',
+ 'images/schemes/restaurant_scheme/restaurant_0.png',
+ 'images/schemes/restaurant_scheme/restaurant_1.png',
+ 'images/schemes/restaurant_scheme/restaurant_2.png',
+ 'images/schemes/restaurant_scheme/restaurant_3.png',
+ 'images/schemes/restaurant_scheme/restaurant_4.png',
+ 'images/schemes/restaurant_scheme/restaurant_5.png',
+ 'images/schemes/restaurant_scheme/restaurant_6.png',
+ 'images/schemes/restaurant_scheme/restaurant_7.png',
+ 'images/schemes/restaurant_scheme/restaurant_8.png',
+ 'images/schemes/restaurant_scheme/restaurant_9.png',
+ 'images/schemes/restaurant_scheme/restaurant_ten.png',
+ 'images/schemes/flight_scheme/flight_0.png',
+ 'images/schemes/flight_scheme/flight_1.png',
+ 'images/schemes/flight_scheme/flight_2.png',
+ 'images/schemes/flight_scheme/flight_3.png',
+ 'images/schemes/flight_scheme/flight_4.png',
+ 'images/schemes/flight_scheme/flight_5.png',
+ 'images/schemes/flight_scheme/flight_6.png',
+ 'images/schemes/flight_scheme/flight_7.png',
+ 'images/schemes/flight_scheme/flight_8.png',
+ 'images/schemes/flight_scheme/flight_9.png',
+ 'images/schemes/flight_scheme/flight_ten.png'
+]
+};
+    timeline.push(preload);
+
+    
+    // capture info 
+    var subject_id = jsPsych.data.getURLVariable('participantId');
+    var study_id = jsPsych.data.getURLVariable('assignmentId');
+    var session_id = jsPsych.data.getURLVariable('projectId');
+    var urlvar = jsPsych.data.urlVariables();
+    const currentUrl = window.location.href;
+
+    jsPsych.data.addProperties({
+        subject_id: subject_id,
+        study_id: study_id,
+        session_id: session_id,
+        urlvar: urlvar,
+        current_url: currentUrl
+    });
+
+    jsPsych.data.addProperties({
+        subject: subject_id,
+    });
+
+    var trial_0 = {
+    type: jsPsychInstructions,
+    pages: [
+        '<div style="font-family: Arial; background: var(--grey); padding: 100px; padding-top: 5%; text-align: left;">' +
+        '<h2>Thank you for participating in this experiment!</h2>' +
+        '<p>By clicking the "Begin Study" button, you will be taken to the study, including complete instructions and an informed consent agreement. Before doing so, you must confirm the following:</p>' +
+        '<p>I hereby confirm that:<br>' +
+        '<input type="checkbox" id="age_checkbox" /> I am over 18 years old.</p>' +
+        '<p>Please close all other browser windows and applications, and plug in if you\'re using a laptop computer. Images in this study will not display properly otherwise.<br>' +
+        '<input type="checkbox" id="close_windows_checkbox" /> I closed all other windows and tabs.</p>' +
+        '<p>Please make sure you are performing this task in a quiet room, without any distractions.<br>' +
+        '<input type="checkbox" id="quiet_checkbox" /> I am in a quiet environment.</p>' +
+        '<p>The study includes several phases, all of which should be completed without extended breaks.<br>' +
+        '<input type="checkbox" id="no_breaks" /> I will perform all phases without extended breaks.</p>' +
+        '<br></p>' +
+        '</div>'
+    ],
+    show_clickable_nav: true,
+    on_load: function() {
+        document.querySelector('button').onclick = function() {
+            var age = document.getElementById('age_checkbox').checked;
+            var otherWin = document.getElementById('close_windows_checkbox').checked;
+            var quiet = document.getElementById('quiet_checkbox').checked;
+            var no_breaks = document.getElementById('no_breaks').checked;
+            if (age && otherWin && quiet && no_breaks) {
+                jsPsych.finishTrial();
+            } else {
+                alert("You cannot proceed without affirming these statements. If they don't apply to you, you will not be able to participate in this experiment. In that case, please return the HIT to Amazon.");
+            }
+        }
+    }
+};
+timeline.push(trial_0);
+
+
+    var trial_consent = {
+        type: jsPsychInstructions,
+        pages: [
+            '<div style="text-align:center; font-family:Arial; font-size: 22px; padding-top:20px; padding-bottom:20px">' +
+            '<p>Please carefully read the below consent form before proceeding.</p>' +
+            '<img src="consent_form_2022.png" style="max-width:80%;padding-left:50px;padding-right:50px;padding-top:20px; padding-bottom:20px; position:relative"></img>' +
+            '<p>By starting the experiment, you indicate that, having read and understood the information provided, you have decided to participate</p>' +
+            '</div>'
+        ],
+        show_clickable_nav: true
+    };
+    timeline.push(trial_consent);
+
+
+    var trial_01 = {
+  type: jsPsychFullscreen,
+  fullscreen_mode: true
+}
+
+  /* create timeline */
+timeline.push(trial_01);
+
+
+    var trial_02 = {
+        type: jsPsychInitializeMicrophone
+    };
+    timeline.push(trial_02);
+
+    
+    var timeline_a_l = {
+  timeline: [
+    {
+      type: jsPsychImageButtonResponse,
+      stimulus: 'images/celebs/timeline_a/0_celebs_a.png',
+      stimulus_width: "600",
+      stimulus_height: '600',
+      choices: [],
+      prompt: "",
+      trial_duration: "6000"
+    },
+    {
+      timeline: [
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          choices: [],
+          prompt: "",
+          trial_duration: "4500"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          prompt: '<p></p>',
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          trial_duration: "4000",
+          choices: ['odd', 'even'],
+          prompt: "<p>Is the year of birth odd or even?</p>"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: [],
+          choices: [],
+          prompt: "",
+          trial_duration: "1800"
+        }
+      ],
+      timeline_variables: [
+        {face: 'images/celebs/timeline_a/1_Patrick_Stewart.png'},
+        {face: 'images/celebs/timeline_a/2_Stevie_Wonder.png'},
+        {face: 'images/celebs/timeline_a/3_Sean_Penn.png'},
+        {face: 'images/celebs/timeline_a/4__Brooke_Shields.png'},
+        {face: 'images/celebs/timeline_a/5_Tina_Fey.png'},
+        {face: 'images/celebs/timeline_a/6__Pedro_Pascal.png'},
+        {face: 'images/celebs/timeline_a/7_Kristen_Bell.png'},
+        {face: 'images/celebs/timeline_a/8_Jennifer_Lawrence.png'},
+        {face: 'images/celebs/timeline_a/9_Timothee_Chalamet.png'},
+        {face: 'images/celebs/timeline_a/ten_Halle_Bailey.png'}
+      ],
+      randomize_order: false
+    }
+  ]
+};
+
+var timeline_a_r = {
+  timeline: [
+    {
+      type: jsPsychImageButtonResponse,
+      stimulus: 'images/celebs/timeline_a/0_celebs_a.png',
+      stimulus_width: "600",
+      stimulus_height: '600',
+      choices: [],
+      prompt: "",
+      trial_duration: "6000"
+    },
+    {
+      timeline: [
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          choices: [],
+          prompt: "",
+          trial_duration: "4500"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          prompt: '<p></p>',
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          trial_duration: "4000",
+          choices: ['odd', 'even'],
+          prompt: "<p>Is the year of birth odd or even?</p>"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: [],
+          choices: [],
+          prompt: "",
+          trial_duration: "1800"
+        }
+      ],
+      timeline_variables: [
+        {face: 'images/celebs/timeline_a/1_Patrick_Stewart.png'},
+        {face: 'images/celebs/timeline_a/2_Stevie_Wonder.png'},
+        {face: 'images/celebs/timeline_a/3_Sean_Penn.png'},
+        {face: 'images/celebs/timeline_a/4__Brooke_Shields.png'},
+        {face: 'images/celebs/timeline_a/5_Tina_Fey.png'},
+        {face: 'images/celebs/timeline_a/6__Pedro_Pascal.png'},
+        {face: 'images/celebs/timeline_a/7_Kristen_Bell.png'},
+        {face: 'images/celebs/timeline_a/8_Jennifer_Lawrence.png'},
+        {face: 'images/celebs/timeline_a/9_Timothee_Chalamet.png'},
+        {face: 'images/celebs/timeline_a/ten_Halle_Bailey.png'}
+      ],
+      randomize_order: true
+    }
+  ]
+};
+
+var timeline_b_l = {
+  timeline: [
+    {
+      type: jsPsychImageButtonResponse,
+      stimulus: 'images/celebs/timeline_b/0_celebs_b.png',
+      stimulus_width: "600",
+      stimulus_height: '600',
+      choices: [],
+      prompt: "",
+      trial_duration: "6000"
+    },
+    {
+      timeline: [
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          choices: [],
+          prompt: "",
+          trial_duration: "4500"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          prompt: '<p></p>',
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          trial_duration: "4000",
+          choices: ['odd', 'even'],
+          prompt: "<p>Is the year of birth odd or even?</p>"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: [],
+          choices: [],
+          prompt: "",
+          trial_duration: "1800"
+        }
+      ],
+      timeline_variables: [
+        {face: 'images/celebs/timeline_b/1_Dolly_Parton.png'},
+        {face: 'images/celebs/timeline_b/2_Robin_Williams.png'},
+        {face: 'images/celebs/timeline_b/3_Eddie_Murphy.png'},
+        {face: 'images/celebs/timeline_b/4_Halle_Berry.png'},
+        {face: 'images/celebs/timeline_b/5_Amy_Poehler.png'},
+        {face: 'images/celebs/timeline_b/6_Cillian_Murphy.png'},
+        {face: 'images/celebs/timeline_b/7_Jessica_Alba.png'},
+        {face: 'images/celebs/timeline_b/8_Robert_Pattinson.png'},
+        {face: 'images/celebs/timeline_b/9_Emma_Robert.png'},
+        {face: 'images/celebs/timeline_b/ten_Billie_Eilish.png'}
+      ],
+      randomize_order: false
+    }
+  ]
+};
+
+var timeline_b_r = {
+  timeline: [
+    {
+      type: jsPsychImageButtonResponse,
+      stimulus: 'images/celebs/timeline_b/0_celebs_b.png',
+      stimulus_width: "600",
+      stimulus_height: '600',
+      choices: [],
+      prompt: "",
+      trial_duration: "6000"
+    },
+    {
+      timeline: [
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          choices: [],
+          prompt: "",
+          trial_duration: "4500"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          prompt: '<p></p>',
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          trial_duration: "4000",
+          choices: ['odd', 'even'],
+          prompt: "<p>Is the year of birth odd or even?</p>"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: [],
+          choices: [],
+          prompt: "",
+          trial_duration: "1800"
+        }
+      ],
+      timeline_variables: [
+        {face: 'images/celebs/timeline_b/1_Dolly_Parton.png'},
+        {face: 'images/celebs/timeline_b/2_Robin_Williams.png'},
+        {face: 'images/celebs/timeline_b/3_Eddie_Murphy.png'},
+        {face: 'images/celebs/timeline_b/4_Halle_Berry.png'},
+        {face: 'images/celebs/timeline_b/5_Amy_Poehler.png'},
+        {face: 'images/celebs/timeline_b/6_Cillian_Murphy.png'},
+        {face: 'images/celebs/timeline_b/7_Jessica_Alba.png'},
+        {face: 'images/celebs/timeline_b/8_Robert_Pattinson.png'},
+        {face: 'images/celebs/timeline_b/9_Emma_Robert.png'},
+        {face: 'images/celebs/timeline_b/ten_Billie_Eilish.png'}
+      ],
+      randomize_order: true
+    }
+  ]
+};
+
+
+var restaurant_scheme_l = {
+  timeline: [
+    {
+      type: jsPsychImageButtonResponse,
+      stimulus: 'images/schemes/restaurant_scheme/restaurant_0.png',
+      stimulus_width: "600",
+      stimulus_height: '600',
+      choices: [],
+      prompt: "",
+      trial_duration: "6000"
+    },
+    {
+      timeline: [
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          choices: [],
+          prompt: "",
+          trial_duration: "4500"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          prompt: '<p></p>',
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          trial_duration: "4000",
+          choices: ['yes', 'no'],
+          prompt: "<p>Is there a person in the picture?</p>"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: [],
+          choices: [],
+          prompt: "",
+          trial_duration: "1800"
+        }
+      ],
+      timeline_variables: [
+        {face: 'images/schemes/restaurant_scheme/restaurant_1.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_2.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_3.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_4.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_5.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_6.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_7.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_8.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_9.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_ten.png'}
+      ],
+      randomize_order: false
+    }
+  ]
+};
+
+
+var restaurant_scheme_r = {
+  timeline: [
+    {
+      type: jsPsychImageButtonResponse,
+      stimulus: 'images/schemes/restaurant_scheme/restaurant_0.png',
+      stimulus_width: "600",
+      stimulus_height: '600',
+      choices: [],
+      prompt: "",
+      trial_duration: "6000"
+    },
+    {
+      timeline: [
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          choices: [],
+          prompt: "",
+          trial_duration: "4500"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          prompt: '<p></p>',
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          trial_duration: "4000",
+          choices: ['yes', 'no'],
+          prompt: "<p>Is there a person in the picture?</p>"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: [],
+          choices: [],
+          prompt: "",
+          trial_duration: "1800"
+        }
+      ],
+      timeline_variables: [
+        {face: 'images/schemes/restaurant_scheme/restaurant_1.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_2.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_3.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_4.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_5.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_6.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_7.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_8.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_9.png'},
+        {face: 'images/schemes/restaurant_scheme/restaurant_ten.png'}
+      ],
+      randomize_order: true
+    }
+  ]
+};
+
+
+
+var flight_scheme_l = {
+  timeline: [
+    {
+      type: jsPsychImageButtonResponse,
+      stimulus: 'images/schemes/flight_scheme/flight_0.png',
+      stimulus_width: "600",
+      stimulus_height: '600',
+      choices: [],
+      prompt: "",
+      trial_duration: "6000"
+    },
+    {
+      timeline: [
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          choices: [],
+          prompt: "",
+          trial_duration: "4500"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          prompt: '<p></p>',
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          trial_duration: "4000",
+          choices: ['yes', 'no'],
+          prompt: "<p>Is there a person in the picture?</p>"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: [],
+          choices: [],
+          prompt: "",
+          trial_duration: "1800"
+        }
+      ],
+      timeline_variables: [
+        {face: 'images/schemes/flight_scheme/flight_1.png'},
+        {face: 'images/schemes/flight_scheme/flight_2.png'},
+        {face: 'images/schemes/flight_scheme/flight_3.png'},
+        {face: 'images/schemes/flight_scheme/flight_4.png'},
+        {face: 'images/schemes/flight_scheme/flight_5.png'},
+        {face: 'images/schemes/flight_scheme/flight_7.png'},
+        {face: 'images/schemes/flight_scheme/flight_8.png'},
+        {face: 'images/schemes/flight_scheme/flight_9.png'},
+        {face: 'images/schemes/flight_scheme/flight_ten.png'}
+      ],
+      randomize_order: false
+    }
+  ]
+};
+
+
+var flight_scheme_r = {
+  timeline: [
+    {
+      type: jsPsychImageButtonResponse,
+      stimulus: 'images/schemes/flight_scheme/flight_0.png',
+      stimulus_width: "600",
+      stimulus_height: '600',
+      choices: [],
+      prompt: "",
+      trial_duration: "6000"
+    },
+    {
+      timeline: [
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          choices: [],
+          prompt: "",
+          trial_duration: "4500"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          prompt: '<p></p>',
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          trial_duration: "4000",
+          choices: ['yes', 'no'],
+          prompt: "<p>Is there a person in the picture?</p>"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: [],
+          choices: [],
+          prompt: "",
+          trial_duration: "1800"
+        }
+      ],
+      timeline_variables: [
+        {face: 'images/schemes/flight_scheme/flight_1.png'},
+        {face: 'images/schemes/flight_scheme/flight_2.png'},
+        {face: 'images/schemes/flight_scheme/flight_3.png'},
+        {face: 'images/schemes/flight_scheme/flight_4.png'},
+        {face: 'images/schemes/flight_scheme/flight_5.png'},
+        {face: 'images/schemes/flight_scheme/flight_7.png'},
+        {face: 'images/schemes/flight_scheme/flight_8.png'},
+        {face: 'images/schemes/flight_scheme/flight_9.png'},
+        {face: 'images/schemes/flight_scheme/flight_ten.png'}
+      ],
+      randomize_order: true
+    }
+  ]
+};
+
+var market_story_l = {
+  timeline: [
+    {
+      type: jsPsychImageButtonResponse,
+      stimulus: 'images/stories/market_story/market_story_0.png',
+      stimulus_width: "600",
+      stimulus_height: '600',
+      choices: [],
+      prompt: "",
+      trial_duration: "6000"
+    },
+    {
+      timeline: [
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          choices: [],
+          prompt: "",
+          trial_duration: "4500"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          prompt: '<p></p>',
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          trial_duration: "4000",
+          choices: ['yes', 'no'],
+          prompt: "<p>Is there a person in the picture?</p>"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: [],
+          choices: [],
+          prompt: "",
+          trial_duration: "1800"
+        }
+      ],
+      timeline_variables: [
+        {face: 'images/stories/market_story/market_story_1.png'},
+        {face: 'images/stories/market_story/market_story_2.png'},
+        {face: 'images/stories/market_story/market_story_3.png'},
+        {face: 'images/stories/market_story/market_story_4.png'},
+        {face: 'images/stories/market_story/market_story_5.png'},
+        {face: 'images/stories/market_story/market_story_6.png'},
+        {face: 'images/stories/market_story/market_story_7.png'},
+        {face: 'images/stories/market_story/market_story_8.png'},
+        {face: 'images/stories/market_story/market_story_9.png'},
+        {face: 'images/stories/market_story/market_story_ten.png'}
+      ],
+      randomize_order: false
+    }
+  ]
+};
+
+var market_story_r = {
+  timeline: [
+    {
+      type: jsPsychImageButtonResponse,
+      stimulus: 'images/stories/market_story/market_story_0.png',
+      stimulus_width: "600",
+      stimulus_height: '600',
+      choices: [],
+      prompt: "",
+      trial_duration: "6000"
+    },
+    {
+      timeline: [
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          choices: [],
+          prompt: "",
+          trial_duration: "4500"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          prompt: '<p></p>',
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          trial_duration: "4000",
+          choices: ['yes', 'no'],
+          prompt: "<p>Is there a person in the picture?</p>"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: [],
+          choices: [],
+          prompt: "",
+          trial_duration: "1800"
+        }
+      ],
+      timeline_variables: [
+        {face: 'images/stories/market_story/market_story_1.png'},
+        {face: 'images/stories/market_story/market_story_2.png'},
+        {face: 'images/stories/market_story/market_story_3.png'},
+        {face: 'images/stories/market_story/market_story_4.png'},
+        {face: 'images/stories/market_story/market_story_5.png'},
+        {face: 'images/stories/market_story/market_story_6.png'},
+        {face: 'images/stories/market_story/market_story_7.png'},
+        {face: 'images/stories/market_story/market_story_8.png'},
+        {face: 'images/stories/market_story/market_story_9.png'},
+        {face: 'images/stories/market_story/market_story_ten.png'}
+      ],
+      randomize_order: true
+    }
+  ]
+};
+
+var paris_story_l = {
+  timeline: [
+    {
+      type: jsPsychImageButtonResponse,
+      stimulus: 'images/stories/paris_story/paris_story_0.png',
+      stimulus_width: "600",
+      stimulus_height: '600',
+      choices: [],
+      prompt: "",
+      trial_duration: "6000"
+    },
+    {
+      timeline: [
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          choices: [],
+          prompt: "",
+          trial_duration: "4500"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          prompt: '<p></p>',
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          trial_duration: "4000",
+          choices: ['yes', 'no'],
+          prompt: "<p>Is there a person in the picture?</p>"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: [],
+          choices: [],
+          prompt: "",
+          trial_duration: "1800"
+        }
+      ],
+      timeline_variables: [
+        {face: 'images/stories/paris_story/paris_story_1.png'},
+        {face: 'images/stories/paris_story/paris_story_2.png'},
+        {face: 'images/stories/paris_story/paris_story_3.png'},
+        {face: 'images/stories/paris_story/paris_story_4.png'},
+        {face: 'images/stories/paris_story/paris_story_5.png'},
+        {face: 'images/stories/paris_story/paris_story_6.png'},
+        {face: 'images/stories/paris_story/paris_story_8.png'},
+        {face: 'images/stories/paris_story/paris_story_9.png'},
+        {face: 'images/stories/paris_story/paris_story_ten.png'}
+      ],
+      randomize_order: false
+    }
+  ]
+};
+
+var paris_story_r = {
+  timeline: [
+    {
+      type: jsPsychImageButtonResponse,
+      stimulus: 'images/stories/paris_story/paris_story_0.png',
+      stimulus_width: "600",
+      stimulus_height: '600',
+      choices: [],
+      prompt: "",
+      trial_duration: "6000"
+    },
+    {
+      timeline: [
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          choices: [],
+          prompt: "",
+          trial_duration: "4500"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          prompt: '<p></p>',
+          stimulus: jsPsych.timelineVariable('face'),
+          stimulus_width: "300",
+          stimulus_height: '300',
+          trial_duration: "4000",
+          choices: ['yes', 'no'],
+          prompt: "<p>Is there a person in the picture?</p>"
+        },
+        {
+          type: jsPsychImageButtonResponse,
+          stimulus: [],
+          choices: [],
+          prompt: "",
+          trial_duration: "1800"
+        }
+      ],
+      timeline_variables: [
+        {face: 'images/stories/paris_story/paris_story_1.png'},
+        {face: 'images/stories/paris_story/paris_story_2.png'},
+        {face: 'images/stories/paris_story/paris_story_3.png'},
+        {face: 'images/stories/paris_story/paris_story_4.png'},
+        {face: 'images/stories/paris_story/paris_story_5.png'},
+        {face: 'images/stories/paris_story/paris_story_6.png'},
+        {face: 'images/stories/paris_story/paris_story_8.png'},
+        {face: 'images/stories/paris_story/paris_story_9.png'},
+        {face: 'images/stories/paris_story/paris_story_ten.png'}
+      ],
+      randomize_order: true
+    }
+  ]
+};
+
+
+// Function to randomly select one of the specified options
+function chooseRandomOption() {
+    const options = [
+[timeline_a_l, timeline_b_r, flight_scheme_l, restaurant_scheme_r, paris_story_l, market_story_r],
+[timeline_b_l, timeline_a_r, flight_scheme_l, restaurant_scheme_r, paris_story_l, market_story_r],
+[flight_scheme_l, restaurant_scheme_r, timeline_a_r, timeline_b_l, paris_story_l, market_story_r],
+[restaurant_scheme_l, flight_scheme_r, timeline_a_r, timeline_b_l, paris_story_l, market_story_r],
+[paris_story_l, market_story_r, timeline_a_r, timeline_b_l, flight_scheme_l, restaurant_scheme_r],
+[market_story_l, paris_story_r, timeline_a_r, timeline_b_l, flight_scheme_l, restaurant_scheme_r],
+[flight_scheme_r, restaurant_scheme_l, timeline_a_r, timeline_b_l, paris_story_l, market_story_r],
+[flight_scheme_r, timeline_a_l, timeline_b_r, restaurant_scheme_l, paris_story_l, market_story_r],
+[flight_scheme_r, timeline_b_l, timeline_a_r, restaurant_scheme_l, paris_story_l, market_story_r],
+[market_story_l, timeline_a_r, timeline_b_l, flight_scheme_r, restaurant_scheme_l, paris_story_r],
+[market_story_l, timeline_b_r, timeline_a_l, flight_scheme_r, restaurant_scheme_l, paris_story_r],
+[paris_story_r, timeline_a_l, timeline_b_r, flight_scheme_l, restaurant_scheme_r, market_story_l],
+[paris_story_r, timeline_b_l, timeline_a_r, flight_scheme_l, restaurant_scheme_r, market_story_l],
+[timeline_a_l, flight_scheme_r, timeline_b_r, restaurant_scheme_l, paris_story_r, market_story_l],
+[timeline_b_l, flight_scheme_r, timeline_a_r, restaurant_scheme_l, paris_story_r, market_story_l],
+[timeline_a_l, timeline_b_r, flight_scheme_r, restaurant_scheme_l, paris_story_r, market_story_l],
+[timeline_b_l, timeline_a_r, flight_scheme_r, restaurant_scheme_l, paris_story_r, market_story_l],
+[timeline_b_r, timeline_a_l, flight_scheme_l, restaurant_scheme_r, paris_story_r, market_story_l]
+];
+    // Randomly select one option
+    const selectedOption = jsPsych.randomization.shuffle(options)[0];
+
+    return selectedOption;
+}
+// Choose one of the specified options
+const selectedOption = chooseRandomOption();
+
+// Print the selected option
+console.log("Selected Option:", selectedOption);
+
+jsPsych.data.addProperties({
+    selected_option: selectedOption  // Adjust 'selected_option' to your preferred data key
+});
+
+var trial_03 = {
+    type: jsPsychInstructions,
+    pages: [
+        '<div style="text-align: left;">' +
+        '<span style="color: black; font-size: 24px;">Welcome to part 1 of the experiment.</span><br/>' +
+        '<span style="color: black; font-size: 24px;">Part 2 of the experiment will appear 24 hours from now via Connect.</span><br/>' +
+        '<span style="color: red; font-size: 24px;"> Please do not continue with the experiment if you cannot participate in part 2.</span><br/>' + '<br/>' +
+        '<span style="color: black; font-size: 24px;">Click next to begin.</span><br/>',
+        '<span style="color: black; font-size: 24px;">In part 1 of the experiment, you will see series of images depicting activities that people do on a daily basis.</span><br/>' +
+        '<span style="color: black; font-size: 24px;">After the picture is displayed, you will be asked to answer a question related to that image presented.</span><br/>' +
+        '<span style="color: black; font-size: 24px;">Click "Next" for an example.</span>' +
+        '</div>',
+    ],
+    show_clickable_nav: true
+};
+timeline.push(trial_03);
+
+
+    
+var trial_035 = {
+        type: jsPsychImageButtonResponse,
+        stimulus:'images/instructions/movie_0.png',
+    choices: [],
+    prompt: "",
+    stimulus_width:"600",
+    stimulus_height:'600',
+    trial_duration: "6000"
+
+
+    };
+    timeline.push(trial_035);
+
+
+    var trial_04 = {
+    timeline: [
+
+    {
+    type: jsPsychImageButtonResponse,
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300' ,
+    choices: [],
+    prompt: "",
+    trial_duration: "4500"
+
+    },
+    {
+    type: jsPsychImageButtonResponse,
+    prompt: '<p></p>',
+    stimulus: jsPsych.timelineVariable('face'),
+    stimulus_width:"300",
+    stimulus_height:'300',
+    trial_duration: "4000",
+    choices: ['yes', 'no',],
+    prompt: "<p>Is there a person in the picture?</p>",  },
+  {
+    type: jsPsychImageButtonResponse,
+    stimulus: [],
+    choices: [],
+    prompt: "",
+    trial_duration: "1800"
+  }
+],
+timeline_variables: [
+        {face: 'images/instructions/movie_1.png'},
+        {face: 'images/instructions/movie_2.png'},
+        {face: 'images/instructions/movie_3.png'},
+        {face: 'images/instructions/movie_4.png'},
+        
+
+
+    ],
+
+}
+
+
+    timeline.push(trial_04);
+
+    
+    var trial_05 = {
+        type: jsPsychInstructions,
+        pages: [
+
+        '<span style="color: black; font-size: 24px">At the end of the series, you will be asked to say out loud all the specific images you saw, as many as you can remember. The images can be said in any order.</span>',
+        '<span style="color: black; font-size: 24px"> Click "Next" for an example. </span>',
+    
+    ],
+    show_clickable_nav: true
+    };
+    timeline.push(trial_05);
+
+    var trial_06 = {
+    type: jsPsychHtmlAudioResponse,
+    stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING</span>
+        <p>Please say out loud all the images you saw, as many as you can remember. The images can be said in any order.</p>`,
+    recording_duration: 55000,
+    allow_playback: true,
+    on_finish: function(data){
+        fetch('/save-my-data.php', { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ audio_base64: data.response, subject_id: subject_id })
+        })
+        .then(response => response.json())
+        .then(responseData => {
+            // Assuming the response contains the generated audio_id
+            var audio_id = responseData.audio_id;
+
+            // Add audio_id to jsPsych.data
+            jsPsych.data.addProperties({
+                audio_id: audio_id,
+                subject: subject_id,
+                // condition: condition_assignment
+            });
+
+            // Now you can use the audio_id or perform any other images
+            console.log("Generated audio ID:", audio_id);
+        })
+        .catch(error => {
+            console.error("Error while saving data:", error);
+        });
+    }
+};
+
+timeline.push(trial_06);
+
+
+ 
+ var trial_07 = {
+        type: jsPsychInstructions,
+        pages: [
+
+        '<span style="color: black; font-size: 24px"> Great.</span>' +'<br/>'+ '<span style="color: black; font-size: 24px"> When you are ready, start the experiment.</span>'
+
+    ],
+    show_clickable_nav: true
+    };
+    timeline.push(trial_07);
+    
+
+    var trial_10 = {
+        type: jsPsychHtmlAudioResponse,
+    stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING</span>
+        <p>Please say out loud all the images you saw, as many as you can remember. The images can be said in any order.</p>`,
+    recording_duration: 55000,
+    allow_playback: true,
+    on_finish: function(data){
+        fetch('/save-my-data.php', { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                audio_base64: data.response,
+                subject_id: subject_id  // Include subject ID in the data
+            })
+        })
+        .then(response => response.json())
+        .then(responseData => {
+            // Assuming the response contains the generated audio_id
+            var audio_id = responseData.audio_id;
+
+            // Add audio_id to jsPsych.data
+            jsPsych.data.addProperties({
+                audio_id: audio_id,
+                subject: subject_id,
+                // condition: condition_assignment
+            });
+
+            // Now you can use the audio_id or perform any other images
+            console.log("Generated audio ID:", audio_id);
+        })
+        .catch(error => {
+            console.error("Error while saving data:", error);
+        });
+    }
+};
+       
+
+    var trial_12 = {
+        type: jsPsychHtmlAudioResponse,
+    stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING</span>
+        <p>Please say out loud all the images you saw, as many as you can remember. The images can be said in any order.</p>`,
+    recording_duration: 55000,
+    allow_playback: true,
+    on_finish: function(data){
+        fetch('/save-my-data.php', { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ audio_base64: data.response, subject_id: subject_id })
+        })
+        .then(response => response.json())
+        .then(responseData => {
+            // Assuming the response contains the generated audio_id
+            var audio_id = responseData.audio_id;
+
+            // Add audio_id to jsPsych.data
+            jsPsych.data.addProperties({
+                audio_id: audio_id,
+                subject: subject_id,
+                // condition: condition_assignment
+            });
+
+            // Now you can use the audio_id or perform any other images
+            console.log("Generated audio ID:", audio_id);
+        })
+        .catch(error => {
+            console.error("Error while saving data:", error);
+        });
+    }
+};
+
+if (selectedOption && selectedOption.length >= 6) {
+    var myArray = [selectedOption[0], selectedOption[1],selectedOption[2],selectedOption[3],selectedOption[4],selectedOption[5]];
+    // Proceed with further operations using myArray
+} else {
+    // Handle the case when selectedOption is undefined or doesn't have enough elements
+}
+var shuffledArray = jsPsych.randomization.repeat(myArray, 1);
+timeline.push(shuffledArray[0],trial_10,shuffledArray[1],trial_10, shuffledArray[2], trial_10, shuffledArray[3],trial_10,shuffledArray[4],trial_10,shuffledArray[5],trial_10);
+
+
+var trial_10 = {
+    type: jsPsychHtmlAudioResponse,
+    stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING </span>
+        <p>Please say out loud all the images you saw, as many as you can remember. The images can be said in any order.</p>`,
+    recording_duration: 15000,
+    allow_playback: true,
+    on_finish: function(data){
+        fetch('/save-my-data.php', { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ audio_base64: data.response })
+        })
+        .then(response => response.json())
+        .then(responseData => {
+            // Assuming the response contains the generated audio_id
+            var audio_id = responseData.audio_id;
+            
+            // Now you can use the audio_id or perform any other images
+            console.log("Generated audio ID:", audio_id);
+        })
+        .catch(error => {
+            console.error("Error while saving data:", error);
+        });
+    }
+};
+//timeline.push(trial_10);
+
+//timeline.push(paris_story_nonlinear,trial_10, market_story_linear,trial_12);
+
+
+    var trial_14 = {
+        type: jsPsychHtmlAudioResponse,
+    stimulus: `<span style="color: red; font-size: 24px"> NOW RECORDING</span>
+        <p>Please say out loud all the images you saw, as many as you can remember. The images can be said in any order.</p>`,
+    recording_duration: 55000,
+    allow_playback: true,
+    on_finish: function(data){
+        fetch('/save-my-data.php', { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ audio_base64: data.response, subject_id: subject_id })
+        })
+        .then(response => response.json())
+        .then(responseData => {
+            // Assuming the response contains the generated audio_id
+            var audio_id = responseData.audio_id;
+
+            // Add audio_id to jsPsych.data
+            jsPsych.data.addProperties({
+                audio_id: audio_id,
+                subject: subject_id,
+                // condition: condition_assignment
+            });
+
+            // Now you can use the audio_id or perform any other images
+            console.log("Generated audio ID:", audio_id);
+        })
+        .catch(error => {
+            console.error("Error while saving data:", error);
+        });
+    }
+};
+
+
+ //timeline.push(trial_14);
+
+    
+
+   
+
+var trial_15 = {
+  type: jsPsychSurveyText,
+  questions: [
+    {prompt: 'please insert your gender (MALE/ FEMALE/ OTHER)'},
+    {prompt: 'Please insert your age'}
+  ]
+}
+timeline.push(trial_15);
+
+
+var trial_16 = {
+    type: jsPsychInstructions,
+    pages: [
+        '<div style="text-align: left;">' +
+        '<span style="color: black; font-size: 24px;">You have completed this part of the experiment.<br/>' +
+        'The completion code is: AJFHBG890<br/>' +
+        'Thank you for your participation in part 1 of the experiment!</span><br/>' +
+        '<span style="color: red; font-size: 24px;">Please come back for part 2 of the experiment in 24 hours through Connect.</span>' +
+        '</div>',
+    ],
+    show_clickable_nav: true
+};
+timeline.push(trial_16);
+
+
+    /* start the experiment */
+    var trial_17 = {
+  type: jsPsychSurveyText,
+  questions: [
+    {prompt: 'please insert The completion code'},]
+}
+timeline.push(trial_17);
+
+jsPsych.run(timeline);
+
+
+
+
+  </script>
+</html>
