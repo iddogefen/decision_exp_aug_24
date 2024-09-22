@@ -20,6 +20,9 @@
   </head>
   <body></body>
   <script>
+
+var data_folder             = 'data/'
+
     /* initialize jsPsych */
     /* initialize jsPsych */
     var jsPsych = initJsPsych({
@@ -32,6 +35,12 @@
 
     /* create timeline */
     var timeline = [];
+
+    jsPsych.data.addProperties({
+  subject: subject_id,
+
+  //condition: condition_assignment
+});
 
     // Preload images
     var preload = {
