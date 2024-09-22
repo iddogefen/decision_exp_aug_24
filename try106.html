@@ -21,29 +21,14 @@
   <body></body>
   <script>
     /* initialize jsPsych */
+    /* initialize jsPsych */
     var jsPsych = initJsPsych({
-    on_finish: function() {
-        var data_folder = 'C:/Users/iddog/OneDrive/Documents/GitHub/decision_experiment_version_1/decision_exp_aug_24/data/';  // Update this path as needed 
-        // Save data to the specified folder
-        saveData(file_name, jsPsych.data.get().csv());
+      on_finish: function() {
+        saveData(data_folder+'All_data/all_data_sub_'+subject_id+".csv", jsPsych.data.get().csv());
+        //jsPsych.data.get().localSave('csv','mydata.csv');
 
-        // Save data locally in the browser
-        jsPsych.data.get().localSave('csv', 'mydata.csv');
-    }
-});
-
-function saveData(filename, filedata) {
-    var blob = new Blob([filedata], {type: 'text/csv'});
-    var url = window.URL.createObjectURL(blob);
-    var a = document.createElement('a');
-    a.style.display = 'none';
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    window.URL.revokeObjectURL(url);
-}
-
+      }
+    });
 
     /* create timeline */
     var timeline = [];
@@ -62,6 +47,24 @@ function saveData(filename, filedata) {
         'images/semantic/semantic_series_1/semantic_series_1_d.jpg'
       ]
     };
+
+    var subject_id = jsPsych.data.getURLVariable('participantId');
+    var study_id = jsPsych.data.getURLVariable('assignmentId');
+    var session_id = jsPsych.data.getURLVariable('projectId');
+    var urlvar = jsPsych.data.urlVariables();
+    const currentUrl = window.location.href;
+
+    jsPsych.data.addProperties({
+        subject_id: subject_id,
+        study_id: study_id,
+        session_id: session_id,
+        urlvar: urlvar,
+        current_url: currentUrl
+    });
+
+    jsPsych.data.addProperties({
+        subject: subject_id,
+    });
 
     // Define consent and instruction trials
     var trial_0 = {
