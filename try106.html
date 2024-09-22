@@ -20,11 +20,27 @@
   </head>
   <body></body>
   <script>
-
+//var data_folder             = 'data/Individual_data/'
 var data_folder             = 'data/'
 
+var int_data_folder         = 'data/Interactive_data/'
+var tools_folder            = 'Tools'
+
     /* initialize jsPsych */
     /* initialize jsPsych */
+
+    function saveData(name, data){
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'write_data.php'); // 'write_data.php' is the path to the php file described above.
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({filedata: data}));
+}
+
+// call the saveData function after the experiment is over
+initJsPsych({
+   on_finish: function(){ saveData(jsPsych.data.get().csv()); }
+});
+
     var jsPsych = initJsPsych({
       on_finish: function() {
         saveData(data_folder+'All_data/all_data_sub_'+subject_id+".csv", jsPsych.data.get().csv());
@@ -75,6 +91,8 @@ var data_folder             = 'data/'
         subject: subject_id,
     });
 
+
+    
     // Define consent and instruction trials
     var trial_0 = {
       type: jsPsychInstructions,
@@ -94,12 +112,18 @@ var data_folder             = 'data/'
         '<img src="consent_form_2022.png" style="max-width:80%; padding:20px;"></img>' +
         '</div>'
       ],
-      show_clickable_nav: true
+      show_clickable_nav: true,
+      
+       // Set to 1 second
+
+      
     };
 
     var trial_01 = {
       type: jsPsychFullscreen,
-      fullscreen_mode: true
+      fullscreen_mode: true,
+      trial_duration: 1000  // Set to 1 second
+
     };
 
     var instructions_deck_choice = {
@@ -137,6 +161,7 @@ var data_folder             = 'data/'
       createImageTrial('images/causal/causal_series_1/causal_series_1_b.jpg'),
       createImageTrial('images/causal/causal_series_1/causal_series_1_c.jpg'),
       createImageTrial('images/causal/causal_series_1/causal_series_1_d.jpg')
+      
     ];
 
     var semantic_sequence_1 = [
@@ -953,28 +978,24 @@ function randomizeTrials(trials) {
   return shuffle(trials);
 }
 
+
+
 // Create an array of the 18 causal and semantic trials
 let trials_causal = [
-  conditional_trial_causal_1, conditional_trial_causal_2, conditional_trial_causal_3,
-  conditional_trial_causal_4, conditional_trial_causal_5, conditional_trial_causal_6,
-  conditional_trial_causal_7, conditional_trial_causal_8, conditional_trial_causal_9,
-  conditional_trial_causal_10, conditional_trial_causal_11, conditional_trial_causal_12,
-  conditional_trial_causal_13, conditional_trial_causal_14, conditional_trial_causal_15,
-  conditional_trial_causal_16, conditional_trial_causal_17, conditional_trial_causal_18
+ conditional_trial_causal_18
 ];
 
 let trials_semantic = [
-  conditional_trial_semantic_1, conditional_trial_semantic_2, conditional_trial_semantic_3,
-  conditional_trial_semantic_4, conditional_trial_semantic_5, conditional_trial_semantic_6,
-  conditional_trial_semantic_7, conditional_trial_semantic_8, conditional_trial_semantic_9,
-  conditional_trial_semantic_10, conditional_trial_semantic_11, conditional_trial_semantic_12,
-  conditional_trial_semantic_13, conditional_trial_semantic_14, conditional_trial_semantic_15,
-  conditional_trial_semantic_16, conditional_trial_semantic_17, conditional_trial_semantic_18
+ conditional_trial_semantic_18
 ];
+
+
 
 // Randomize the order of the 18 trials for both causal and semantic
 var randomizedTrialsCausal = randomizeTrials(trials_causal);
 var randomizedTrialsSemantic = randomizeTrials(trials_semantic);
+
+
 
 // Add trials to the timeline, ensuring to access trials in the randomized order
 timeline.push(preload, trial_0, trial_consent, trial_01, instructions_deck_choice);
