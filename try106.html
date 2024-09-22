@@ -417,8 +417,8 @@ var trial_2 = {
   type: jsPsychHtmlButtonResponse,
   stimulus: `
     <div style="display: flex; justify-content: center; align-items: center;">
-      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
-      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px;" />
     </div>`,
   choices: ['deck 1', 'deck 2'],
   on_finish: function(data) {
@@ -644,45 +644,57 @@ var trial_18 = {
       }
     };
 
-    // Conditional timeline for semantic_sequence_1
-    var conditional_trial_semantic_1 = {
-      timeline: semantic_sequence_1,
-      conditional_function: function() {
-        var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
-        return last_choice == 1; // 'deck 2' selected
-      }
-    };
+// Conditional timeline for semantic_sequence_1
+var conditional_trial_semantic_1 = {
+  timeline: semantic_sequence_1,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
+  }
+};
 
-    var conditional_trial_causal_2 = {
-      timeline: causal_sequence_2,
-      conditional_function: function() {
-        var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
-        return last_choice == 0; // 'deck 1' selected
-      }
-    };
+var conditional_trial_causal_2 = {
+  timeline: causal_sequence_2,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
+  }
+};
 
-    var conditional_trial_semantic_2 = {
-      timeline: semantic_sequence_2,
-      conditional_function: function() {
-        var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
-        return last_choice == 1; // 'deck 2' selected
-      }
-    };
+var conditional_trial_semantic_2 = {
+  timeline: semantic_sequence_2,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
+  }
+};
 
-    var person_question = {
-      type: jsPsychHtmlButtonResponse,
-      stimulus: 'Was there a person in the picture?',
-      choices: ['Yes', 'No'],
-      on_finish: function(data) {
-        data.response;
-      }
-    };
+var person_question = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: 'Was there a person in the picture?',
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.response;
+  }
+};
 
-    var conditional_trial_causal_3 = {
+var conditional_trial_causal_3 = {
   timeline: causal_sequence_3,
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
   }
 };
 
@@ -691,6 +703,9 @@ var conditional_trial_semantic_3 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
   }
 };
 
@@ -699,6 +714,9 @@ var conditional_trial_causal_4 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
   }
 };
 
@@ -707,6 +725,9 @@ var conditional_trial_semantic_4 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
   }
 };
 
@@ -715,6 +736,9 @@ var conditional_trial_causal_5 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
   }
 };
 
@@ -723,6 +747,9 @@ var conditional_trial_semantic_5 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
   }
 };
 
@@ -731,6 +758,9 @@ var conditional_trial_causal_6 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
   }
 };
 
@@ -739,6 +769,9 @@ var conditional_trial_semantic_6 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
   }
 };
 
@@ -747,6 +780,9 @@ var conditional_trial_causal_7 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
   }
 };
 
@@ -755,6 +791,9 @@ var conditional_trial_semantic_7 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
   }
 };
 
@@ -763,6 +802,9 @@ var conditional_trial_causal_8 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
   }
 };
 
@@ -771,6 +813,9 @@ var conditional_trial_semantic_8 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
   }
 };
 
@@ -779,6 +824,9 @@ var conditional_trial_causal_9 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
   }
 };
 
@@ -787,6 +835,9 @@ var conditional_trial_semantic_9 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
   }
 };
 
@@ -795,6 +846,9 @@ var conditional_trial_causal_10 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
   }
 };
 
@@ -803,6 +857,9 @@ var conditional_trial_semantic_10 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
   }
 };
 
@@ -811,6 +868,9 @@ var conditional_trial_causal_11 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
   }
 };
 
@@ -819,6 +879,9 @@ var conditional_trial_semantic_11 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
   }
 };
 
@@ -827,6 +890,9 @@ var conditional_trial_causal_12 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
   }
 };
 
@@ -835,6 +901,9 @@ var conditional_trial_semantic_12 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
   }
 };
 
@@ -843,6 +912,9 @@ var conditional_trial_causal_13 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
   }
 };
 
@@ -851,6 +923,9 @@ var conditional_trial_semantic_13 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
   }
 };
 
@@ -859,6 +934,9 @@ var conditional_trial_causal_14 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
   }
 };
 
@@ -867,6 +945,9 @@ var conditional_trial_semantic_14 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
   }
 };
 
@@ -875,6 +956,9 @@ var conditional_trial_causal_15 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
   }
 };
 
@@ -883,6 +967,9 @@ var conditional_trial_semantic_15 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
   }
 };
 
@@ -891,6 +978,9 @@ var conditional_trial_causal_16 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
   }
 };
 
@@ -899,6 +989,9 @@ var conditional_trial_semantic_16 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
   }
 };
 
@@ -907,6 +1000,9 @@ var conditional_trial_causal_17 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
   }
 };
 
@@ -915,6 +1011,9 @@ var conditional_trial_semantic_17 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
   }
 };
 
@@ -923,6 +1022,9 @@ var conditional_trial_causal_18 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 0; // 'deck 1' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'causal'});
   }
 };
 
@@ -931,9 +1033,11 @@ var conditional_trial_semantic_18 = {
   conditional_function: function() {
     var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
     return last_choice == 1; // 'deck 2' selected
+  },
+  on_finish: function(data) {
+    jsPsych.data.addProperties({trial_type: 'semantic'});
   }
 };
-
 
     var enjoyment_question = {
       type: jsPsychSurveyLikert,
@@ -982,21 +1086,11 @@ function randomizeTrials(trials) {
 
 // Create an array of the 18 causal and semantic trials
 let trials_causal = [
-  conditional_trial_causal_1, conditional_trial_causal_2, conditional_trial_causal_3,
-  conditional_trial_causal_4, conditional_trial_causal_5, conditional_trial_causal_6,
-  conditional_trial_causal_7, conditional_trial_causal_8, conditional_trial_causal_9,
-  conditional_trial_causal_10, conditional_trial_causal_11, conditional_trial_causal_12,
-  conditional_trial_causal_13, conditional_trial_causal_14, conditional_trial_causal_15,
-  conditional_trial_causal_16, conditional_trial_causal_17, conditional_trial_causal_18
+  conditional_trial_causal_1
 ];
 
 let trials_semantic = [
-  conditional_trial_semantic_1, conditional_trial_semantic_2, conditional_trial_semantic_3,
-  conditional_trial_semantic_4, conditional_trial_semantic_5, conditional_trial_semantic_6,
-  conditional_trial_semantic_7, conditional_trial_semantic_8, conditional_trial_semantic_9,
-  conditional_trial_semantic_10, conditional_trial_semantic_11, conditional_trial_semantic_12,
-  conditional_trial_semantic_13, conditional_trial_semantic_14, conditional_trial_semantic_15,
-  conditional_trial_semantic_16, conditional_trial_semantic_17, conditional_trial_semantic_18
+  conditional_trial_semantic_1
 ];
 
 
