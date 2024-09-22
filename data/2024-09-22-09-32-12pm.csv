@@ -1,0 +1,30 @@
+"success","timeout","failed_images","failed_audio","failed_video","trial_type","trial_index","time_elapsed","internal_node_id","subject","subject_id","study_id","session_id","urlvar","current_url","view_history","rt","stimulus","response","choice","question_order"
+"true","false","[]","[]","[]","preload","0","86","0.0-0.0","","","","","{"""":""""}","https://test12345.live/","","","","","",""
+"","","","","","instructions","1","8558","0.0-1.0","","","","","{"""":""""}","https://test12345.live/","[{""page_index"":0,""viewing_time"":8471}]","8472","","","",""
+"","","","","","instructions","2","11164","0.0-2.0","","","","","{"""":""""}","https://test12345.live/","[{""page_index"":0,""viewing_time"":2605}]","2605","","","",""
+"true","","","","","fullscreen","3","14266","0.0-3.0","","","","","{"""":""""}","https://test12345.live/","","2099","","","",""
+"","","","","","instructions","4","15243","0.0-4.0","","","","","{"""":""""}","https://test12345.live/","[{""page_index"":0,""viewing_time"":976}]","976","","","",""
+"","","","","","html-button-response","5","16940","0.0-5.0","","","","","{"""":""""}","https://test12345.live/","","1694","
+    <div style=""display: flex; justify-content: center; align-items: center;"">
+      <img src=""images/red_deck_2.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+      <img src=""images/blue_deck_1.png"" style=""width: 300px; height: 300px;"" />
+    </div>","0","0",""
+"","","","","","html-keyboard-response","6","19952","0.0-6.0-0.0","","","","","{"""":""""}","https://test12345.live/","","null","<div style=""display: flex; justify-content: center; align-items: center;"">
+                    <img src=""images/causal/causal_series_1/causal_series_1_a.jpg"" style=""width: 300px; height: 300px;"" />
+                  </div>","null","",""
+"","","","","","html-keyboard-response","7","22965","0.0-6.0-1.0","","","","","{"""":""""}","https://test12345.live/","","null","<div style=""display: flex; justify-content: center; align-items: center;"">
+                    <img src=""images/causal/causal_series_1/causal_series_1_b.jpg"" style=""width: 300px; height: 300px;"" />
+                  </div>","null","",""
+"","","","","","html-keyboard-response","8","25971","0.0-6.0-2.0","","","","","{"""":""""}","https://test12345.live/","","null","<div style=""display: flex; justify-content: center; align-items: center;"">
+                    <img src=""images/causal/causal_series_1/causal_series_1_c.jpg"" style=""width: 300px; height: 300px;"" />
+                  </div>","null","",""
+"","","","","","html-keyboard-response","9","28989","0.0-6.0-3.0","","","","","{"""":""""}","https://test12345.live/","","null","<div style=""display: flex; justify-content: center; align-items: center;"">
+                    <img src=""images/causal/causal_series_1/causal_series_1_d.jpg"" style=""width: 300px; height: 300px;"" />
+                  </div>","null","",""
+"","","","","","html-button-response","10","29794","0.0-8.0","","","","","{"""":""""}","https://test12345.live/","","804","Was there a person in the picture?","0","",""
+"","","","","","survey-likert","11","32563","0.0-9.0","","","","","{"""":""""}","https://test12345.live/","","2765","","{""Q0"":3}","","[0]"
+"","","","","","survey-text","12","33391","0.0-10.0","","","","","{"""":""""}","https://test12345.live/","","824","","{""Q0"":""""}","",""
+"","","","","","survey-text","13","34358","0.0-11.0","","","","","{"""":""""}","https://test12345.live/","","965","","{""Q0"":""""}","",""
+"","","","","","survey-text","14","34949","0.0-12.0","","","","","{"""":""""}","https://test12345.live/","","585","","{""Q0"":"""",""Q1"":""""}","",""
+"","","","","","instructions","15","35563","0.0-13.0","","","","","{"""":""""}","https://test12345.live/","[{""page_index"":0,""viewing_time"":613}]","613","","","",""
+"","","","","","survey-text","16","36063","0.0-14.0","","","","","{"""":""""}","https://test12345.live/","","498","","{""Q0"":""""}","",""
