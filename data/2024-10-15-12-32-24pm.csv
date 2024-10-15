@@ -1,0 +1,234 @@
+"success","timeout","failed_images","failed_audio","failed_video","trial_type","trial_index","time_elapsed","internal_node_id","view_history","rt","stimulus","response","choice","trial_name"
+"true","false","[]","[]","[]","preload","0","4393","0.0-0.0","","","","","",""
+"","","","","","instructions","1","5778","0.0-1.0","[{""page_index"":0,""viewing_time"":1385}]","1385","","","",""
+"","","","","","instructions","2","8468","0.0-2.0","[{""page_index"":0,""viewing_time"":2690}]","2690","","","",""
+"true","","","","","fullscreen","3","11229","0.0-3.0","","1754","","","",""
+"","","","","","instructions","4","13064","0.0-4.0","[{""page_index"":0,""viewing_time"":1834}]","1834","","","",""
+"","","","","","html-button-response","5","19312","0.0-5.0","","6247","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/instructions/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/instructions/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","1","1",""
+"","","","","","html-button-response","6","20315","0.0-6.0","","1002","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/instructions/3.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/instructions/4.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>YES, event 1 does lead to event 2.</p>
+    </div>","0","0",""
+"","","","","","html-button-response","7","22886","0.0-7.0","","2571","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/instructions/5.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/instructions/6.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","1","1",""
+"","","","","","html-button-response","8","24907","0.0-8.0","","2020","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/instructions/7.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/instructions/8.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>NO, event 1 does not lead to event 2.</p>
+    </div>","0","0",""
+"","","","","","instructions","9","26198","0.0-9.0","[{""page_index"":0,""viewing_time"":1291}]","1291","","","",""
+"","","","","","html-button-response","10","27875","0.0-10.0","","1676","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/semantic/semantic_6/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/semantic/semantic_6/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","1","1","semantic_6"
+"","","","","","html-button-response","11","29375","0.0-11.0","","1499","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/semantic/semantic_7/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/semantic/semantic_7/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","1","1","semantic_7"
+"","","","","","html-button-response","12","31342","0.0-12.0","","1966","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/schematic/schematic_3/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/schematic/schematic_3/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","0","0","schematic_3"
+"","","","","","html-button-response","13","33268","0.0-13.0","","1925","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/schematic/schematic_6/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/schematic/schematic_6/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","0","0","schematic_6"
+"","","","","","html-button-response","14","36731","0.0-14.0","","3463","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/causal/causal_8/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/causal/causal_8/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","0","0","causal_8"
+"","","","","","html-button-response","15","39894","0.0-15.0","","3162","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/causal/causal_7/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/causal/causal_7/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","0","0","causal_7"
+"","","","","","html-button-response","16","43546","0.0-16.0","","3651","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/causal/causal_5/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/causal/causal_5/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","0","0","causal_5"
+"","","","","","html-button-response","17","46505","0.0-17.0","","2958","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/causal/causal_6/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/causal/causal_6/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","0","0","causal_6"
+"","","","","","html-button-response","18","48850","0.0-18.0","","2344","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/schematic/schematic_7/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/schematic/schematic_7/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","0","0","schematic_7"
+"","","","","","html-button-response","19","53072","0.0-19.0","","4221","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/schematic/schematic_4/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/schematic/schematic_4/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","0","0","schematic_4"
+"","","","","","html-button-response","20","54915","0.0-20.0","","1842","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/schematic/schematic_8/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/schematic/schematic_8/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","0","0","schematic_8"
+"","","","","","html-button-response","21","58074","0.0-21.0","","3159","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/semantic/semantic_4/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/semantic/semantic_4/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","1","1","semantic_4"
+"","","","","","html-button-response","22","60240","0.0-22.0","","2165","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/schematic/schematic_1/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/schematic/schematic_1/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","1","1","schematic_1"
+"","","","","","html-button-response","23","62779","0.0-23.0","","2539","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/schematic/schematic_5/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/schematic/schematic_5/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","0","0","schematic_5"
+"","","","","","html-button-response","24","68429","0.0-24.0","","5649","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/causal/causal_4/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/causal/causal_4/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","0","0","causal_4"
+"","","","","","html-button-response","25","70385","0.0-25.0","","1955","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/semantic/semantic_5/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/semantic/semantic_5/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","1","1","semantic_5"
+"","","","","","html-button-response","26","71941","0.0-26.0","","1555","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/semantic/semantic_2/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/semantic/semantic_2/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","1","1","semantic_2"
+"","","","","","html-button-response","27","73773","0.0-27.0","","1832","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/causal/causal_3/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/causal/causal_3/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","0","0","causal_3"
+"","","","","","html-button-response","28","76390","0.0-28.0","","2616","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/causal/causal_1/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/causal/causal_1/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","0","0","causal_1"
+"","","","","","html-button-response","29","79172","0.0-29.0","","2781","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/schematic/schematic_2/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/schematic/schematic_2/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","0","0","schematic_2"
+"","","","","","html-button-response","30","80486","0.0-30.0","","1314","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/causal/causal_2/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/causal/causal_2/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","0","0","causal_2"
+"","","","","","html-button-response","31","81866","0.0-31.0","","1379","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/semantic/semantic_1/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/semantic/semantic_1/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","1","1","semantic_1"
+"","","","","","html-button-response","32","83885","0.0-32.0","","2018","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/semantic/semantic_8/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/semantic/semantic_8/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","0","0","semantic_8"
+"","","","","","html-button-response","33","90970","0.0-33.0","","7084","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/semantic/semantic_3/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/semantic/semantic_3/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>","1","1","semantic_3"
+"","","","","","survey-text","34","96628","0.0-34.0","","5654","","{""Q0"":""female"",""Q1"":""25""}","",""
+"","","","","","instructions","35","100711","0.0-35.0","[{""page_index"":0,""viewing_time"":4083}]","4083","","","",""
+"","","","","","survey-text","36","103272","0.0-36.0","","2560","","{""Q0"":""AJFHBG898""}","",""
