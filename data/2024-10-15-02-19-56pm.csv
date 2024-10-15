@@ -1,0 +1,234 @@
+"success","timeout","failed_images","failed_audio","failed_video","trial_type","trial_index","time_elapsed","internal_node_id","view_history","rt","stimulus","response","choice","trial_name"
+"true","false","[]","[]","[]","preload","0","2926","0.0-0.0","","","","","",""
+"","","","","","instructions","1","15253","0.0-1.0","[{""page_index"":0,""viewing_time"":12326}]","12326","","","",""
+"","","","","","instructions","2","100588","0.0-2.0","[{""page_index"":0,""viewing_time"":85334}]","85334","","","",""
+"true","","","","","fullscreen","3","104158","0.0-3.0","","2558","","","",""
+"","","","","","instructions","4","111321","0.0-4.0","[{""page_index"":0,""viewing_time"":7163}]","7163","","","",""
+"","","","","","html-button-response","5","116535","0.0-5.0","","5213","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/instructions_2/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/instructions_2/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0",""
+"","","","","","html-button-response","6","119287","0.0-6.0","","2752","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/instructions_2/3.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/instructions_2/4.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>YES, event 1 does take place before event 2.</p>
+    </div>","0","0",""
+"","","","","","html-button-response","7","174705","0.0-7.0","","55418","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/instructions_2/5.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/instructions_2/6.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0",""
+"","","","","","html-button-response","8","179612","0.0-8.0","","4906","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/instructions_2/7.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/instructions_2/8.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>NO, event 1 does not take place before event 2.</p>
+    </div>","0","0",""
+"","","","","","instructions","9","181245","0.0-9.0","[{""page_index"":0,""viewing_time"":1633}]","1633","","","",""
+"","","","","","html-button-response","10","185528","0.0-10.0","","4282","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/schematic/schematic_6/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/schematic/schematic_6/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","schematic_6"
+"","","","","","html-button-response","11","191364","0.0-11.0","","5835","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/semantic/semantic_2/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/semantic/semantic_2/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","semantic_2"
+"","","","","","html-button-response","12","197919","0.0-12.0","","6554","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/causal/causal_7/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/causal/causal_7/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","causal_7"
+"","","","","","html-button-response","13","200447","0.0-13.0","","2527","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/schematic/schematic_2/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/schematic/schematic_2/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","schematic_2"
+"","","","","","html-button-response","14","204107","0.0-14.0","","3660","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/semantic/semantic_7/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/semantic/semantic_7/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","semantic_7"
+"","","","","","html-button-response","15","213504","0.0-15.0","","9396","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/causal/causal_2/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/causal/causal_2/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","causal_2"
+"","","","","","html-button-response","16","215890","0.0-16.0","","2385","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/schematic/schematic_5/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/schematic/schematic_5/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","schematic_5"
+"","","","","","html-button-response","17","219616","0.0-17.0","","3725","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/semantic/semantic_5/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/semantic/semantic_5/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","semantic_5"
+"","","","","","html-button-response","18","223697","0.0-18.0","","4080","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/causal/causal_5/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/causal/causal_5/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","causal_5"
+"","","","","","html-button-response","19","226143","0.0-19.0","","2445","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/schematic/schematic_7/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/schematic/schematic_7/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","schematic_7"
+"","","","","","html-button-response","20","228219","0.0-20.0","","2076","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/causal/causal_3/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/causal/causal_3/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","causal_3"
+"","","","","","html-button-response","21","232668","0.0-21.0","","4447","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/semantic/semantic_4/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/semantic/semantic_4/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","semantic_4"
+"","","","","","html-button-response","22","236185","0.0-22.0","","3517","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/semantic/semantic_8/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/semantic/semantic_8/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","semantic_8"
+"","","","","","html-button-response","23","237715","0.0-23.0","","1529","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/semantic/semantic_6/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/semantic/semantic_6/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","semantic_6"
+"","","","","","html-button-response","24","241601","0.0-24.0","","3886","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/causal/causal_1/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/causal/causal_1/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","causal_1"
+"","","","","","html-button-response","25","246993","0.0-25.0","","5391","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/causal/causal_4/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/causal/causal_4/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","causal_4"
+"","","","","","html-button-response","26","251148","0.0-26.0","","4155","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/semantic/semantic_3/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/semantic/semantic_3/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","semantic_3"
+"","","","","","html-button-response","27","254734","0.0-27.0","","3585","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/causal/causal_6/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/causal/causal_6/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","causal_6"
+"","","","","","html-button-response","28","257808","0.0-28.0","","3073","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/schematic/schematic_8/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/schematic/schematic_8/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","schematic_8"
+"","","","","","html-button-response","29","262602","0.0-29.0","","4793","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/schematic/schematic_1/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/schematic/schematic_1/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","schematic_1"
+"","","","","","html-button-response","30","265083","0.0-30.0","","2480","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/causal/causal_8/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/causal/causal_8/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","causal_8"
+"","","","","","html-button-response","31","267455","0.0-31.0","","2371","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/schematic/schematic_4/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/schematic/schematic_4/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","schematic_4"
+"","","","","","html-button-response","32","272756","0.0-32.0","","5301","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/semantic/semantic_1/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/semantic/semantic_1/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","semantic_1"
+"","","","","","html-button-response","33","275135","0.0-33.0","","2378","
+    <div style=""display: flex; justify-content: center; align-items: center; flex-direction: column;"">
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <img src=""images/schematic/schematic_3/1.png"" style=""width: 300px; height: 300px; margin-right: 10px;"" />
+        <img src=""images/schematic/schematic_3/2.png"" style=""width: 300px; height: 300px;"" />
+      </div>
+      <p>Does event 1 take place before event 2?</p>
+    </div>","0","0","schematic_3"
+"","","","","","survey-text","34","283288","0.0-34.0","","8150","","{""Q0"":""FEMALE"",""Q1"":""21""}","",""
+"","","","","","instructions","35","290007","0.0-35.0","[{""page_index"":0,""viewing_time"":6719}]","6719","","","",""
+"","","","","","survey-text","36","292326","0.0-36.0","","2318","","{""Q0"":""AJFHBG898""}","",""
