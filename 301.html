@@ -251,7 +251,6 @@ var instructions_event_identification_2 = {
 
 timeline.push(preload, trial_0, trial_consent, trial_01, instructions_event_identification,trial_1,trial_2,trial_3,trial_4,instructions_event_identification_2);
 
-
 var causal_1 = {
   type: jsPsychHtmlButtonResponse,
   stimulus: `
@@ -265,9 +264,9 @@ var causal_1 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'causal_1';  // הוספת שם הטרייל
   }
 };
-
 
 var causal_2 = {
   type: jsPsychHtmlButtonResponse,
@@ -282,9 +281,9 @@ var causal_2 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'causal_2';  // הוספת שם הטרייל
   }
 };
-
 
 var causal_3 = {
   type: jsPsychHtmlButtonResponse,
@@ -299,9 +298,9 @@ var causal_3 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'causal_3';  // הוספת שם הטרייל
   }
 };
-
 
 var causal_4 = {
   type: jsPsychHtmlButtonResponse,
@@ -316,6 +315,7 @@ var causal_4 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'causal_4';  // הוספת שם הטרייל
   }
 };
 
@@ -332,6 +332,7 @@ var causal_5 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'causal_5';  // הוספת שם הטרייל
   }
 };
 
@@ -348,6 +349,7 @@ var causal_6 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'causal_6';  // הוספת שם הטרייל
   }
 };
 
@@ -364,6 +366,7 @@ var causal_7 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'causal_7';  // הוספת שם הטרייל
   }
 };
 
@@ -380,6 +383,7 @@ var causal_8 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'causal_8';  // הוספת שם הטרייל
   }
 };
 
@@ -397,9 +401,9 @@ var schematic_1 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'schematic_1';  // Add trial name to data
   }
 };
-
 
 var schematic_2 = {
   type: jsPsychHtmlButtonResponse,
@@ -414,9 +418,9 @@ var schematic_2 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'schematic_2';
   }
 };
-
 
 var schematic_3 = {
   type: jsPsychHtmlButtonResponse,
@@ -431,9 +435,9 @@ var schematic_3 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'schematic_3';
   }
 };
-
 
 var schematic_4 = {
   type: jsPsychHtmlButtonResponse,
@@ -448,6 +452,7 @@ var schematic_4 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'schematic_4';
   }
 };
 
@@ -464,6 +469,7 @@ var schematic_5 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'schematic_5';
   }
 };
 
@@ -480,6 +486,7 @@ var schematic_6 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'schematic_6';
   }
 };
 
@@ -496,6 +503,7 @@ var schematic_7 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'schematic_7';
   }
 };
 
@@ -512,8 +520,10 @@ var schematic_8 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'schematic_8';
   }
 };
+
 
 var semantic_1 = {
   type: jsPsychHtmlButtonResponse,
@@ -528,9 +538,9 @@ var semantic_1 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'semantic_1';
   }
 };
-
 
 var semantic_2 = {
   type: jsPsychHtmlButtonResponse,
@@ -545,9 +555,9 @@ var semantic_2 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'semantic_2';
   }
 };
-
 
 var semantic_3 = {
   type: jsPsychHtmlButtonResponse,
@@ -562,9 +572,9 @@ var semantic_3 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'semantic_3';
   }
 };
-
 
 var semantic_4 = {
   type: jsPsychHtmlButtonResponse,
@@ -579,6 +589,7 @@ var semantic_4 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'semantic_4';
   }
 };
 
@@ -595,6 +606,7 @@ var semantic_5 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'semantic_5';
   }
 };
 
@@ -611,6 +623,7 @@ var semantic_6 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'semantic_6';
   }
 };
 
@@ -627,6 +640,7 @@ var semantic_7 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'semantic_7';
   }
 };
 
@@ -643,6 +657,7 @@ var semantic_8 = {
   choices: ['Yes', 'No'],
   on_finish: function(data) {
     data.choice = data.response;
+    data.trial_name = 'semantic_8';
   }
 };
 
