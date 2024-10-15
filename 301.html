@@ -29,19 +29,12 @@ function saveData(name, data){
   xhr.send(JSON.stringify({filedata: data}));
 }
 
-// call the saveData function after the experiment is over
-initJsPsych({
-   on_finish: function(){ saveData(jsPsych.data.get().csv()); }
+var jsPsych = initJsPsych({
+  on_finish: function() {
+    saveData(data_folder+'All_data/all_data_sub_'+subject_id+".csv", jsPsych.data.get().csv());
+  }
 });
 
-    /* initialize jsPsych */
-    var jsPsych = initJsPsych({
-      on_finish: function() {
-        saveData(data_folder+'All_data/all_data_sub_'+subject_id+".csv", jsPsych.data.get().csv());
-        //jsPsych.data.get().localSave('csv','mydata.csv');
-
-      }
-    });
 
     /* create timeline */
     var timeline = [];
