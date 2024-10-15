@@ -24,7 +24,8 @@
     var jsPsych = initJsPsych({
       on_finish: function() {
         saveData(data_folder+'All_data/all_data_sub_'+subject_id+".csv", jsPsych.data.get().csv());
-        jsPsych.data.get().localSave('csv','mydata.csv');
+        //jsPsych.data.get().localSave('csv','mydata.csv');
+
       }
     });
 
@@ -651,22 +652,6 @@ timeline.push(...randomized_trials);
       ]
     };
 
-    // Add other trials
-// Trial 1: Ask if the participant can describe the difference between the two decks
-var trial_difference_between_decks = {
-  type: jsPsychSurveyText,
-  questions: [
-    {prompt: 'Can you describe the difference between the two decks of cards?'}
-  ]
-};
-
-// Trial 2: Ask which deck seemed more interesting
-var trial_interesting_deck = {
-  type: jsPsychSurveyText,
-  questions: [
-    {prompt: 'Which deck seemed more interesting to you overall? (You can also say that both were interesting or neither was interesting)'}
-  ]
-};
 
 // Add the new trials to the timeline at the end
 timeline.push(trial_difference_between_decks);
