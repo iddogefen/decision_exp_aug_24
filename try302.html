@@ -168,7 +168,7 @@ var instructions_deck_choice = {
   pages: [
     '<div style="font-family: Arial; text-align: left; padding: 100px; padding-top: 5%;">' +
     '<h2>Instructions</h2>' +
-    '<p>In this experiment, you will be asked to choose between two decks of cards: one red and one blue.</p>' +
+    '<p>In this experiment, you will see a series of three images each time, and then you will be asked to choose between two decks of cards: one red and one blue.</p>' +
     '<p>Please make your choice intuitively, selecting the deck that seems more interesting to you.</p>' +
     '<p>There is no right or wrong choice—simply go with your instinct.</p>' +
     '</div>'
@@ -185,7 +185,7 @@ function createImageTrial(imagePath) {
                 <img src="${imagePath}" style="width: 300px; height: 300px;" />
               </div>`,
     choices: "NO_KEYS",
-    trial_duration: 1000
+    trial_duration: 6000
   };
 }
 
