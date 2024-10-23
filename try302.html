@@ -9,6 +9,7 @@
     <title>My experiment</title>
     <script src="jspsych/plugins/jspsych.js"></script>
     <script src="jspsych/plugins/plugin-instructions.js"></script>
+    <script src="jspsych/plugins/plugin-html-button-response.js"></script>
     <script src="jspsych/plugins/plugin-survey-text.js"></script>
     <script src="jspsych/plugins/plugin-html-keyboard-response.js"></script>
     <script src="jspsych/plugins/plugin-survey-likert.js"></script>
@@ -185,7 +186,7 @@ function createImageTrial(imagePath) {
                 <img src="${imagePath}" style="width: 300px; height: 300px;" />
               </div>`,
     choices: "NO_KEYS",
-    trial_duration: 4000
+    trial_duration: 500
   };
 }
 
@@ -402,6 +403,45 @@ var randomized_causal_blocks = shuffleArray(causal_blocks);
 randomized_causal_blocks.forEach(block => {
   timeline.push(...block);
 });
+
+   // Add other trials
+// Trial 1: Ask if the participant can describe the difference between the two decks
+var trial_difference_between_decks = {
+  type: jsPsychSurveyText,
+  questions: [
+    {prompt: 'Can you describe the difference between the two decks of cards?'}
+  ]
+};
+
+// Trial 2: Ask which deck seemed more interesting
+var trial_interesting_deck = {
+  type: jsPsychSurveyText,
+  questions: [
+    {prompt: 'Which deck seemed more interesting to you overall? (You can also say that both were interesting or neither was interesting)'}
+  ]
+};
+
+// Trial: Ask which deck color the fourth image continues the story from the series
+var trial_deck_color = {
+  type: jsPsychHtmlButtonResponse,
+      stimulus: 'Which color deck does the fourth image continue the story from the series?',
+      choices: ['Blue', 'Red'],
+};
+
+// Trial: Ask which deck color the fourth image does not follow the story from the series
+var trial_deck_color_not_following = {
+  type: jsPsychHtmlButtonResponse,
+      stimulus: 'Which color deck does the fourth image not follow the story from the series?',
+      choices: ['Blue', 'Red'],
+};
+
+
+
+// Add the new trials to the timeline at the end
+timeline.push(trial_difference_between_decks);
+timeline.push(trial_interesting_deck);
+timeline.push(trial_deck_color);
+timeline.push(trial_deck_color_not_following);
 
 // Add final questions (e.g., gender, age)
 var trial_101 = {
