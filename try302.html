@@ -169,14 +169,15 @@ var instructions_deck_choice = {
   pages: [
     '<div style="font-family: Arial; text-align: left; padding: 100px; padding-top: 5%;">' +
     '<h2>Instructions</h2>' +
-    '<p>In this experiment, you will see a series of three images each time, which together tell a story. Afterward, you will be asked to choose between two decks of cards: one <span style="color: red;">red</span> and one <span style="color: blue;">blue</span>.</p>' +
-    '<p>The <span style="color: blue;">blue</span> deck will provide the last part of the story, while the <span style="color: red;">red</span> deck will give you a random image.</p>' +
+    '<p>In this experiment, you will see a series of three images each time, which together tell a story. Afterward, you will be asked to choose between two decks of cards: one <span style="color: blue;">blue</span> and one <span style="color: red;">red</span>.</p>' +
+    '<p>The <span style="color: red;">red</span> deck will provide the last part of the story, while the <span style="color: blue;">blue</span> deck will give you a random image.</p>' +
     '<p>Please make your choice intuitively, selecting the deck that seems more interesting to you. There is no right or wrong choice, simply go with your instinct.</p>' +
     '</div>'
   ],
   show_clickable_nav: true
 };
 timeline.push(instructions_deck_choice);
+
 
 
 // Function to create a trial for each image
@@ -314,8 +315,8 @@ var choose_next_image = {
   type: jsPsychHtmlButtonResponse,
   stimulus: `
     <div style="display: flex; justify-content: center; align-items: center;">
-      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
-      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px;" />
     </div>`,
   choices: ['deck 1', 'deck 2'],
   on_finish: function(data) {
