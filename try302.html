@@ -180,20 +180,21 @@ var trial_01 = {
 
 timeline.push(trial_0, trial_consent, trial_01);
 
-// Instructions
+
 var instructions_deck_choice = {
   type: jsPsychInstructions,
   pages: [
     '<div style="font-family: Arial; text-align: left; padding: 100px; padding-top: 5%;">' +
     '<h2>Instructions</h2>' +
-    '<p>In this experiment, you will see a series of three images each time, which together tell a story. Afterward, you will be asked to choose between two decks of cards: one <span style="color: blue;">blue</span> and one <span style="color: red;">red</span>.</p>' +
-    '<p>One deck will provide the last part of the story, while the other deck will give you a random image.</p>' +
-    '<p>Please make your choice intuitively, selecting the deck that seems more interesting to you. There is no right or wrong choice, simply go with your instinct.</p>' +
+    '<p>In this experiment, you will view a series of three images at a time. Afterward, you will be asked to choose between two decks of cards: one <span style="color: blue;">blue</span> and one <span style="color: red;">red</span>.</p>' +
+    '<p>Each deck contains different cards.</p>' +
+    '<p>Your task is to select the deck that appeals to you the most. Trust your intuition—there are no right or wrong choices, so simply follow your instincts.</p>' +
     '</div>'
   ],
   show_clickable_nav: true
 };
 timeline.push(instructions_deck_choice);
+
 
 
 
@@ -332,8 +333,8 @@ var choose_next_image = {
   type: jsPsychHtmlButtonResponse,
   stimulus: `
     <div style="display: flex; justify-content: center; align-items: center;">
-      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
-      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px;" />
     </div>`,
   choices: ['deck 1', 'deck 2'],
   on_finish: function(data) {
@@ -364,24 +365,24 @@ function createFourthImageTrial(causalImagePath, semanticImagePath) {
 }
 
 // Create show_fourth_image trials
-var show_fourth_image_1 = createFourthImageTrial('images/causal/causal_series_1/causal_series_1_d.jpg', 'images/semantic/semantic_series_1/semantic_series_1_d.jpg');
-var show_fourth_image_2 = createFourthImageTrial('images/causal/causal_series_2/causal_series_2_d.jpg', 'images/semantic/semantic_series_2/semantic_series_2_d.jpg');
-var show_fourth_image_3 = createFourthImageTrial('images/causal/causal_series_3/causal_series_3_d.jpg', 'images/semantic/semantic_series_3/semantic_series_3_d.jpg');
-var show_fourth_image_4 = createFourthImageTrial('images/causal/causal_series_4/causal_series_4_d.jpg', 'images/semantic/semantic_series_4/semantic_series_4_d.jpg');
-var show_fourth_image_5 = createFourthImageTrial('images/causal/causal_series_5/causal_series_5_d.jpg', 'images/semantic/semantic_series_5/semantic_series_5_d.jpg');
-var show_fourth_image_6 = createFourthImageTrial('images/causal/causal_series_6/causal_series_6_d.jpg', 'images/semantic/semantic_series_6/semantic_series_6_d.jpg');
-var show_fourth_image_7 = createFourthImageTrial('images/causal/causal_series_7/causal_series_7_d.jpg', 'images/semantic/semantic_series_7/semantic_series_7_d.jpg');
-var show_fourth_image_8 = createFourthImageTrial('images/causal/causal_series_8/causal_series_8_d.jpg', 'images/semantic/semantic_series_8/semantic_series_8_d.jpg');
-var show_fourth_image_9 = createFourthImageTrial('images/causal/causal_series_9/causal_series_9_d.jpg', 'images/semantic/semantic_series_9/semantic_series_9_d.jpg');
-var show_fourth_image_10 = createFourthImageTrial('images/causal/causal_series_10/causal_series_10_d.jpg', 'images/semantic/semantic_series_10/semantic_series_10_d.jpg');
-var show_fourth_image_11 = createFourthImageTrial('images/causal/causal_series_11/causal_series_11_d.jpg', 'images/semantic/semantic_series_11/semantic_series_11_d.jpg');
-var show_fourth_image_12 = createFourthImageTrial('images/causal/causal_series_12/causal_series_12_d.jpg', 'images/semantic/semantic_series_12/semantic_series_12_d.jpg');
-var show_fourth_image_13 = createFourthImageTrial('images/causal/causal_series_13/causal_series_13_d.jpg', 'images/semantic/semantic_series_13/semantic_series_13_d.jpg');
-var show_fourth_image_14 = createFourthImageTrial('images/causal/causal_series_14/causal_series_14_d.jpg', 'images/semantic/semantic_series_14/semantic_series_14_d.jpg');
-var show_fourth_image_15 = createFourthImageTrial('images/causal/causal_series_15/causal_series_15_d.jpg', 'images/semantic/semantic_series_15/semantic_series_15_d.jpg');
-var show_fourth_image_16 = createFourthImageTrial('images/causal/causal_series_16/causal_series_16_d.jpg', 'images/semantic/semantic_series_16/semantic_series_16_d.jpg');
-var show_fourth_image_17 = createFourthImageTrial('images/causal/causal_series_17/causal_series_17_d.jpg', 'images/semantic/semantic_series_17/semantic_series_17_d.jpg');
-var show_fourth_image_18 = createFourthImageTrial('images/causal/causal_series_18/causal_series_18_d.jpg', 'images/semantic/semantic_series_18/semantic_series_18_d.jpg');
+var show_fourth_image_1 = createFourthImageTrial('images/causal/causal_series_1/causal_series_1_d.jpg', 'images/semantic/semantic_series_18/semantic_series_18_d.jpg');
+var show_fourth_image_2 = createFourthImageTrial('images/causal/causal_series_2/causal_series_2_d.jpg', 'images/semantic/semantic_series_1/semantic_series_1_d.jpg');
+var show_fourth_image_3 = createFourthImageTrial('images/causal/causal_series_3/causal_series_3_d.jpg', 'images/semantic/semantic_series_2/semantic_series_2_d.jpg');
+var show_fourth_image_4 = createFourthImageTrial('images/causal/causal_series_4/causal_series_4_d.jpg', 'images/semantic/semantic_series_3/semantic_series_3_d.jpg');
+var show_fourth_image_5 = createFourthImageTrial('images/causal/causal_series_5/causal_series_5_d.jpg', 'images/semantic/semantic_series_4/semantic_series_4_d.jpg');
+var show_fourth_image_6 = createFourthImageTrial('images/causal/causal_series_6/causal_series_6_d.jpg', 'images/semantic/semantic_series_5/semantic_series_5_d.jpg');
+var show_fourth_image_7 = createFourthImageTrial('images/causal/causal_series_7/causal_series_7_d.jpg', 'images/semantic/semantic_series_6/semantic_series_6_d.jpg');
+var show_fourth_image_8 = createFourthImageTrial('images/causal/causal_series_8/causal_series_8_d.jpg', 'images/semantic/semantic_series_7/semantic_series_7_d.jpg');
+var show_fourth_image_9 = createFourthImageTrial('images/causal/causal_series_9/causal_series_9_d.jpg', 'images/semantic/semantic_series_8/semantic_series_8_d.jpg');
+var show_fourth_image_10 = createFourthImageTrial('images/causal/causal_series_10/causal_series_10_d.jpg', 'images/semantic/semantic_series_9/semantic_series_9_d.jpg');
+var show_fourth_image_11 = createFourthImageTrial('images/causal/causal_series_11/causal_series_11_d.jpg', 'images/semantic/semantic_series_10/semantic_series_10_d.jpg');
+var show_fourth_image_12 = createFourthImageTrial('images/causal/causal_series_12/causal_series_12_d.jpg', 'images/semantic/semantic_series_11/semantic_series_11_d.jpg');
+var show_fourth_image_13 = createFourthImageTrial('images/causal/causal_series_13/causal_series_13_d.jpg', 'images/semantic/semantic_series_12/semantic_series_12_d.jpg');
+var show_fourth_image_14 = createFourthImageTrial('images/causal/causal_series_14/causal_series_14_d.jpg', 'images/semantic/semantic_series_13/semantic_series_13_d.jpg');
+var show_fourth_image_15 = createFourthImageTrial('images/causal/causal_series_15/causal_series_15_d.jpg', 'images/semantic/semantic_series_14/semantic_series_14_d.jpg');
+var show_fourth_image_16 = createFourthImageTrial('images/causal/causal_series_16/causal_series_16_d.jpg', 'images/semantic/semantic_series_15/semantic_series_15_d.jpg');
+var show_fourth_image_17 = createFourthImageTrial('images/causal/causal_series_17/causal_series_17_d.jpg', 'images/semantic/semantic_series_16/semantic_series_16_d.jpg');
+var show_fourth_image_18 = createFourthImageTrial('images/causal/causal_series_18/causal_series_18_d.jpg', 'images/semantic/semantic_series_17/semantic_series_17_d.jpg');
 
 
 // Shuffle array function
