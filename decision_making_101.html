@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <style>
+        .hide_cursor {
+            cursor: none;
+        }
+        </style>
+
+    <title>My experiment</title>
+    <script src="jspsych/plugins/jspsych.js"></script>
+    <!--<script src="jspsych/plugins/jspsych-order.js"></script>-->
+    <script src="jspsych/plugins/plugin-instructions.js"></script>
+    <script src="jspsych/plugins/plugin-survey-text.js"></script>
+    <script src="jspsych/plugins/plugin-html-keyboard-response.js"></script>
+    <script src="jspsych/plugins/plugin-html-button-response.js"></script>
+    <script src="jspsych/plugins/plugin-image-button-response.js"></script>
+    <script src="jspsych/plugins/plugin-image-keyboard-response.js"></script>
+    <script src="jspsych/plugins/plugin-html-audio-response.js"></script>
+    <script src="jspsych/plugins/plugin-initialize-microphone.js"></script>
+    <script src="jspsych/plugins/plugin-fullscreen.js"></script>
+    <script src="jspsych/plugins/plugin-preload.js"></script>
+    <script src="jspsych/plugins/plugin-browser-check.js"></script>
+
+    <script src="Tools/Functions.js"></script>
+
+
+    <link rel="stylesheet" href="jspsych/css/jspsych.css">
+  </head>
+  <body></body>
+  <script>
+
+//var data_folder             = 'data/Individual_data/'
+var data_folder             = 'data/'
+
+var int_data_folder         = 'data/Interactive_data/'
+var tools_folder            = 'Tools'
+
+    /* initialize jsPsych */
+    var jsPsych = initJsPsych({
+      on_finish: function() {
+        saveData(data_folder+'All_data/all_data_sub_'+subject_id+".csv", jsPsych.data.get().csv());
+        jsPsych.data.get().localSave('csv','mydata.csv');
+
+      }
+    });
+
+    /* create timeline */
+var timeline = [];
+
+    // generate a random subject ID with 15 characters
+var subject_id = jsPsych.randomization.randomID(15);
+
+// pick a random condition for the subject at the start of the experiment
+//var condition_assignment = jsPsych.randomization.sampleWithoutReplacement(['conditionA', 'conditionB', 'conditionC'], 1)[0];
+// this adds a property called 'subject' and a property called 'condition' to every trial
+jsPsych.data.addProperties({
+  subject: subject_id,
+
+  //condition: condition_assignment
+});
+
+
+var preload = {
+  type: jsPsychPreload,
+  images: [
+    'images/images_exp_2/rain_1_0.png',
+    'images/images_exp_2/rain_1_1.png',
+    'images/images_exp_2/rain_1_2.png',
+    'images/images_exp_2/rain_1_3.png',
+    'images/images_exp_2/rain_1_4.png',
+    'images/images_exp_2/rain_2_0.png',
+    'images/images_exp_2/rain_2_1.png',
+    'images/images_exp_2/rain_2_2.png',
+    'images/images_exp_2/rain_2_3.png',
+    'images/images_exp_2/rain_2_4.png',
+    'images/images_exp_2/rain_3_0.png',
+    'images/images_exp_2/rain_3_1.png',
+    'images/images_exp_2/rain_3_2.png',
+    'images/images_exp_2/rain_3_3.png',
+    'images/images_exp_2/rain_3_4.png',
+    'images/images_exp_2/rain_4_0.png',
+    'images/images_exp_2/rain_4_1.png',
+    'images/images_exp_2/rain_4_2.png',
+    'images/images_exp_2/rain_4_3.png',
+    'images/images_exp_2/rain_4_4.png',
+    'images/images_exp_2/rain_5_0.png',
+    'images/images_exp_2/rain_5_1.png',
+    'images/images_exp_2/rain_5_2.png',
+    'images/images_exp_2/rain_5_3.png',
+    'images/images_exp_2/rain_5_4.png',
+    'images/images_exp_2/rain_6_0.png',
+    'images/images_exp_2/rain_6_1.png',
+    'images/images_exp_2/rain_6_2.png',
+    'images/images_exp_2/rain_6_3.png',
+    'images/images_exp_2/rain_6_4.png',
+    'images/images_exp_2/rain_7_0.png',
+    'images/images_exp_2/rain_7_1.png',
+    'images/images_exp_2/rain_7_2.png',
+    'images/images_exp_2/rain_7_3.png',
+    'images/images_exp_2/rain_7_4.png',
+    'images/images_exp_2/rain_8_0.png',
+    'images/images_exp_2/rain_8_1.png',
+    'images/images_exp_2/rain_8_2.png',
+    'images/images_exp_2/rain_8_3.png',
+    'images/images_exp_2/rain_8_4.png',
+    'images/images_exp_2/rain_9_0.png',
+    'images/images_exp_2/rain_9_1.png',
+    'images/images_exp_2/rain_9_2.png',
+    'images/images_exp_2/rain_9_3.png',
+    'images/images_exp_2/rain_9_4.png',
+    'images/images_exp_2/rain_10_0.png',
+    'images/images_exp_2/rain_10_1.png',
+    'images/images_exp_2/rain_10_2.png',
+    'images/images_exp_2/rain_10_3.png',
+    'images/images_exp_2/rain_10_4.png',
+    'images/images_exp_2/thetf_1_0.png',
+    'images/images_exp_2/thetf_1_1.png',
+    'images/images_exp_2/thetf_1_2.png',
+    'images/images_exp_2/thetf_1_3.png',
+    'images/images_exp_2/thetf_1_4.png',
+    'images/images_exp_2/thetf_2_0.png',
+    'images/images_exp_2/thetf_2_1.png',
+    'images/images_exp_2/thetf_2_2.png',
+    'images/images_exp_2/thetf_2_3.png',
+    'images/images_exp_2/thetf_2_4.png',
+    'images/images_exp_2/thetf_3_0.png',
+    'images/images_exp_2/thetf_3_1.png',
+    'images/images_exp_2/thetf_3_2.png',
+    'images/images_exp_2/thetf_3_3.png',
+    'images/images_exp_2/thetf_3_4.png',
+    'images/images_exp_2/thetf_4_0.png',
+    'images/images_exp_2/thetf_4_1.png',
+    'images/images_exp_2/thetf_4_2.png',
+    'images/images_exp_2/thetf_4_3.png',
+    'images/images_exp_2/thetf_4_4.png',
+    'images/images_exp_2/thetf_5_0.png',
+    'images/images_exp_2/thetf_5_1.png',
+    'images/images_exp_2/thetf_5_2.png',
+    'images/images_exp_2/thetf_5_3.png',
+    'images/images_exp_2/thetf_5_4.png',
+    'images/images_exp_2/thetf_6_0.png',
+    'images/images_exp_2/thetf_6_1.png',
+    'images/images_exp_2/thetf_6_2.png',
+    'images/images_exp_2/thetf_6_3.png',
+    'images/images_exp_2/thetf_6_4.png',
+    'images/images_exp_2/thetf_7_0.png',
+    'images/images_exp_2/thetf_7_1.png',
+    'images/images_exp_2/thetf_7_2.png',
+    'images/images_exp_2/thetf_7_3.png',
+    'images/images_exp_2/thetf_7_4.png',
+    'images/images_exp_2/thetf_8_0.png',
+    'images/images_exp_2/thetf_8_1.png',
+    'images/images_exp_2/thetf_8_2.png',
+    'images/images_exp_2/thetf_8_3.png',
+    'images/images_exp_2/thetf_8_4.png',
+    'images/images_exp_2/thetf_9_0.png',
+    'images/images_exp_2/thetf_9_1.png',
+    'images/images_exp_2/thetf_9_2.png',
+    'images/images_exp_2/thetf_9_3.png',
+    'images/images_exp_2/thetf_9_4.png',
+    'images/images_exp_2/thetf_10_0.png',
+    'images/images_exp_2/thetf_10_1.png',
+    'images/images_exp_2/thetf_10_2.png',
+    'images/images_exp_2/thetf_10_3.png',
+    'images/images_exp_2/thetf_10_4.png'
+  ]
+};
+
+timeline.push(preload);
+
+    
+    // capture info 
+    var subject_id = jsPsych.data.getURLVariable('participantId');
+    var study_id = jsPsych.data.getURLVariable('assignmentId');
+    var session_id = jsPsych.data.getURLVariable('projectId');
+    var urlvar = jsPsych.data.urlVariables();
+    const currentUrl = window.location.href;
+
+    jsPsych.data.addProperties({
+        subject_id: subject_id,
+        study_id: study_id,
+        session_id: session_id,
+        urlvar: urlvar,
+        current_url: currentUrl
+    });
+
+    jsPsych.data.addProperties({
+        subject: subject_id,
+    });
+
+    var trial_0 = {
+    type: jsPsychInstructions,
+    pages: [
+        '<div style="font-family: Arial; background: var(--grey); padding: 100px; padding-top: 5%; text-align: left;">' +
+        '<h2>Thank you for participating in this experiment!</h2>' +
+        '<p>By clicking the "Begin Study" button, you will be taken to the study, including complete instructions and an informed consent agreement. Before doing so, you must confirm the following:</p>' +
+        '<p>I hereby confirm that:<br>' +
+        '<input type="checkbox" id="age_checkbox" /> I am over 18 years old.</p>' +
+        '<p>Please close all other browser windows and applications, and plug in if you\'re using a laptop computer. Images in this study will not display properly otherwise.<br>' +
+        '<input type="checkbox" id="close_windows_checkbox" /> I closed all other windows and tabs.</p>' +
+        '<p>Please make sure you are performing this task in a quiet room, without any distractions.<br>' +
+        '<input type="checkbox" id="quiet_checkbox" /> I am in a quiet environment.</p>' +
+        '<p>The study includes several phases, all of which should be completed without extended breaks.<br>' +
+        '<input type="checkbox" id="no_breaks" /> I will perform all phases without extended breaks.</p>' +
+        '<br></p>' +
+        '</div>'
+    ],
+    show_clickable_nav: true,
+    on_load: function() {
+        document.querySelector('button').onclick = function() {
+            var age = document.getElementById('age_checkbox').checked;
+            var otherWin = document.getElementById('close_windows_checkbox').checked;
+            var quiet = document.getElementById('quiet_checkbox').checked;
+            var no_breaks = document.getElementById('no_breaks').checked;
+            if (age && otherWin && quiet && no_breaks) {
+                jsPsych.finishTrial();
+            } else {
+                alert("You cannot proceed without affirming these statements. If they don't apply to you, you will not be able to participate in this experiment. In that case, please return the HIT to Amazon.");
+            }
+        }
+    }
+};
+timeline.push(trial_0);
+
+
+    var trial_consent = {
+        type: jsPsychInstructions,
+        pages: [
+            '<div style="text-align:center; font-family:Arial; font-size: 22px; padding-top:20px; padding-bottom:20px">' +
+            '<p>Please carefully read the below consent form before proceeding.</p>' +
+            '<img src="consent_form_2022.png" style="max-width:80%;padding-left:50px;padding-right:50px;padding-top:20px; padding-bottom:20px; position:relative"></img>' +
+            '<p>By starting the experiment, you indicate that, having read and understood the information provided, you have decided to participate</p>' +
+            '</div>'
+        ],
+        show_clickable_nav: true
+    };
+    timeline.push(trial_consent);
+
+
+    var trial_01 = {
+  type: jsPsychFullscreen,
+  fullscreen_mode: true
+}
+
+  /* create timeline */
+timeline.push(trial_01);
+
+var trial_2 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response; // Stores 'deck 1' or 'deck 2'
+  }
+};
+
+var trial_3_rain = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/rain_1_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_1_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_1_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_1_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: "NO_KEYS", // Use "NO_KEYS" instead of jsPsych.NO_KEYS
+  trial_duration: 5000, // Ends trial after 5 seconds
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly if you need to, but since it's keyboard-based, it might not be needed
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_2, trial_3_rain);
+
+
+// Define trial_4 where the participant makes a choice
+var trial_4 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_5_rain that depends on the choice made in trial_4
+var trial_5_rain = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_4
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/rain_6_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_6_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_6_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_6_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+          <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+          <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+          <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+        </div>`;
+    }
+  },
+  choices: ['Next'],
+  prompt: "",
+  trial_duration: 5000
+};
+
+// Add the trials to the timeline
+timeline.push(trial_4, trial_5_rain);
+
+
+// Define trial_2 where the participant makes a choice
+var trial_6 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+// Define trial_3 that depends on the choice made in trial_2
+var trial_7_rain = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/rain_2_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_2_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_2_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_2_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_6, trial_7_rain);
+
+var trial_8 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+// Define trial_3 that depends on the choice made in trial_2
+var trial_9_rain = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/rain_7_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_7_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_7_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_7_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_8, trial_9_rain);
+
+var trial_10 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+// Define trial_3 that depends on the choice made in trial_2
+var trial_11_rain = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/rain_3_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_3_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_3_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_3_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_10, trial_11_rain);
+   
+var trial_12 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+// Define trial_3 that depends on the choice made in trial_2
+var trial_13_rain = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/rain_8_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_8_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_8_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_8_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_12, trial_13_rain);
+
+var trial_14 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+// Define trial_3 that depends on the choice made in trial_2
+var trial_15_rain = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/rain_4_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_4_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_4_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_4_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_14, trial_15_rain);
+
+var trial_16 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+// Define trial_3 that depends on the choice made in trial_2
+var trial_17_rain = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/rain_9_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_9_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_9_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_9_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_16, trial_17_rain);
+   
+var trial_18 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+// Define trial_3 that depends on the choice made in trial_2
+var trial_19_rain = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/rain_5_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_5_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_5_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_5_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_18, trial_19_rain);
+
+var trial_20 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+// Define trial_3 that depends on the choice made in trial_2
+var trial_21_rain = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/rain_10_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_10_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_10_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/rain_10_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_20, trial_21_rain);
+
+// Define trial_2 where the participant makes a choice
+var trial_22 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+var trial_23_thetf = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/thetf_1_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_1_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_1_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_1_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_22, trial_23_thetf);
+
+
+// Define trial_2 where the participant makes a choice
+var trial_24 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+var trial_25_thetf = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/thetf_6_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_6_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_6_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_6_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+          <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+          <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+          <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+        </div>`;
+        
+    }
+  },
+  choices: ['Next','next'],
+  prompt: "",
+  trial_duration: "5000",
+
+};
+
+// Add the trials to the timeline
+timeline.push(trial_24, trial_25_thetf);
+
+// Define trial_2 where the participant makes a choice
+var trial_26 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+// Define trial_3 that depends on the choice made in trial_2
+var trial_27_thetf = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/thetf_2_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_2_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_2_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_2_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_26, trial_27_thetf);
+
+var trial_28 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+// Define trial_3 that depends on the choice made in trial_2
+var trial_29_thetf = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/thetf_7_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_7_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_7_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_7_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_28, trial_29_thetf);
+
+var trial_30 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+// Define trial_3 that depends on the choice made in trial_2
+var trial_31_thetf = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/thetf_3_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_3_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_3_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_3_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_30, trial_31_thetf);
+   
+var trial_32 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+// Define trial_3 that depends on the choice made in trial_2
+var trial_33_thetf = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/thetf_8_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_8_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_8_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_8_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_32, trial_33_thetf);
+
+var trial_34 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+// Define trial_3 that depends on the choice made in trial_2
+var trial_35_thetf = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/thetf_4_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_4_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_4_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_4_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_34, trial_35_thetf);
+
+var trial_36 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+// Define trial_3 that depends on the choice made in trial_2
+var trial_37_thetf = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/thetf_9_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_9_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_9_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_9_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_36, trial_37_thetf);
+   
+var trial_38 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+// Define trial_3 that depends on the choice made in trial_2
+var trial_39_thetf = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/thetf_5_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_5_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_5_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_5_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_38, trial_39_thetf);
+
+var trial_40 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  prompt: "",
+  on_finish: function(data){
+    // Save the participant's choice for use in the next trial
+    data.choice = data.response;
+  }
+};
+
+// Define trial_3 that depends on the choice made in trial_2
+// Define trial_3 that depends on the choice made in trial_2
+var trial_41_thetf = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    // Get the participant's choice from trial_2
+    var choice = jsPsych.data.get().last(1).values()[0].choice;
+
+    // Display images based on the choice
+    if(choice === 0){
+      return `
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/images_exp_2/thetf_10_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_10_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_10_3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/images_exp_2/thetf_10_4.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <img src="images/celebs/timeline_a/1_Patrick_Stewart.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/2_Stevie_Wonder.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/3_Sean_Penn.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+            <img src="images/celebs/timeline_a/4__Brooke_Shields.png" style="width: 300px; height: 300px;" />
+          </div>
+        </div>`;
+    }
+  },
+  choices: ['Next','next'],
+  trial_duration: 5000,
+  on_load: function() {
+    // Ensure the "Next" button is displayed correctly
+    document.querySelector('.jspsych-btn').style.display = 'inline-block';
+  }
+};
+
+// Add the trials to the timeline
+timeline.push(trial_40, trial_41_thetf);
+
+
+
+var trial_101 = {
+  type: jsPsychSurveyText,
+  questions: [
+    {prompt: 'please insert your gender (MALE/ FEMALE/ OTHER)'},
+    {prompt: 'Please insert your age'}
+  ]
+}
+timeline.push(trial_101);
+
+
+var trial_102 = {
+        type: jsPsychInstructions,
+        pages: [
+
+        '<span style="color: black; font-size: 24px"> You have completed the experiment.'  +'<br/>'+ 'The completion code is : AJFHBG896' +'<br/>'+  'Thank you for your participation!</span> '
+
+    ],
+    show_clickable_nav: true
+    };
+    timeline.push(trial_102);
+
+    /* start the experiment */
+    var trial_103 = {
+  type: jsPsychSurveyText,
+  questions: [
+    {prompt: 'please insert The completion code'},]
+}
+timeline.push(trial_103);
+
+jsPsych.run(timeline);
+
+
+
+
+  </script>
+</html>

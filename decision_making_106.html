@@ -1,0 +1,1076 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .hide_cursor {
+        cursor: none;
+      }
+    </style>
+    <title>My experiment</title>
+    <script src="jspsych/plugins/jspsych.js"></script>
+    <script src="jspsych/plugins/plugin-instructions.js"></script>
+    <script src="jspsych/plugins/plugin-survey-text.js"></script>
+    <script src="jspsych/plugins/plugin-html-keyboard-response.js"></script>
+    <script src="jspsych/plugins/plugin-survey-likert.js"></script>
+    <script src="jspsych/plugins/plugin-html-button-response.js"></script>
+    <script src="jspsych/plugins/plugin-fullscreen.js"></script>
+    <script src="jspsych/plugins/plugin-preload.js"></script>
+    <link rel="stylesheet" href="jspsych/css/jspsych.css">
+  </head>
+  <body></body>
+  <script>
+//var data_folder             = 'data/Individual_data/'
+var data_folder             = 'data/'
+
+var int_data_folder         = 'data/Interactive_data/'
+var tools_folder            = 'Tools'
+
+    /* initialize jsPsych */
+    /* initialize jsPsych */
+
+    function saveData(name, data){
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'write_data.php'); // 'write_data.php' is the path to the php file described above.
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({filedata: data}));
+}
+
+// call the saveData function after the experiment is over
+initJsPsych({
+   on_finish: function(){ saveData(jsPsych.data.get().csv()); }
+});
+
+    var jsPsych = initJsPsych({
+      on_finish: function() {
+        saveData(data_folder+'All_data/all_data_sub_'+subject_id+".csv", jsPsych.data.get().csv());
+        //jsPsych.data.get().localSave('csv','mydata.csv');
+
+      }
+    });
+
+    /* create timeline */
+    var timeline = [];
+
+    jsPsych.data.addProperties({
+  subject: subject_id,
+
+  //condition: condition_assignment
+});
+
+    // Preload images
+    var preload = {
+      type: jsPsychPreload,
+      images: [
+        'images/causal/causal_series_1/causal_series_1_a.jpg',
+        'images/causal/causal_series_1/causal_series_1_b.jpg',
+        'images/causal/causal_series_1/causal_series_1_c.jpg',
+        'images/causal/causal_series_1/causal_series_1_d.jpg',
+        'images/semantic/semantic_series_1/semantic_series_1_a.jpg',
+        'images/semantic/semantic_series_1/semantic_series_1_b.jpg',
+        'images/semantic/semantic_series_1/semantic_series_1_c.jpg',
+        'images/semantic/semantic_series_1/semantic_series_1_d.jpg'
+      ]
+    };
+
+    var subject_id = jsPsych.data.getURLVariable('participantId');
+    var study_id = jsPsych.data.getURLVariable('assignmentId');
+    var session_id = jsPsych.data.getURLVariable('projectId');
+    var urlvar = jsPsych.data.urlVariables();
+    const currentUrl = window.location.href;
+
+    jsPsych.data.addProperties({
+        subject_id: subject_id,
+        study_id: study_id,
+        session_id: session_id,
+        urlvar: urlvar,
+        current_url: currentUrl
+    });
+
+    jsPsych.data.addProperties({
+        subject: subject_id,
+    });
+
+
+    
+    // Define consent and instruction trials
+    var trial_0 = {
+      type: jsPsychInstructions,
+      pages: [
+        '<div style="font-family: Arial; background: var(--grey); padding: 100px; padding-top: 5%; text-align: left;">' +
+        '<h2>Thank you for participating in this experiment!</h2>' +
+        '<p>By clicking the "Begin Study" button, you will be taken to the study, including complete instructions and an informed consent agreement.</p>'
+      ],
+      show_clickable_nav: true
+    };
+
+    var trial_consent = {
+      type: jsPsychInstructions,
+      pages: [
+        '<div style="text-align:center; font-family:Arial; font-size: 22px; padding-top:20px;">' +
+        '<p>Please carefully read the consent form below before proceeding.</p>' +
+        '<img src="consent_form_2022.png" style="max-width:80%; padding:20px;"></img>' +
+        '</div>'
+      ],
+      show_clickable_nav: true,
+      
+       // Set to 1 second
+
+      
+    };
+
+    var trial_01 = {
+      type: jsPsychFullscreen,
+      fullscreen_mode: true,
+      trial_duration: 1000  // Set to 1 second
+
+    };
+
+    var instructions_deck_choice = {
+  type: jsPsychInstructions,
+  pages: [
+    '<div style="font-family: Arial; text-align: left; padding: 100px; padding-top: 5%;">' +
+    '<h2>Instructions</h2>' +
+    '<p>In this experiment, you will be asked to choose between two decks of cards: one  and one blue.</p>' +
+    '<p>Please make your choice intuitively, selecting the deck that seems more interesting to you.</p>' +
+    '<p>You are welcome to explore the differences between the two decks as you go along.</p>' +
+    '<p>There is no right or wrong choice—simply go with your instinct.</p>' +
+    '<p>When you are ready, press "Next" to begin.</p>' +
+    '</div>'
+  ],
+  show_clickable_nav: true
+};
+
+// Add the new instruction trial to the timeline after trial_01
+
+    // Function to create a trial for each image with a 3-second gap
+    function createImageTrial(imagePath) {
+      return {
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: `<div style="display: flex; justify-content: center; align-items: center;">
+                    <img src="${imagePath}" style="width: 300px; height: 300px;" />
+                  </div>`,
+        choices: "NO_KEYS",
+        trial_duration: 3000
+      };
+    }
+
+    // Define the sequence of image trials
+    var causal_sequence_1 = [
+      createImageTrial('images/causal/causal_series_1/causal_series_1_a.jpg'),
+      createImageTrial('images/causal/causal_series_1/causal_series_1_b.jpg'),
+      createImageTrial('images/causal/causal_series_1/causal_series_1_c.jpg'),
+      createImageTrial('images/causal/causal_series_1/causal_series_1_d.jpg')
+      
+    ];
+
+    var semantic_sequence_1 = [
+      createImageTrial('images/semantic/semantic_series_1/semantic_series_1_a.jpg'),
+      createImageTrial('images/semantic/semantic_series_1/semantic_series_1_b.jpg'),
+      createImageTrial('images/semantic/semantic_series_1/semantic_series_1_c.jpg'),
+      createImageTrial('images/semantic/semantic_series_1/semantic_series_1_d.jpg')
+    ];
+
+    var causal_sequence_2 = [
+      createImageTrial('images/causal/causal_series_2/causal_series_2_a.jpg'),
+      createImageTrial('images/causal/causal_series_2/causal_series_2_b.jpg'),
+      createImageTrial('images/causal/causal_series_2/causal_series_2_c.jpg'),
+      createImageTrial('images/causal/causal_series_2/causal_series_2_d.jpg')
+    ];
+
+    var semantic_sequence_2 = [
+      createImageTrial('images/semantic/semantic_series_2/semantic_series_2_a.jpg'),
+      createImageTrial('images/semantic/semantic_series_2/semantic_series_2_b.jpg'),
+      createImageTrial('images/semantic/semantic_series_2/semantic_series_2_c.jpg'),
+      createImageTrial('images/semantic/semantic_series_2/semantic_series_2_d.jpg')
+    ];
+
+
+    var causal_sequence_3 = [
+  createImageTrial('images/causal/causal_series_3/causal_series_3_a.jpg'),
+  createImageTrial('images/causal/causal_series_3/causal_series_3_b.jpg'),
+  createImageTrial('images/causal/causal_series_3/causal_series_3_c.jpg'),
+  createImageTrial('images/causal/causal_series_3/causal_series_3_d.jpg')
+];
+
+var semantic_sequence_3 = [
+  createImageTrial('images/semantic/semantic_series_3/semantic_series_3_a.jpg'),
+  createImageTrial('images/semantic/semantic_series_3/semantic_series_3_b.jpg'),
+  createImageTrial('images/semantic/semantic_series_3/semantic_series_3_c.jpg'),
+  createImageTrial('images/semantic/semantic_series_3/semantic_series_3_d.jpg')
+];
+
+var causal_sequence_4 = [
+  createImageTrial('images/causal/causal_series_4/causal_series_4_a.jpg'),
+  createImageTrial('images/causal/causal_series_4/causal_series_4_b.jpg'),
+  createImageTrial('images/causal/causal_series_4/causal_series_4_c.jpg'),
+  createImageTrial('images/causal/causal_series_4/causal_series_4_d.jpg')
+];
+
+var semantic_sequence_4 = [
+  createImageTrial('images/semantic/semantic_series_4/semantic_series_4_a.jpg'),
+  createImageTrial('images/semantic/semantic_series_4/semantic_series_4_b.jpg'),
+  createImageTrial('images/semantic/semantic_series_4/semantic_series_4_c.jpg'),
+  createImageTrial('images/semantic/semantic_series_4/semantic_series_4_d.jpg')
+];
+
+var causal_sequence_5 = [
+  createImageTrial('images/causal/causal_series_5/causal_series_5_a.jpg'),
+  createImageTrial('images/causal/causal_series_5/causal_series_5_b.jpg'),
+  createImageTrial('images/causal/causal_series_5/causal_series_5_c.jpg'),
+  createImageTrial('images/causal/causal_series_5/causal_series_5_d.jpg')
+];
+
+var semantic_sequence_5 = [
+  createImageTrial('images/semantic/semantic_series_5/semantic_series_5_a.jpg'),
+  createImageTrial('images/semantic/semantic_series_5/semantic_series_5_b.jpg'),
+  createImageTrial('images/semantic/semantic_series_5/semantic_series_5_c.jpg'),
+  createImageTrial('images/semantic/semantic_series_5/semantic_series_5_d.jpg')
+];
+
+var causal_sequence_6 = [
+  createImageTrial('images/causal/causal_series_6/causal_series_6_a.jpg'),
+  createImageTrial('images/causal/causal_series_6/causal_series_6_b.jpg'),
+  createImageTrial('images/causal/causal_series_6/causal_series_6_c.jpg'),
+  createImageTrial('images/causal/causal_series_6/causal_series_6_d.jpg')
+];
+
+var semantic_sequence_6 = [
+  createImageTrial('images/semantic/semantic_series_6/semantic_series_6_a.jpg'),
+  createImageTrial('images/semantic/semantic_series_6/semantic_series_6_b.jpg'),
+  createImageTrial('images/semantic/semantic_series_6/semantic_series_6_c.jpg'),
+  createImageTrial('images/semantic/semantic_series_6/semantic_series_6_d.jpg')
+];
+
+var causal_sequence_7 = [
+  createImageTrial('images/causal/causal_series_7/causal_series_7_a.jpg'),
+  createImageTrial('images/causal/causal_series_7/causal_series_7_b.jpg'),
+  createImageTrial('images/causal/causal_series_7/causal_series_7_c.jpg'),
+  createImageTrial('images/causal/causal_series_7/causal_series_7_d.jpg')
+];
+
+var semantic_sequence_7 = [
+  createImageTrial('images/semantic/semantic_series_7/semantic_series_7_a.jpg'),
+  createImageTrial('images/semantic/semantic_series_7/semantic_series_7_b.jpg'),
+  createImageTrial('images/semantic/semantic_series_7/semantic_series_7_c.jpg'),
+  createImageTrial('images/semantic/semantic_series_7/semantic_series_7_d.jpg')
+];
+
+var causal_sequence_8 = [
+  createImageTrial('images/causal/causal_series_8/causal_series_8_a.jpg'),
+  createImageTrial('images/causal/causal_series_8/causal_series_8_b.jpg'),
+  createImageTrial('images/causal/causal_series_8/causal_series_8_c.jpg'),
+  createImageTrial('images/causal/causal_series_8/causal_series_8_d.jpg')
+];
+
+var semantic_sequence_8 = [
+  createImageTrial('images/semantic/semantic_series_8/semantic_series_8_a.jpg'),
+  createImageTrial('images/semantic/semantic_series_8/semantic_series_8_b.jpg'),
+  createImageTrial('images/semantic/semantic_series_8/semantic_series_8_c.jpg'),
+  createImageTrial('images/semantic/semantic_series_8/semantic_series_8_d.jpg')
+];
+
+var causal_sequence_9 = [
+  createImageTrial('images/causal/causal_series_9/causal_series_9_a.jpg'),
+  createImageTrial('images/causal/causal_series_9/causal_series_9_b.jpg'),
+  createImageTrial('images/causal/causal_series_9/causal_series_9_c.jpg'),
+  createImageTrial('images/causal/causal_series_9/causal_series_9_d.jpg')
+];
+
+var semantic_sequence_9 = [
+  createImageTrial('images/semantic/semantic_series_9/semantic_series_9_a.jpg'),
+  createImageTrial('images/semantic/semantic_series_9/semantic_series_9_b.jpg'),
+  createImageTrial('images/semantic/semantic_series_9/semantic_series_9_c.jpg'),
+  createImageTrial('images/semantic/semantic_series_9/semantic_series_9_d.jpg')
+];
+
+var causal_sequence_10 = [
+  createImageTrial('images/causal/causal_series_10/causal_series_10_a.jpg'),
+  createImageTrial('images/causal/causal_series_10/causal_series_10_b.jpg'),
+  createImageTrial('images/causal/causal_series_10/causal_series_10_c.jpg'),
+  createImageTrial('images/causal/causal_series_10/causal_series_10_d.jpg')
+];
+
+var semantic_sequence_10 = [
+  createImageTrial('images/semantic/semantic_series_10/semantic_series_10_a.jpg'),
+  createImageTrial('images/semantic/semantic_series_10/semantic_series_10_b.jpg'),
+  createImageTrial('images/semantic/semantic_series_10/semantic_series_10_c.jpg'),
+  createImageTrial('images/semantic/semantic_series_10/semantic_series_10_d.jpg')
+];
+
+var causal_sequence_11 = [
+  createImageTrial('images/causal/causal_series_11/causal_series_11_a.jpg'),
+  createImageTrial('images/causal/causal_series_11/causal_series_11_b.jpg'),
+  createImageTrial('images/causal/causal_series_11/causal_series_11_c.jpg'),
+  createImageTrial('images/causal/causal_series_11/causal_series_11_d.jpg')
+];
+
+var semantic_sequence_11 = [
+  createImageTrial('images/semantic/semantic_series_11/semantic_series_11_a.jpg'),
+  createImageTrial('images/semantic/semantic_series_11/semantic_series_11_b.jpg'),
+  createImageTrial('images/semantic/semantic_series_11/semantic_series_11_c.jpg'),
+  createImageTrial('images/semantic/semantic_series_11/semantic_series_11_d.jpg')
+];
+
+var causal_sequence_12 = [
+  createImageTrial('images/causal/causal_series_12/causal_series_12_a.jpg'),
+  createImageTrial('images/causal/causal_series_12/causal_series_12_b.jpg'),
+  createImageTrial('images/causal/causal_series_12/causal_series_12_c.jpg'),
+  createImageTrial('images/causal/causal_series_12/causal_series_12_d.jpg')
+];
+
+var semantic_sequence_12 = [
+  createImageTrial('images/semantic/semantic_series_12/semantic_series_12_a.jpg'),
+  createImageTrial('images/semantic/semantic_series_12/semantic_series_12_b.jpg'),
+  createImageTrial('images/semantic/semantic_series_12/semantic_series_12_c.jpg'),
+  createImageTrial('images/semantic/semantic_series_12/semantic_series_12_d.jpg')
+];
+
+var causal_sequence_13 = [
+  createImageTrial('images/causal/causal_series_13/causal_series_13_a.jpg'),
+  createImageTrial('images/causal/causal_series_13/causal_series_13_b.jpg'),
+  createImageTrial('images/causal/causal_series_13/causal_series_13_c.jpg'),
+  createImageTrial('images/causal/causal_series_13/causal_series_13_d.jpg')
+];
+
+var semantic_sequence_13 = [
+  createImageTrial('images/semantic/semantic_series_13/semantic_series_13_a.jpg'),
+  createImageTrial('images/semantic/semantic_series_13/semantic_series_13_b.jpg'),
+  createImageTrial('images/semantic/semantic_series_13/semantic_series_13_c.jpg'),
+  createImageTrial('images/semantic/semantic_series_13/semantic_series_13_d.jpg')
+];
+
+var causal_sequence_14 = [
+  createImageTrial('images/causal/causal_series_14/causal_series_14_a.jpg'),
+  createImageTrial('images/causal/causal_series_14/causal_series_14_b.jpg'),
+  createImageTrial('images/causal/causal_series_14/causal_series_14_c.jpg'),
+  createImageTrial('images/causal/causal_series_14/causal_series_14_d.jpg')
+];
+
+var semantic_sequence_14 = [
+  createImageTrial('images/semantic/semantic_series_14/semantic_series_14_a.jpg'),
+  createImageTrial('images/semantic/semantic_series_14/semantic_series_14_b.jpg'),
+  createImageTrial('images/semantic/semantic_series_14/semantic_series_14_c.jpg'),
+  createImageTrial('images/semantic/semantic_series_14/semantic_series_14_d.jpg')
+];
+
+var causal_sequence_15 = [
+  createImageTrial('images/causal/causal_series_15/causal_series_15_a.jpg'),
+  createImageTrial('images/causal/causal_series_15/causal_series_15_b.jpg'),
+  createImageTrial('images/causal/causal_series_15/causal_series_15_c.jpg'),
+  createImageTrial('images/causal/causal_series_15/causal_series_15_d.jpg')
+];
+
+var semantic_sequence_15 = [
+  createImageTrial('images/semantic/semantic_series_15/semantic_series_15_a.jpg'),
+  createImageTrial('images/semantic/semantic_series_15/semantic_series_15_b.jpg'),
+  createImageTrial('images/semantic/semantic_series_15/semantic_series_15_c.jpg'),
+  createImageTrial('images/semantic/semantic_series_15/semantic_series_15_d.jpg')
+];
+
+var causal_sequence_16 = [
+  createImageTrial('images/causal/causal_series_16/causal_series_16_a.jpg'),
+  createImageTrial('images/causal/causal_series_16/causal_series_16_b.jpg'),
+  createImageTrial('images/causal/causal_series_16/causal_series_16_c.jpg'),
+  createImageTrial('images/causal/causal_series_16/causal_series_16_d.jpg')
+];
+
+var semantic_sequence_16 = [
+  createImageTrial('images/semantic/semantic_series_16/semantic_series_16_a.jpg'),
+  createImageTrial('images/semantic/semantic_series_16/semantic_series_16_b.jpg'),
+  createImageTrial('images/semantic/semantic_series_16/semantic_series_16_c.jpg'),
+  createImageTrial('images/semantic/semantic_series_16/semantic_series_16_d.jpg')
+];
+
+var causal_sequence_17 = [
+  createImageTrial('images/causal/causal_series_17/causal_series_17_a.jpg'),
+  createImageTrial('images/causal/causal_series_17/causal_series_17_b.jpg'),
+  createImageTrial('images/causal/causal_series_17/causal_series_17_c.jpg'),
+  createImageTrial('images/causal/causal_series_17/causal_series_17_d.jpg')
+];
+
+var semantic_sequence_17 = [
+  createImageTrial('images/semantic/semantic_series_17/semantic_series_17_a.jpg'),
+  createImageTrial('images/semantic/semantic_series_17/semantic_series_17_b.jpg'),
+  createImageTrial('images/semantic/semantic_series_17/semantic_series_17_c.jpg'),
+  createImageTrial('images/semantic/semantic_series_17/semantic_series_17_d.jpg')
+];
+
+var causal_sequence_18 = [
+  createImageTrial('images/causal/causal_series_18/causal_series_18_a.jpg'),
+  createImageTrial('images/causal/causal_series_18/causal_series_18_b.jpg'),
+  createImageTrial('images/causal/causal_series_18/causal_series_18_c.jpg'),
+  createImageTrial('images/causal/causal_series_18/causal_series_18_d.jpg')
+];
+
+var semantic_sequence_18 = [
+  createImageTrial('images/semantic/semantic_series_18/semantic_series_18_a.jpg'),
+  createImageTrial('images/semantic/semantic_series_18/semantic_series_18_b.jpg'),
+  createImageTrial('images/semantic/semantic_series_18/semantic_series_18_c.jpg'),
+  createImageTrial('images/semantic/semantic_series_18/semantic_series_18_d.jpg')
+];
+
+    // Define the deck selection trial
+
+
+var trial_2 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck a', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_3 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_4 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_5 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_6 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_7 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_8 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_9 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_10 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_11 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_12 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_13 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_14 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_15 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_16 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_17 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_18 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/blue_deck_1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+      <img src="images/red_deck_2.png" style="width: 300px; height: 300px;" />
+    </div>`,
+  choices: ['deck 1', 'deck 2'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+
+    // Conditional timeline for causal_sequence_1
+    var conditional_trial_causal_1 = {
+      timeline: causal_sequence_1,
+      conditional_function: function() {
+        var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+        return last_choice == 1; // 'deck a' selected
+      }
+    };
+
+    // Conditional timeline for semantic_sequence_1
+    var conditional_trial_semantic_1 = {
+      timeline: semantic_sequence_1,
+      conditional_function: function() {
+        var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+        return last_choice == 0; // 'deck 2' selected
+      }
+    };
+
+    var conditional_trial_causal_2 = {
+      timeline: causal_sequence_2,
+      conditional_function: function() {
+        var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+        return last_choice == 1; // 'deck 1' selected
+      }
+    };
+
+    var conditional_trial_semantic_2 = {
+      timeline: semantic_sequence_2,
+      conditional_function: function() {
+        var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+        return last_choice == 0; // 'deck 2' selected
+      }
+    };
+
+    var person_question = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: 'Was there a person in the picture?',
+      choices: ['Yes', 'No'],
+      on_finish: function(data) {
+        data.response;
+      }
+    };
+
+    var conditional_trial_causal_3 = {
+  timeline: causal_sequence_3,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 1' selected
+  }
+};
+
+var conditional_trial_semantic_3 = {
+  timeline: semantic_sequence_3,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 2' selected
+  }
+};
+
+var conditional_trial_causal_4 = {
+  timeline: causal_sequence_4,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 1' selected
+  }
+};
+
+var conditional_trial_semantic_4 = {
+  timeline: semantic_sequence_4,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 2' selected
+  }
+};
+
+var conditional_trial_causal_5 = {
+  timeline: causal_sequence_5,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 1' selected
+  }
+};
+
+var conditional_trial_semantic_5 = {
+  timeline: semantic_sequence_5,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 2' selected
+  }
+};
+
+var conditional_trial_causal_6 = {
+  timeline: causal_sequence_6,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 1' selected
+  }
+};
+
+var conditional_trial_semantic_6 = {
+  timeline: semantic_sequence_6,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 2' selected
+  }
+};
+
+var conditional_trial_causal_7 = {
+  timeline: causal_sequence_7,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 1' selected
+  }
+};
+
+var conditional_trial_semantic_7 = {
+  timeline: semantic_sequence_7,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 2' selected
+  }
+};
+
+var conditional_trial_causal_8 = {
+  timeline: causal_sequence_8,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 1' selected
+  }
+};
+
+var conditional_trial_semantic_8 = {
+  timeline: semantic_sequence_8,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 2' selected
+  }
+};
+
+var conditional_trial_causal_9 = {
+  timeline: causal_sequence_9,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 1' selected
+  }
+};
+
+var conditional_trial_semantic_9 = {
+  timeline: semantic_sequence_9,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 2' selected
+  }
+};
+
+var conditional_trial_causal_10 = {
+  timeline: causal_sequence_10,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 1' selected
+  }
+};
+
+var conditional_trial_semantic_10 = {
+  timeline: semantic_sequence_10,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 2' selected
+  }
+};
+
+var conditional_trial_causal_11 = {
+  timeline: causal_sequence_11,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 1' selected
+  }
+};
+
+var conditional_trial_semantic_11 = {
+  timeline: semantic_sequence_11,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 2' selected
+  }
+};
+
+var conditional_trial_causal_12 = {
+  timeline: causal_sequence_12,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 1' selected
+  }
+};
+
+var conditional_trial_semantic_12 = {
+  timeline: semantic_sequence_12,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 2' selected
+  }
+};
+
+var conditional_trial_causal_13 = {
+  timeline: causal_sequence_13,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 1' selected
+  }
+};
+
+var conditional_trial_semantic_13 = {
+  timeline: semantic_sequence_13,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 2' selected
+  }
+};
+
+var conditional_trial_causal_14 = {
+  timeline: causal_sequence_14,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 1' selected
+  }
+};
+
+var conditional_trial_semantic_14 = {
+  timeline: semantic_sequence_14,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 2' selected
+  }
+};
+
+var conditional_trial_causal_15 = {
+  timeline: causal_sequence_15,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 1' selected
+  }
+};
+
+var conditional_trial_semantic_15 = {
+  timeline: semantic_sequence_15,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 2' selected
+  }
+};
+
+var conditional_trial_causal_16 = {
+  timeline: causal_sequence_16,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 1' selected
+  }
+};
+
+var conditional_trial_semantic_16 = {
+  timeline: semantic_sequence_16,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 2' selected
+  }
+};
+
+var conditional_trial_causal_17 = {
+  timeline: causal_sequence_17,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 1' selected
+  }
+};
+
+var conditional_trial_semantic_17 = {
+  timeline: semantic_sequence_17,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 2' selected
+  }
+};
+
+var conditional_trial_causal_18 = {
+  timeline: causal_sequence_18,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 1; // 'deck 1' selected
+  }
+};
+
+var conditional_trial_semantic_18 = {
+  timeline: semantic_sequence_18,
+  conditional_function: function() {
+    var last_choice = jsPsych.data.getLastTrialData().values()[0].response;
+    return last_choice == 0; // 'deck 2' selected
+  }
+};
+
+
+    var enjoyment_question = {
+      type: jsPsychSurveyLikert,
+      questions: [
+        {
+          prompt: 'How interesting was the trial?', 
+          labels: ['1 (Not at all)', '2', '3', '4', '5 (Very much)'], 
+          required: true
+        }
+      ]
+    };
+// Shuffle function to randomize trials
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+// Randomize the order of the trials
+// Shuffle function to randomize trials
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+// Shuffle function to randomize trials
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+// Randomize the order of 18 causal and semantic trials
+function randomizeTrials(trials) {
+  return shuffle(trials);
+}
+
+
+
+// Create an array of the 18 causal and semantic trials
+let trials_causal = [
+  conditional_trial_causal_1, conditional_trial_causal_2, conditional_trial_causal_3,
+  conditional_trial_causal_4, conditional_trial_causal_5, conditional_trial_causal_6,
+  conditional_trial_causal_7, conditional_trial_causal_8, conditional_trial_causal_9,
+  conditional_trial_causal_10, conditional_trial_causal_11, conditional_trial_causal_12,
+  conditional_trial_causal_13, conditional_trial_causal_14, conditional_trial_causal_15,
+  conditional_trial_causal_16, conditional_trial_causal_17, conditional_trial_causal_18
+];
+
+let trials_semantic = [
+  conditional_trial_semantic_1, conditional_trial_semantic_2, conditional_trial_semantic_3,
+  conditional_trial_semantic_4, conditional_trial_semantic_5, conditional_trial_semantic_6,
+  conditional_trial_semantic_7, conditional_trial_semantic_8, conditional_trial_semantic_9,
+  conditional_trial_semantic_10, conditional_trial_semantic_11, conditional_trial_semantic_12,
+  conditional_trial_semantic_13, conditional_trial_semantic_14, conditional_trial_semantic_15,
+  conditional_trial_semantic_16, conditional_trial_semantic_17, conditional_trial_semantic_18
+];
+
+
+
+// Randomize the order of the 18 trials for both causal and semantic
+var randomizedTrialsCausal = randomizeTrials(trials_causal);
+var randomizedTrialsSemantic = randomizeTrials(trials_semantic);
+
+
+
+// Add trials to the timeline, ensuring to access trials in the randomized order
+timeline.push(preload, trial_0, trial_consent, trial_01, instructions_deck_choice);
+
+// Loop to push the randomized trials
+for (let i = 0; i < randomizedTrialsCausal.length; i++) {
+  timeline.push(trial_2); // Push trial before each randomized causal trial
+  timeline.push(randomizedTrialsCausal[i]); // Push the randomized causal trial
+  timeline.push(randomizedTrialsSemantic[i]); // Add corresponding semantic trial
+  timeline.push(person_question); // Add question about the image
+  timeline.push(enjoyment_question); // Add interest question
+}
+
+
+
+    // Add other trials
+// Trial 1: Ask if the participant can describe the difference between the two decks
+var trial_difference_between_decks = {
+  type: jsPsychSurveyText,
+  questions: [
+    {prompt: 'Can you describe the difference between the two decks of cards?'}
+  ]
+};
+
+// Trial 2: Ask which deck seemed more interesting
+var trial_interesting_deck = {
+  type: jsPsychSurveyText,
+  questions: [
+    {prompt: 'Which deck seemed more interesting to you overall? (You can also say that both were interesting or neither was interesting)'}
+  ]
+};
+
+// Add the new trials to the timeline at the end
+timeline.push(trial_difference_between_decks);
+timeline.push(trial_interesting_deck);
+
+
+    var trial_101 = {
+      type: jsPsychSurveyText,
+      questions: [
+        {prompt: 'Please insert your gender (MALE/ FEMALE/ OTHER)'},
+        {prompt: 'Please insert your age'}
+      ]
+    };
+    timeline.push(trial_101);
+
+    var trial_102 = {
+      type: jsPsychInstructions,
+      pages: [
+        '<span style="color: black; font-size: 24px">You have completed the experiment.' + 
+        '<br/>The completion code is : AJFHBG896<br/>Thank you for your participation!</span>'
+      ],
+      show_clickable_nav: true
+    };
+    timeline.push(trial_102);
+
+    var trial_103 = {
+      type: jsPsychSurveyText,
+      questions: [
+        {prompt: 'Please insert the completion code'}
+      ]
+    };
+    timeline.push(trial_103);
+
+    // Run the experiment
+    jsPsych.run(timeline);
+  </script>
+</html>
