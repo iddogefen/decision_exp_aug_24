@@ -1,0 +1,717 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .hide_cursor {
+        cursor: none;
+      }
+    </style>
+    <title>My experiment</title>
+    <script src="jspsych/plugins/jspsych.js"></script>
+    <script src="jspsych/plugins/plugin-instructions.js"></script>
+    <script src="jspsych/plugins/plugin-survey-text.js"></script>
+    <script src="jspsych/plugins/plugin-html-keyboard-response.js"></script>
+    <script src="jspsych/plugins/plugin-survey-likert.js"></script>
+    <script src="jspsych/plugins/plugin-html-button-response.js"></script>
+    <script src="jspsych/plugins/plugin-fullscreen.js"></script>
+    <script src="jspsych/plugins/plugin-preload.js"></script>
+    <link rel="stylesheet" href="jspsych/css/jspsych.css">
+  </head>
+  <body></body>
+  <script>
+
+//var data_folder             = 'data/Individual_data/'
+var data_folder             = 'data/'
+
+var int_data_folder         = 'data/Interactive_data/'
+var tools_folder            = 'Tools'
+
+
+function saveData(name, data){
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'write_data.php'); // 'write_data.php' is the path to the php file described above.
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({filedata: data}));
+}
+
+var jsPsych = initJsPsych({
+  on_finish: function() {
+    saveData(data_folder+'All_data/all_data_sub_'+subject_id+".csv", jsPsych.data.get().csv());
+  }
+});
+
+    // generate a random subject ID with 15 characters
+var subject_id = jsPsych.randomization.randomID(15);
+    /* create timeline */
+    var timeline = [];
+
+    // Preload images
+    var preload = {
+      type: jsPsychPreload,
+      images: [
+        'images/instructions/1.png',
+        'images/instructions/2.png',
+        'images/instructions/3.png',
+        'images/instructions/4.png',
+        'images/instructions/5.png',
+        'images/instructions/6.png',
+        'images/instructions/7.png',
+        'images/instructions/8.png',
+        
+    // Causal images
+    'images/causal/causal_1/1.png',
+    'images/causal/causal_1/2.png',
+    'images/causal/causal_2/1.png',
+    'images/causal/causal_2/2.png',
+    'images/causal/causal_3/1.png',
+    'images/causal/causal_3/2.png',
+    'images/causal/causal_4/1.png',
+    'images/causal/causal_4/2.png',
+    'images/causal/causal_5/1.png',
+    'images/causal/causal_5/2.png',
+    'images/causal/causal_6/1.png',
+    'images/causal/causal_6/2.png',
+    'images/causal/causal_7/1.png',
+    'images/causal/causal_7/2.png',
+    'images/causal/causal_8/1.png',
+    'images/causal/causal_8/2.png',
+
+    // Schematic images
+    'images/schematic/schematic_1/1.png',
+    'images/schematic/schematic_1/2.png',
+    'images/schematic/schematic_2/1.png',
+    'images/schematic/schematic_2/2.png',
+    'images/schematic/schematic_3/1.png',
+    'images/schematic/schematic_3/2.png',
+    'images/schematic/schematic_4/1.png',
+    'images/schematic/schematic_4/2.png',
+    'images/schematic/schematic_5/1.png',
+    'images/schematic/schematic_5/2.png',
+    'images/schematic/schematic_6/1.png',
+    'images/schematic/schematic_6/2.png',
+    'images/schematic/schematic_7/1.png',
+    'images/schematic/schematic_7/2.png',
+    'images/schematic/schematic_8/1.png',
+    'images/schematic/schematic_8/2.png',
+
+    // Semantic images
+    'images/semantic/semantic_1/1.png',
+    'images/semantic/semantic_1/2.png',
+    'images/semantic/semantic_2/1.png',
+    'images/semantic/semantic_2/2.png',
+    'images/semantic/semantic_3/1.png',
+    'images/semantic/semantic_3/2.png',
+    'images/semantic/semantic_4/1.png',
+    'images/semantic/semantic_4/2.png',
+    'images/semantic/semantic_5/1.png',
+    'images/semantic/semantic_5/2.png',
+    'images/semantic/semantic_6/1.png',
+    'images/semantic/semantic_6/2.png',
+    'images/semantic/semantic_7/1.png',
+    'images/semantic/semantic_7/2.png',
+    'images/semantic/semantic_8/1.png',
+    'images/semantic/semantic_8/2.png'
+  ]
+};
+
+    
+    // Define consent and instruction trials
+    var trial_0 = {
+      type: jsPsychInstructions,
+      pages: [
+        '<div style="font-family: Arial; background: var(--grey); padding: 100px; padding-top: 5%; text-align: left;">' +
+        '<h2>Thank you for participating in this experiment!</h2>' +
+        '<p>By clicking the "Begin Study" button, you will be taken to the study, including complete instructions and an informed consent agreement.</p>'
+      ],
+      show_clickable_nav: true
+    };
+
+    var trial_consent = {
+      type: jsPsychInstructions,
+      pages: [
+        '<div style="text-align:center; font-family:Arial; font-size: 22px; padding-top:20px;">' +
+        '<p>Please carefully read the consent form below before proceeding.</p>' +
+        '<img src="consent_form_2022.png" style="max-width:80%; padding:20px;"></img>' +
+        '</div>'
+      ],
+      show_clickable_nav: true
+    };
+
+    var trial_01 = {
+      type: jsPsychFullscreen,
+      fullscreen_mode: true
+    };
+    
+    var instructions_event_identification = {
+  type: jsPsychInstructions,
+  pages: [
+    '<div style="font-family: Arial; text-align: left; padding: 100px; padding-top: 5%;">' +
+    '<h2>Instructions</h2>' +
+    '<p>In this experiment, you will be presented with pairs of images showing two events.</p>' +
+    '<p>Your task is to determine whether the first event leads to the second event.</p>' +
+    '<p>Carefully observe both images and respond based on your understanding of the sequence of events.</p>' +
+    '<p>When you are ready, press "Next" to try an example.</p>' +
+    '</div>'
+  ],
+  show_clickable_nav: true
+};
+
+
+// Add the new instruction trial to the timeline after trial_01
+
+    // Function to create a trial for each image with a 3-second gap
+    function createImageTrial(imagePath) {
+      return {
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: `<div style="display: flex; justify-content: center; align-items: center;">
+                    <img src="${imagePath}" style="width: 300px; height: 300px;" />
+                  </div>`,
+        choices: "NO_KEYS",
+        trial_duration: 3000
+      };
+    }
+
+  var trial_1 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/instructions/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/instructions/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_2 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/instructions/3.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/instructions/4.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>YES, event 1 does lead to event 2.</p>
+    </div>`,
+  choices: ['Got it'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+
+var trial_3 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/instructions/5.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/instructions/6.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var trial_4 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/instructions/7.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/instructions/8.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>NO, event 1 does not lead to event 2.</p>
+    </div>`,
+  choices: ['Got it'],
+  on_finish: function(data) {
+    data.choice = data.response;
+  }
+};
+
+var instructions_event_identification_2 = {
+  type: jsPsychInstructions,
+  pages: [
+    '<div style="font-family: Arial; text-align: left; padding: 100px; padding-top: 5%;">' +
+    '<h2>Instructions</h2>' +
+    '<p>Great. Now, When you are ready, press "Next" to start the experiment.</p>' +
+    '</div>'
+  ],
+  show_clickable_nav: true
+};
+
+
+timeline.push(preload, trial_0, trial_consent, trial_01, instructions_event_identification,trial_1,trial_2,trial_3,trial_4,instructions_event_identification_2);
+
+var causal_1 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/causal/causal_1/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/causal/causal_1/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'causal_1';  // הוספת שם הטרייל
+  }
+};
+
+var causal_2 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/causal/causal_2/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/causal/causal_2/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'causal_2';  // הוספת שם הטרייל
+  }
+};
+
+var causal_3 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/causal/causal_3/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/causal/causal_3/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'causal_3';  // הוספת שם הטרייל
+  }
+};
+
+var causal_4 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/causal/causal_4/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/causal/causal_4/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'causal_4';  // הוספת שם הטרייל
+  }
+};
+
+var causal_5 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/causal/causal_5/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/causal/causal_5/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'causal_5';  // הוספת שם הטרייל
+  }
+};
+
+var causal_6 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/causal/causal_6/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/causal/causal_6/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'causal_6';  // הוספת שם הטרייל
+  }
+};
+
+var causal_7 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/causal/causal_7/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/causal/causal_7/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'causal_7';  // הוספת שם הטרייל
+  }
+};
+
+var causal_8 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/causal/causal_8/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/causal/causal_8/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'causal_8';  // הוספת שם הטרייל
+  }
+};
+
+
+var schematic_1 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/schematic/schematic_1/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/schematic/schematic_1/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'schematic_1';  // Add trial name to data
+  }
+};
+
+var schematic_2 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/schematic/schematic_2/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/schematic/schematic_2/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'schematic_2';
+  }
+};
+
+var schematic_3 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/schematic/schematic_3/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/schematic/schematic_3/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'schematic_3';
+  }
+};
+
+var schematic_4 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/schematic/schematic_4/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/schematic/schematic_4/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'schematic_4';
+  }
+};
+
+var schematic_5 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/schematic/schematic_5/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/schematic/schematic_5/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'schematic_5';
+  }
+};
+
+var schematic_6 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/schematic/schematic_6/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/schematic/schematic_6/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'schematic_6';
+  }
+};
+
+var schematic_7 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/schematic/schematic_7/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/schematic/schematic_7/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'schematic_7';
+  }
+};
+
+var schematic_8 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/schematic/schematic_8/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/schematic/schematic_8/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'schematic_8';
+  }
+};
+
+
+var semantic_1 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/semantic/semantic_1/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/semantic/semantic_1/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'semantic_1';
+  }
+};
+
+var semantic_2 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/semantic/semantic_2/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/semantic/semantic_2/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'semantic_2';
+  }
+};
+
+var semantic_3 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/semantic/semantic_3/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/semantic/semantic_3/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'semantic_3';
+  }
+};
+
+var semantic_4 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/semantic/semantic_4/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/semantic/semantic_4/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'semantic_4';
+  }
+};
+
+var semantic_5 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/semantic/semantic_5/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/semantic/semantic_5/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'semantic_5';
+  }
+};
+
+var semantic_6 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/semantic/semantic_6/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/semantic/semantic_6/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'semantic_6';
+  }
+};
+
+var semantic_7 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/semantic/semantic_7/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/semantic/semantic_7/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'semantic_7';
+  }
+};
+
+var semantic_8 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/semantic/semantic_8/1.png" style="width: 300px; height: 300px; margin-right: 10px;" />
+        <img src="images/semantic/semantic_8/2.png" style="width: 300px; height: 300px;" />
+      </div>
+      <p>Does event 1 lead to event 2?</p>
+    </div>`,
+  choices: ['Yes', 'No'],
+  on_finish: function(data) {
+    data.choice = data.response;
+    data.trial_name = 'semantic_8';
+  }
+};
+
+var all_trials = [causal_1, causal_2, causal_3, causal_4, causal_5, causal_6, causal_7, causal_8,
+                  schematic_1, schematic_2, schematic_3, schematic_4, schematic_5, schematic_6, schematic_7, schematic_8,
+                  semantic_1, semantic_2, semantic_3, semantic_4, semantic_5, semantic_6, semantic_7, semantic_8];
+
+var randomized_trials = jsPsych.randomization.shuffle(all_trials);
+
+timeline.push(...randomized_trials);
+
+
+    var enjoyment_question = {
+      type: jsPsychSurveyLikert,
+      questions: [
+        {
+          prompt: 'How interesting was the trial?', 
+          labels: ['1 (Not at all)', '2', '3', '4', '5 (Very much)'], 
+          required: true
+        }
+      ]
+    };
+
+
+
+
+    var trial_101 = {
+      type: jsPsychSurveyText,
+      questions: [
+        {prompt: 'Please insert your gender (MALE/ FEMALE/ OTHER)'},
+        {prompt: 'Please insert your age'}
+      ]
+    };
+    timeline.push(trial_101);
+
+    var trial_102 = {
+      type: jsPsychInstructions,
+      pages: [
+        '<span style="color: black; font-size: 24px">You have completed the experiment.' + 
+        '<br/>The completion code is : AJFHBG898<br/>Thank you for your participation!</span>'
+      ],
+      show_clickable_nav: true
+    };
+    timeline.push(trial_102);
+
+    var trial_103 = {
+      type: jsPsychSurveyText,
+      questions: [
+        {prompt: 'Please insert the completion code'}
+      ]
+    };
+    timeline.push(trial_103);
+
+    // Run the experiment
+    jsPsych.run(timeline);
+  </script>
+</html>
