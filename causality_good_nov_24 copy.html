@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Optional: Hide cursor if needed */
+      .hide_cursor {
+        cursor: none;
+      }
+    </style>
+    <title>My Experiment</title>
+    <!-- Include jsPsych library and plugins -->
+    <script src="jspsych/plugins/jspsych.js"></script>
+    <script src="jspsych/plugins/plugin-instructions.js"></script>
+    <script src="jspsych/plugins/plugin-html-button-response.js"></script>
+    <script src="jspsych/plugins/plugin-preload.js"></script>
+    <link rel="stylesheet" href="jspsych/css/jspsych.css">
+  </head>
+  <body></body>
+  <script>
+    // Define data folder for saving results
+    var data_folder = 'data/';
+
+    // Function to save data via POST request
+    function saveData(name, data) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', 'write_data.php'); // PHP file to handle data writing
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.send(JSON.stringify({ filedata: data }));
+    }
+
+    // Initialize jsPsych
+    var jsPsych = initJsPsych({
+      on_finish: function () {
+        saveData(data_folder + 'all_data_sub_' + subject_id + '.csv', jsPsych.data.get().csv());
+      }
+    });
+
+    // Generate a random subject ID
+    var subject_id = jsPsych.randomization.randomID(15);
+
+    // Initialize experiment timeline
+    var timeline = [];
+
+    // Preload images
+    var preload = {
+      type: jsPsychPreload,
+      images: [
+        'images/causal/physical_activity_semantic/physical_activity_semantic_1.png',
+        'images/causal/physical_activity_semantic/physical_activity_semantic_2.png',
+        'images/causal/physical_activity_semantic/physical_activity_semantic_3.png',
+        'images/causal/physical_activity_semantic/physical_activity_semantic_4.png',
+        'images/causal/physical_activity_semantic/physical_activity_semantic_5.png',
+        'images/causal/physical_activity_semantic/physical_activity_semantic_6.png',
+        'images/causal/physical_activity_semantic/physical_activity_semantic_7.png',
+        'images/causal/physical_activity_semantic/physical_activity_semantic_8.png',
+        'images/causal/physical_activity_semantic/physical_activity_semantic_9.png',
+        'images/causal/physical_activity_semantic/physical_activity_semantic_10.png',
+        'images/causal/package_causal/package_causal_1.png',
+        'images/causal/package_causal/package_causal_2.png',
+        'images/causal/package_causal/package_causal_3.png',
+        'images/causal/package_causal/package_causal_4.png',
+        'images/causal/package_causal/package_causal_5.png',
+        'images/causal/package_causal/package_causal_6.png',
+        'images/causal/package_causal/package_causal_7.png',
+        'images/causal/package_causal/package_causal_8.png',
+        'images/causal/package_causal/package_causal_9.png',
+        'images/causal/package_causal/package_causal_10.png',
+        'images/causal/dog_causal/dog_causal_1.png',
+        'images/causal/dog_causal/dog_causal_2.png',
+        'images/causal/dog_causal/dog_causal_3.png',
+        'images/causal/dog_causal/dog_causal_4.png',
+        'images/causal/dog_causal/dog_causal_5.png',
+        'images/causal/dog_causal/dog_causal_6.png',
+        'images/causal/dog_causal/dog_causal_7.png',
+        'images/causal/dog_causal/dog_causal_8.png',
+        'images/causal/dog_causal/dog_causal_9.png',
+        'images/causal/dog_causal/dog_causal_10.png',
+        'images/instructions/1.png',
+        'images/instructions/2.png',
+        'images/instructions/3.png',
+        'images/instructions/4.png',
+        'images/instructions/5.png',
+        'images/instructions/6.png',
+        'images/instructions/7.png',
+        'images/instructions/8.png',
+      ]
+    };
+
+    // Add preloading to timeline
+    timeline.push(preload);
+
+    // Add instruction phase
+  // Add instruction phase
+  var instructions = {
+      type: jsPsychInstructions,
+      pages: [
+        '<h2>Welcome to the experiment!</h2>' +
+        '<p>In this experiment, you will see pairs of images depicting two events.</p>' +
+        '<p>Your task is to determine whether:</p>' +
+        '<ul>' +
+        '<li><strong>Event 1 leads to Event 2</strong></li>' +
+        '<li><strong>Event 2 leads to Event 1</strong></li>' +
+        '<li><strong>The events are unrelated</strong></li>' +
+        '</ul>' +
+        '<p>Before starting the actual experiment, you will go through <strong>three examples</strong> to understand the task.</p>' +
+        '<p>Click "Next" to begin the examples.</p>'
+      ],
+      show_clickable_nav: true
+    };
+
+    timeline.push(instructions);
+
+    // Example trial 1
+    var example_trial_1 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: `
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <div style="text-align: center; margin-right: 20px;">
+            <p style="font-size: 24px; font-weight: bold;">Event 1</p>
+            <img src="images/instructions/1.png" style="width: 300px; height: auto;">
+          </div>
+          <div style="text-align: center; margin-left: 20px;">
+            <p style="font-size: 24px; font-weight: bold;">Event 2</p>
+            <img src="images/instructions/2.png" style="width: 300px; height: auto;">
+          </div>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">Does Event 1 lead to Event 2?</p>`,
+      choices: ['Event 1 leads to Event 2', 'Event 2 leads to Event 1', 'Events are unrelated'],
+      trial_duration: 60000,
+      button_html: '<button class="jspsych-btn" disabled>%choice%</button>',
+      on_load: function () {
+        setTimeout(() => {
+          document.querySelectorAll('.jspsych-btn').forEach(button => {
+            button.disabled = false;
+          });
+        }, 5000);
+      }
+    };
+
+    var feedback_trial_1 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: `
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <div style="text-align: center; margin-right: 20px;">
+            <p style="font-size: 24px; font-weight: bold;">Event 1</p>
+            <img src="images/instructions/1.png" style="width: 300px; height: auto;">
+          </div>
+          <div style="text-align: center; margin-left: 20px;">
+            <p style="font-size: 24px; font-weight: bold;">Event 2</p>
+            <img src="images/instructions/2.png" style="width: 300px; height: auto;">
+          </div>
+        </div>
+        <h2>Correct Answer</h2>
+        <p>The correct answer is: <strong>Event 1 leads to Event 2</strong>.</p>
+        <p>Click "Next" to proceed to the next example.</p>`,
+      choices: ['Next']
+    };
+
+    timeline.push(example_trial_1);
+    timeline.push(feedback_trial_1);
+
+    // Example trial 2
+    var example_trial_2 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: `
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <div style="text-align: center; margin-right: 20px;">
+            <p style="font-size: 24px; font-weight: bold;">Event 1</p>
+            <img src="images/instructions/2.png" style="width: 300px; height: auto;">
+          </div>
+          <div style="text-align: center; margin-left: 20px;">
+            <p style="font-size: 24px; font-weight: bold;">Event 2</p>
+            <img src="images/instructions/1.png" style="width: 300px; height: auto;">
+          </div>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">Does Event 1 lead to Event 2?</p>`,
+      choices: ['Event 1 leads to Event 2', 'Event 2 leads to Event 1', 'Events are unrelated'],
+      trial_duration: 60000,
+      button_html: '<button class="jspsych-btn" disabled>%choice%</button>',
+      on_load: function () {
+        setTimeout(() => {
+          document.querySelectorAll('.jspsych-btn').forEach(button => {
+            button.disabled = false;
+          });
+        }, 5000);
+      }
+    };
+
+    var feedback_trial_2 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: `
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <div style="text-align: center; margin-right: 20px;">
+            <p style="font-size: 24px; font-weight: bold;">Event 1</p>
+            <img src="images/instructions/2.png" style="width: 300px; height: auto;">
+          </div>
+          <div style="text-align: center; margin-left: 20px;">
+            <p style="font-size: 24px; font-weight: bold;">Event 2</p>
+            <img src="images/instructions/1.png" style="width: 300px; height: auto;">
+          </div>
+        </div>
+        <h2>Correct Answer</h2>
+        <p>The correct answer is: <strong>Event 2 leads to Event 1</strong>.</p>
+        <p>Click "Next" to proceed to the next example.</p>`,
+      choices: ['Next']
+    };
+
+    timeline.push(example_trial_2);
+    timeline.push(feedback_trial_2);
+
+    // Example trial 3
+    var example_trial_3 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: `
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <div style="text-align: center; margin-right: 20px;">
+            <p style="font-size: 24px; font-weight: bold;">Event 1</p>
+            <img src="images/instructions/5.png" style="width: 300px; height: auto;">
+          </div>
+          <div style="text-align: center; margin-left: 20px;">
+            <p style="font-size: 24px; font-weight: bold;">Event 2</p>
+            <img src="images/instructions/6.png" style="width: 300px; height: auto;">
+          </div>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">Does Event 1 lead to Event 2?</p>`,
+      choices: ['Event 1 leads to Event 2', 'Event 1 leads to Event 2', 'Events are unrelated'],
+      trial_duration: 60000,
+      button_html: '<button class="jspsych-btn" disabled>%choice%</button>',
+      on_load: function () {
+        setTimeout(() => {
+          document.querySelectorAll('.jspsych-btn').forEach(button => {
+            button.disabled = false;
+          });
+        }, 5000);
+      }
+    };
+
+    var feedback_trial_3 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: `
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <div style="text-align: center; margin-right: 20px;">
+            <p style="font-size: 24px; font-weight: bold;">Event 1</p>
+            <img src="images/instructions/5.png" style="width: 300px; height: auto;">
+          </div>
+          <div style="text-align: center; margin-left: 20px;">
+            <p style="font-size: 24px; font-weight: bold;">Event 2</p>
+            <img src="images/instructions/6.png" style="width: 300px; height: auto;">
+          </div>
+        </div>
+        <h2>Correct Answer</h2>
+        <p>The correct answer is: <strong>Events are unrelated</strong>.</p>
+        <p>Click "Next" to proceed to the experiment.</p>`,
+      choices: ['Next']
+    };
+
+    timeline.push(example_trial_3);
+    timeline.push(feedback_trial_3);
+
+    // Add transition trial before the experiment starts
+    var transition_trial = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: `
+        <h2>Get Ready!</h2>
+        <p>You have completed the examples. The experiment is about to begin.</p>
+        <p>Click "Start" to begin the experiment.</p>`,
+      choices: ['Start']
+    };
+
+    timeline.push(transition_trial);
+
+
+
+    // Generate all unique pairs for the causal images with random order
+function generateRandomizedPairs(rangeStart, rangeEnd) {
+  let pairs = [];
+  for (let i = rangeStart; i <= rangeEnd; i++) {
+    for (let j = i + 1; j <= rangeEnd; j++) {
+      if (Math.random() > 0.5) {
+        pairs.push([i, j]); // Keep the original order
+      } else {
+        pairs.push([j, i]); // Reverse the order
+      }
+    }
+  }
+  return pairs;
+}
+
+   // Generate all unique pairs for the causal images with random order
+// Generate and shuffle pairs for physical_activity_semantic
+let physicalPairs = generateRandomizedPairs(1, 10);
+let shuffledPhysicalPairs = jsPsych.randomization.shuffle(physicalPairs);
+
+// Add physical_activity_semantic trials
+shuffledPhysicalPairs.forEach(pair => {
+  timeline.push({
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="text-align: center; margin-right: 20px;">
+          <p style="font-size: 24px; font-weight: bold;">Event 1</p>
+          <img src="images/causal/physical_activity_semantic/physical_activity_semantic_${pair[0]}.png" style="width: 300px; height: auto;">
+        </div>
+        <div style="text-align: center; margin-left: 20px;">
+          <p style="font-size: 24px; font-weight: bold;">Event 2</p>
+          <img src="images/causal/physical_activity_semantic/physical_activity_semantic_${pair[1]}.png" style="width: 300px; height: auto;">
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 20px;">Does Event 1 lead to Event 2?</p>`,
+    choices: ['Event 1 leads to Event 2', 'Event 2 leads to Event 1', 'Events are unrelated'],
+    trial_duration: 60000,
+    button_html: '<button class="jspsych-btn" disabled>%choice%</button>',
+    on_load: function () {
+      setTimeout(() => {
+        document.querySelectorAll('.jspsych-btn').forEach(button => {
+          button.disabled = false;
+        });
+      }, 5000);
+    },
+    on_finish: function (data) {
+      data.firstImageNumber = pair[0];
+      data.secondImageNumber = pair[1];
+      data.response_made = typeof data.response !== 'undefined';
+      data.stimulus_type = 'physical_activity_semantic';
+    }
+  });
+
+  timeline.push({
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+      <h2>How confident are you in your answer?</h2>
+      <p>Rate your confidence on a scale of 1 (not confident at all) to 5 (very confident).</p>`,
+    choices: ['1', '2', '3', '4', '5'],
+    on_finish: function (data) {
+      data.confidence = parseInt(data.response) + 1;
+      data.firstImageNumber = pair[0];
+      data.secondImageNumber = pair[1];
+      data.stimulus_type = 'physical_activity_semantic';
+    }
+  });
+});
+
+// Generate and shuffle pairs for dog_causal
+let dogPairs = generateRandomizedPairs(1, 10);
+let shuffledDogPairs = jsPsych.randomization.shuffle(dogPairs);
+
+// Add dog_causal trials
+shuffledDogPairs.forEach(pair => {
+  timeline.push({
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="text-align: center; margin-right: 20px;">
+          <p style="font-size: 24px; font-weight: bold;">Event 1</p>
+          <img src="images/causal/dog_causal/dog_causal_${pair[0]}.png" style="width: 300px; height: auto;">
+        </div>
+        <div style="text-align: center; margin-left: 20px;">
+          <p style="font-size: 24px; font-weight: bold;">Event 2</p>
+          <img src="images/causal/dog_causal/dog_causal_${pair[1]}.png" style="width: 300px; height: auto;">
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 20px;">Does Event 1 lead to Event 2?</p>`,
+    choices: ['Event 1 leads to Event 2', 'Event 2 leads to Event 1', 'Events are unrelated'],
+    trial_duration: 60000,
+    button_html: '<button class="jspsych-btn" disabled>%choice%</button>',
+    on_load: function () {
+      setTimeout(() => {
+        document.querySelectorAll('.jspsych-btn').forEach(button => {
+          button.disabled = false;
+        });
+      }, 5000);
+    },
+    on_finish: function (data) {
+      data.firstImageNumber = pair[0];
+      data.secondImageNumber = pair[1];
+      data.response_made = typeof data.response !== 'undefined';
+      data.stimulus_type = 'dog_causal';
+    }
+  });
+
+  timeline.push({
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+      <h2>How confident are you in your answer?</h2>
+      <p>Rate your confidence on a scale of 1 (not confident at all) to 5 (very confident).</p>`,
+    choices: ['1', '2', '3', '4', '5'],
+    on_finish: function (data) {
+      data.confidence = parseInt(data.response) + 1;
+      data.firstImageNumber = pair[0];
+      data.secondImageNumber = pair[1];
+      data.stimulus_type = 'dog_causal';
+    }
+  });
+});
+
+// Generate and shuffle pairs for package_causal
+let packagePairs = generateRandomizedPairs(1, 10);
+let shuffledPackagePairs = jsPsych.randomization.shuffle(packagePairs);
+
+// Add package_causal trials
+shuffledPackagePairs.forEach(pair => {
+  timeline.push({
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="text-align: center; margin-right: 20px;">
+          <p style="font-size: 24px; font-weight: bold;">Event 1</p>
+          <img src="images/causal/package_causal/package_causal_${pair[0]}.png" style="width: 300px; height: auto;">
+        </div>
+        <div style="text-align: center; margin-left: 20px;">
+          <p style="font-size: 24px; font-weight: bold;">Event 2</p>
+          <img src="images/causal/package_causal/package_causal_${pair[1]}.png" style="width: 300px; height: auto;">
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 20px;">Does Event 1 lead to Event 2?</p>`,
+    choices: ['Event 1 leads to Event 2', 'Event 2 leads to Event 1', 'Events are unrelated'],
+    trial_duration: 60000,
+    button_html: '<button class="jspsych-btn" disabled>%choice%</button>',
+    on_load: function () {
+      setTimeout(() => {
+        document.querySelectorAll('.jspsych-btn').forEach(button => {
+          button.disabled = false;
+        });
+      }, 5000);
+    },
+    on_finish: function (data) {
+      data.firstImageNumber = pair[0];
+      data.secondImageNumber = pair[1];
+      data.response_made = typeof data.response !== 'undefined';
+      data.stimulus_type = 'package_causal';
+    }
+  });
+
+  timeline.push({
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+      <h2>How confident are you in your answer?</h2>
+      <p>Rate your confidence on a scale of 1 (not confident at all) to 5 (very confident).</p>`,
+    choices: ['1', '2', '3', '4', '5'],
+    on_finish: function (data) {
+      data.confidence = parseInt(data.response) + 1;
+      data.firstImageNumber = pair[0];
+      data.secondImageNumber = pair[1];
+      data.stimulus_type = 'package_causal';
+    }
+  });
+});
+
+
+
+
+    // Add final thank-you screen
+    var trial_end = {
+      type: jsPsychInstructions,
+      pages: [
+        '<h2>Thank you for participating!</h2>' +
+        '<p>You have completed the experiment.</p>' +
+        '<p>Your completion code is: <strong>A4CBA22722</strong></p>' +
+        '<p>Please copy this code and submit it in the platform.</p>'
+      ],
+      show_clickable_nav: true
+    };
+
+    timeline.push(trial_end);
+
+    // Run the experiment
+    jsPsych.run(timeline);
+  </script>
+</html>
