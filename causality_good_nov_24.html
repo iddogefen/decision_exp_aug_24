@@ -55,6 +55,26 @@
         'images/causal/physical_activity_semantic/physical_activity_semantic_8.png',
         'images/causal/physical_activity_semantic/physical_activity_semantic_9.png',
         'images/causal/physical_activity_semantic/physical_activity_semantic_10.png',
+        'images/causal/package_causal/package_causal_1.png',
+        'images/causal/package_causal/package_causal_2.png',
+        'images/causal/package_causal/package_causal_3.png',
+        'images/causal/package_causal/package_causal_4.png',
+        'images/causal/package_causal/package_causal_5.png',
+        'images/causal/package_causal/package_causal_6.png',
+        'images/causal/package_causal/package_causal_7.png',
+        'images/causal/package_causal/package_causal_8.png',
+        'images/causal/package_causal/package_causal_9.png',
+        'images/causal/package_causal/package_causal_10.png',
+        'images/causal/dog_causal/dog_causal_1.png',
+        'images/causal/dog_causal/dog_causal_2.png',
+        'images/causal/dog_causal/dog_causal_3.png',
+        'images/causal/dog_causal/dog_causal_4.png',
+        'images/causal/dog_causal/dog_causal_5.png',
+        'images/causal/dog_causal/dog_causal_6.png',
+        'images/causal/dog_causal/dog_causal_7.png',
+        'images/causal/dog_causal/dog_causal_8.png',
+        'images/causal/dog_causal/dog_causal_9.png',
+        'images/causal/dog_causal/dog_causal_10.png',
         'images/instructions/1.png',
         'images/instructions/2.png',
         'images/instructions/3.png',
@@ -251,7 +271,7 @@
 
 
 
-   // Generate all unique pairs for the causal images with random order
+    // Generate all unique pairs for the causal images with random order
 function generateRandomizedPairs(rangeStart, rangeEnd) {
   let pairs = [];
   for (let i = rangeStart; i <= rangeEnd; i++) {
@@ -266,13 +286,14 @@ function generateRandomizedPairs(rangeStart, rangeEnd) {
   return pairs;
 }
 
-// Generate and shuffle pairs
-let allPairs = generateRandomizedPairs(1, 10); // Generate randomized pairs from 1 to 10
-let shuffledPairs = jsPsych.randomization.shuffle(allPairs); // Shuffle the pairs
+ // Initialize an empty array to store all trials
+let allTrials = [];
 
-shuffledPairs.forEach(pair => {
-  // Add main trial
-  timeline.push({
+// Generate trials for physical_activity_semantic
+let physicalPairs = generateRandomizedPairs(1, 10);
+physicalPairs.forEach(pair => {
+  // Main trial
+  allTrials.push({
     type: jsPsychHtmlButtonResponse,
     stimulus: `
       <div style="display: flex; justify-content: center; align-items: center;">
@@ -287,7 +308,7 @@ shuffledPairs.forEach(pair => {
       </div>
       <p style="text-align: center; margin-top: 20px;">Does Event 1 lead to Event 2?</p>`,
     choices: ['Event 1 leads to Event 2', 'Event 2 leads to Event 1', 'Events are unrelated'],
-    trial_duration: 60000, // Set a 1-minute time limit
+    trial_duration: 60000,
     button_html: '<button class="jspsych-btn" disabled>%choice%</button>',
     on_load: function () {
       setTimeout(() => {
@@ -300,25 +321,91 @@ shuffledPairs.forEach(pair => {
       data.firstImageNumber = pair[0];
       data.secondImageNumber = pair[1];
       data.response_made = typeof data.response !== 'undefined';
-      data.stimulus_type = 'physical_activity_semantic'; // Add stimulus type
-    }
-  });
-
-  // Add confidence rating trial
-  timeline.push({
-    type: jsPsychHtmlButtonResponse,
-    stimulus: `
-      <h2>How confident are you in your answer?</h2>
-      <p>Rate your confidence on a scale of 1 (not confident at all) to 5 (very confident).</p>`,
-    choices: ['1', '2', '3', '4', '5'],
-    on_finish: function (data) {
-      data.confidence = parseInt(data.response) + 1; // Save confidence rating (1-5)
-      data.firstImageNumber = pair[0];
-      data.secondImageNumber = pair[1];
-      data.stimulus_type = 'physical_activity_semantic'; // Add stimulus type
+      data.stimulus_type = 'physical_activity_semantic';
     }
   });
 });
+
+// Generate trials for dog_causal
+let dogPairs = generateRandomizedPairs(1, 10);
+dogPairs.forEach(pair => {
+  // Main trial
+  allTrials.push({
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="text-align: center; margin-right: 20px;">
+          <p style="font-size: 24px; font-weight: bold;">Event 1</p>
+          <img src="images/causal/dog_causal/dog_causal_${pair[0]}.png" style="width: 300px; height: auto;">
+        </div>
+        <div style="text-align: center; margin-left: 20px;">
+          <p style="font-size: 24px; font-weight: bold;">Event 2</p>
+          <img src="images/causal/dog_causal/dog_causal_${pair[1]}.png" style="width: 300px; height: auto;">
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 20px;">Does Event 1 lead to Event 2?</p>`,
+    choices: ['Event 1 leads to Event 2', 'Event 2 leads to Event 1', 'Events are unrelated'],
+    trial_duration: 60000,
+    button_html: '<button class="jspsych-btn" disabled>%choice%</button>',
+    on_load: function () {
+      setTimeout(() => {
+        document.querySelectorAll('.jspsych-btn').forEach(button => {
+          button.disabled = false;
+        });
+      }, 5000);
+    },
+    on_finish: function (data) {
+      data.firstImageNumber = pair[0];
+      data.secondImageNumber = pair[1];
+      data.response_made = typeof data.response !== 'undefined';
+      data.stimulus_type = 'dog_causal';
+    }
+  });
+});
+
+// Generate trials for package_causal
+let packagePairs = generateRandomizedPairs(1, 10);
+packagePairs.forEach(pair => {
+  // Main trial
+  allTrials.push({
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="text-align: center; margin-right: 20px;">
+          <p style="font-size: 24px; font-weight: bold;">Event 1</p>
+          <img src="images/causal/package_causal/package_causal_${pair[0]}.png" style="width: 300px; height: auto;">
+        </div>
+        <div style="text-align: center; margin-left: 20px;">
+          <p style="font-size: 24px; font-weight: bold;">Event 2</p>
+          <img src="images/causal/package_causal/package_causal_${pair[1]}.png" style="width: 300px; height: auto;">
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 20px;">Does Event 1 lead to Event 2?</p>`,
+    choices: ['Event 1 leads to Event 2', 'Event 2 leads to Event 1', 'Events are unrelated'],
+    trial_duration: 60000,
+    button_html: '<button class="jspsych-btn" disabled>%choice%</button>',
+    on_load: function () {
+      setTimeout(() => {
+        document.querySelectorAll('.jspsych-btn').forEach(button => {
+          button.disabled = false;
+        });
+      }, 5000);
+    },
+    on_finish: function (data) {
+      data.firstImageNumber = pair[0];
+      data.secondImageNumber = pair[1];
+      data.response_made = typeof data.response !== 'undefined';
+      data.stimulus_type = 'package_causal';
+    }
+  });
+});
+
+// Shuffle all trials
+let shuffledTrials = jsPsych.randomization.shuffle(allTrials);
+
+// Add the shuffled trials to the timeline
+timeline.push(...shuffledTrials);
+
 
 
 
