@@ -73,14 +73,8 @@
         '<li><strong>Event 2 leads to Event 1</strong></li>' +
         '<li><strong>The events are unrelated</strong></li>' +
         '</ul>' +
-        '<p>Please pay attention to the images and make your choice carefully.</p>',
-        '<h2>How to respond</h2>' +
-        '<p>After each pair of events is displayed, you will have three buttons to choose from:</p>' +
-        '<ul>' +
-        '<li>Choose <strong>Event 1 leads to Event 2</strong> if the first event likely caused the second.</li>' +
-        '<li>Choose <strong>Event 2 leads to Event 1</strong> if the second event likely caused the first.</li>' +
-        '<li>Choose <strong>Events are unrelated</strong> if you believe the events have no connection.</li>' +
-        '</ul>' +
+        '<p>You will have up to <strong>1 minute</strong> to make your decision, but you can proceed sooner if you’re ready.</p>' +
+        '<p>The buttons will become active <strong>5 seconds</strong> after the images are displayed.</p>' +
         '<p>Click "Next" to begin the experiment.</p>'
       ],
       show_clickable_nav: true
@@ -106,7 +100,7 @@
     let allPairs = generateRandomizedPairs(1, 10); // Generate randomized pairs from 1 to 10
     let shuffledPairs = jsPsych.randomization.shuffle(allPairs); // Shuffle the pairs
 
-    // Add causal trials dynamically
+    // Add causal trials dynamically with a 1-minute limit and 5-second delay for buttons
     shuffledPairs.forEach(pair => {
       timeline.push({
         type: jsPsychHtmlButtonResponse,
@@ -125,9 +119,20 @@
           </div>
           <p style="text-align: center; margin-top: 20px;">Does Event 1 lead to Event 2?</p>`,
         choices: ['Event 1 leads to Event 2', 'Event 2 leads to Event 1', 'Events are unrelated'],
+        trial_duration: 60000, // Set a 1-minute time limit
+        button_html: '<button class="jspsych-btn" disabled>%choice%</button>', // Buttons are disabled initially
+        on_load: function () {
+          // Enable the buttons after 5 seconds
+          setTimeout(() => {
+            document.querySelectorAll('.jspsych-btn').forEach(button => {
+              button.disabled = false;
+            });
+          }, 5000);
+        },
         on_finish: function (data) {
           data.firstImageNumber = pair[0];
           data.secondImageNumber = pair[1];
+          data.response_made = typeof data.response !== 'undefined'; // Add if a response was made
         }
       });
     });
