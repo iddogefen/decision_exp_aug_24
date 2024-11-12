@@ -61,18 +61,49 @@
     // Add preloading to timeline
     timeline.push(preload);
 
-    // Generate all unique pairs for the causal images
-    function generateUniquePairs(rangeStart, rangeEnd) {
+    // Add instruction phase
+    var instructions = {
+      type: jsPsychInstructions,
+      pages: [
+        '<h2>Welcome to the experiment!</h2>' +
+        '<p>In this experiment, you will see pairs of images depicting two events.</p>' +
+        '<p>Your task is to determine whether:</p>' +
+        '<ul>' +
+        '<li><strong>Event 1 leads to Event 2</strong></li>' +
+        '<li><strong>Event 2 leads to Event 1</strong></li>' +
+        '<li><strong>The events are unrelated</strong></li>' +
+        '</ul>' +
+        '<p>Please pay attention to the images and make your choice carefully.</p>',
+        '<h2>How to respond</h2>' +
+        '<p>After each pair of events is displayed, you will have three buttons to choose from:</p>' +
+        '<ul>' +
+        '<li>Choose <strong>Event 1 leads to Event 2</strong> if the first event likely caused the second.</li>' +
+        '<li>Choose <strong>Event 2 leads to Event 1</strong> if the second event likely caused the first.</li>' +
+        '<li>Choose <strong>Events are unrelated</strong> if you believe the events have no connection.</li>' +
+        '</ul>' +
+        '<p>Click "Next" to begin the experiment.</p>'
+      ],
+      show_clickable_nav: true
+    };
+
+    timeline.push(instructions);
+
+    // Generate all unique pairs for the causal images with random order
+    function generateRandomizedPairs(rangeStart, rangeEnd) {
       let pairs = [];
       for (let i = rangeStart; i <= rangeEnd; i++) {
         for (let j = i + 1; j <= rangeEnd; j++) {
-          pairs.push([i, j]);
+          if (Math.random() > 0.5) {
+            pairs.push([i, j]); // Keep the original order
+          } else {
+            pairs.push([j, i]); // Reverse the order
+          }
         }
       }
       return pairs;
     }
 
-    let allPairs = generateUniquePairs(1, 10); // Pairs from 1 to 10
+    let allPairs = generateRandomizedPairs(1, 10); // Generate randomized pairs from 1 to 10
     let shuffledPairs = jsPsych.randomization.shuffle(allPairs); // Shuffle the pairs
 
     // Add causal trials dynamically
