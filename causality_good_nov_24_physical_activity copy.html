@@ -69,8 +69,8 @@
         '<p>In this experiment, you will see pairs of images depicting two events.</p>' +
         '<p>Your task is to determine whether:</p>' +
         '<ul>' +
-        '<li><strong>Event 1 happened before Event 2</strong></li>' +
-        '<li><strong>Event 2 happened before Event 1</strong></li>' +
+        '<li><strong>Event 1 leads to Event 2</strong></li>' +
+        '<li><strong>Event 2 leads to Event 1</strong></li>' +
         '<li><strong>The events are unrelated</strong></li>' +
         '</ul>' +
         '<p>You will have up to <strong>1 minute</strong> to make your decision, but you can proceed sooner if you’re ready.</p>' +
@@ -117,8 +117,8 @@
               <img src="images/causal/physical_activity_semantic/physical_activity_semantic_${pair[1]}.png" style="width: 300px; height: auto;">
             </div>
           </div>
-          <p style="text-align: center; margin-top: 20px;">Did Event 1 happen before Event 2?</p>`,
-        choices: ['Event 1 happened before Event 2', 'Event 2 happened before Event 1', 'Events are unrelated'],
+          <p style="text-align: center; margin-top: 20px;">Does Event 1 lead to Event 2?</p>`,
+        choices: ['Event 1 leads to Event 2', 'Event 2 leads to Event 1', 'Events are unrelated'],
         trial_duration: 60000, // Set a 1-minute time limit
         button_html: '<button class="jspsych-btn" disabled>%choice%</button>', // Buttons are disabled initially
         on_load: function () {
