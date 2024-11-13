@@ -1,0 +1,1706 @@
+"success","timeout","failed_images","failed_audio","failed_video","trial_type","trial_index","time_elapsed","internal_node_id","view_history","rt","stimulus","response","firstImageNumber","secondImageNumber","response_made","stimulus_type"
+"true","false","[]","[]","[]","preload","0","5351","0.0-0.0","","","","","","","",""
+"","","","","","instructions","1","88383","0.0-1.0","[{""page_index"":0,""viewing_time"":83030}]","83031","","","","","",""
+"","","","","","html-button-response","2","95737","0.0-2.0","","7353","
+        <div style=""display: flex; justify-content: center; align-items: center;"">
+          <div style=""text-align: center; margin-right: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+            <img src=""images/instructions/1.png"" style=""width: 300px; height: auto;"">
+          </div>
+          <div style=""text-align: center; margin-left: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+            <img src=""images/instructions/2.png"" style=""width: 300px; height: auto;"">
+          </div>
+        </div>
+        <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","","","",""
+"","","","","","html-button-response","3","97202","0.0-3.0","","1465","
+        <div style=""display: flex; justify-content: center; align-items: center;"">
+          <div style=""text-align: center; margin-right: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+            <img src=""images/instructions/1.png"" style=""width: 300px; height: auto;"">
+          </div>
+          <div style=""text-align: center; margin-left: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+            <img src=""images/instructions/2.png"" style=""width: 300px; height: auto;"">
+          </div>
+        </div>
+        <h2>Correct Answer</h2>
+        <p>The correct answer is: <strong>Event 1 leads to Event 2</strong>.</p>
+        <p>Click ""Next"" to proceed to the next example.</p>","0","","","",""
+"","","","","","html-button-response","4","102641","0.0-4.0","","5438","
+        <div style=""display: flex; justify-content: center; align-items: center;"">
+          <div style=""text-align: center; margin-right: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+            <img src=""images/instructions/2.png"" style=""width: 300px; height: auto;"">
+          </div>
+          <div style=""text-align: center; margin-left: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+            <img src=""images/instructions/1.png"" style=""width: 300px; height: auto;"">
+          </div>
+        </div>
+        <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","","","",""
+"","","","","","html-button-response","5","103716","0.0-5.0","","1074","
+        <div style=""display: flex; justify-content: center; align-items: center;"">
+          <div style=""text-align: center; margin-right: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+            <img src=""images/instructions/2.png"" style=""width: 300px; height: auto;"">
+          </div>
+          <div style=""text-align: center; margin-left: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+            <img src=""images/instructions/1.png"" style=""width: 300px; height: auto;"">
+          </div>
+        </div>
+        <h2>Correct Answer</h2>
+        <p>The correct answer is: <strong>Event 2 leads to Event 1</strong>.</p>
+        <p>Click ""Next"" to proceed to the next example.</p>","0","","","",""
+"","","","","","html-button-response","6","109124","0.0-6.0","","5408","
+        <div style=""display: flex; justify-content: center; align-items: center;"">
+          <div style=""text-align: center; margin-right: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+            <img src=""images/instructions/5.png"" style=""width: 300px; height: auto;"">
+          </div>
+          <div style=""text-align: center; margin-left: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+            <img src=""images/instructions/6.png"" style=""width: 300px; height: auto;"">
+          </div>
+        </div>
+        <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","","","",""
+"","","","","","html-button-response","7","110156","0.0-7.0","","1030","
+        <div style=""display: flex; justify-content: center; align-items: center;"">
+          <div style=""text-align: center; margin-right: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+            <img src=""images/instructions/5.png"" style=""width: 300px; height: auto;"">
+          </div>
+          <div style=""text-align: center; margin-left: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+            <img src=""images/instructions/6.png"" style=""width: 300px; height: auto;"">
+          </div>
+        </div>
+        <h2>Correct Answer</h2>
+        <p>The correct answer is: <strong>Events are unrelated</strong>.</p>
+        <p>Click ""Next"" to proceed to the experiment.</p>","0","","","",""
+"","","","","","html-button-response","8","111622","0.0-8.0","","1464","
+        <h2>Get Ready!</h2>
+        <p>You have completed the examples. The experiment is about to begin.</p>
+        <p>Click ""Start"" to begin the experiment.</p>","0","","","",""
+"","","","","","html-button-response","9","117317","0.0-9.0","","5695","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","10","7","true","physical_activity_semantic"
+"","","","","","html-button-response","10","122772","0.0-10.0","","5454","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","4","3","true","package_causal"
+"","","","","","html-button-response","11","129111","0.0-11.0","","6337","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","6","8","true","dog_causal"
+"","","","","","html-button-response","12","134516","0.0-12.0","","5403","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","2","1","true","dog_causal"
+"","","","","","html-button-response","13","139931","0.0-13.0","","5414","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","6","10","true","physical_activity_semantic"
+"","","","","","html-button-response","14","146572","0.0-14.0","","6640","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","5","9","true","package_causal"
+"","","","","","html-button-response","15","156305","0.0-15.0","","9732","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","7","9","true","package_causal"
+"","","","","","html-button-response","16","216958","0.0-16.0","","null","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","null","3","5","true","package_causal"
+"","","","","","html-button-response","17","277962","0.0-17.0","","null","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","null","5","2","true","package_causal"
+"","","","","","html-button-response","18","338958","0.0-18.0","","null","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","null","5","8","true","package_causal"
+"","","","","","html-button-response","19","399965","0.0-19.0","","null","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","null","7","2","true","physical_activity_semantic"
+"","","","","","html-button-response","20","496963","0.0-20.0","","null","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","null","6","8","true","physical_activity_semantic"
+"","","","","","html-button-response","21","577640","0.0-21.0","","null","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","null","2","1","true","physical_activity_semantic"
+"","","","","","html-button-response","22","582666","0.0-22.0","","5025","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","9","1","true","dog_causal"
+"","","","","","html-button-response","23","588193","0.0-23.0","","5526","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","9","5","true","physical_activity_semantic"
+"","","","","","html-button-response","24","593620","0.0-24.0","","5426","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","9","4","true","package_causal"
+"","","","","","html-button-response","25","598987","0.0-25.0","","5366","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","10","8","true","physical_activity_semantic"
+"","","","","","html-button-response","26","606333","0.0-26.0","","7345","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","10","6","true","dog_causal"
+"","","","","","html-button-response","27","650770","0.0-27.0","","44436","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","5","7","true","physical_activity_semantic"
+"","","","","","html-button-response","28","656209","0.0-28.0","","5438","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","1","8","true","dog_causal"
+"","","","","","html-button-response","29","670299","0.0-29.0","","14089","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","4","9","true","dog_causal"
+"","","","","","html-button-response","30","676194","0.0-30.0","","5895","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","10","4","true","dog_causal"
+"","","","","","html-button-response","31","717554","0.0-31.0","","41359","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","10","1","true","package_causal"
+"","","","","","html-button-response","32","723065","0.0-32.0","","5510","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","5","8","true","physical_activity_semantic"
+"","","","","","html-button-response","33","728633","0.0-33.0","","5567","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","7","9","true","physical_activity_semantic"
+"","","","","","html-button-response","34","734200","0.0-34.0","","5566","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","8","10","true","dog_causal"
+"","","","","","html-button-response","35","794958","0.0-35.0","","null","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","null","7","10","true","dog_causal"
+"","","","","","html-button-response","36","804807","0.0-36.0","","9848","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","6","5","true","physical_activity_semantic"
+"","","","","","html-button-response","37","816117","0.0-37.0","","11310","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","1","9","true","package_causal"
+"","","","","","html-button-response","38","821654","0.0-38.0","","5535","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","4","8","true","package_causal"
+"","","","","","html-button-response","39","827100","0.0-39.0","","5446","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","5","6","true","dog_causal"
+"","","","","","html-button-response","40","833669","0.0-40.0","","6569","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","6","7","true","dog_causal"
+"","","","","","html-button-response","41","840712","0.0-41.0","","7042","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","9","8","true","physical_activity_semantic"
+"","","","","","html-button-response","42","900951","0.0-42.0","","null","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","null","3","7","true","physical_activity_semantic"
+"","","","","","html-button-response","43","960968","0.0-43.0","","null","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","null","1","4","true","package_causal"
+"","","","","","html-button-response","44","967265","0.0-44.0","","6296","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","5","3","true","physical_activity_semantic"
+"","","","","","html-button-response","45","973353","0.0-45.0","","6088","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","5","4","true","package_causal"
+"","","","","","html-button-response","46","978849","0.0-46.0","","5495","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","5","10","true","dog_causal"
+"","","","","","html-button-response","47","984352","0.0-47.0","","5502","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","2","8","true","dog_causal"
+"","","","","","html-button-response","48","989775","0.0-48.0","","5422","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","1","8","true","package_causal"
+"","","","","","html-button-response","49","995175","0.0-49.0","","5400","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","10","4","true","physical_activity_semantic"
+"","","","","","html-button-response","50","1000661","0.0-50.0","","5486","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","8","3","true","physical_activity_semantic"
+"","","","","","html-button-response","51","1006077","0.0-51.0","","5415","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","2","10","true","dog_causal"
+"","","","","","html-button-response","52","1011444","0.0-52.0","","5366","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","4","7","true","physical_activity_semantic"
+"","","","","","html-button-response","53","1017094","0.0-53.0","","5649","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","7","1","true","package_causal"
+"","","","","","html-button-response","54","1046386","0.0-54.0","","29292","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","8","7","true","dog_causal"
+"","","","","","html-button-response","55","1051833","0.0-55.0","","5446","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","4","5","true","physical_activity_semantic"
+"","","","","","html-button-response","56","1059131","0.0-56.0","","7298","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","9","10","true","package_causal"
+"","","","","","html-button-response","57","1119961","0.0-57.0","","null","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","null","9","6","true","physical_activity_semantic"
+"","","","","","html-button-response","58","1147411","0.0-58.0","","27449","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","4","2","true","package_causal"
+"","","","","","html-button-response","59","1162622","0.0-59.0","","15211","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","2","6","true","dog_causal"
+"","","","","","html-button-response","60","1168022","0.0-60.0","","5398","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","1","3","true","package_causal"
+"","","","","","html-button-response","61","1173389","0.0-61.0","","5367","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","6","2","true","physical_activity_semantic"
+"","","","","","html-button-response","62","1184235","0.0-62.0","","10845","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","10","3","true","dog_causal"
+"","","","","","html-button-response","63","1244951","0.0-63.0","","null","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","null","5","1","true","package_causal"
+"","","","","","html-button-response","64","1290547","0.0-64.0","","45595","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","3","10","true","physical_activity_semantic"
+"","","","","","html-button-response","65","1296073","0.0-65.0","","5524","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","7","8","true","physical_activity_semantic"
+"","","","","","html-button-response","66","1301440","0.0-66.0","","5366","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","5","7","true","package_causal"
+"","","","","","html-button-response","67","1306912","0.0-67.0","","5471","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","3","10","true","package_causal"
+"","","","","","html-button-response","68","1312311","0.0-68.0","","5398","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","4","7","true","dog_causal"
+"","","","","","html-button-response","69","1318415","0.0-69.0","","6103","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","1","7","true","physical_activity_semantic"
+"","","","","","html-button-response","70","1325152","0.0-70.0","","6736","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","8","9","true","dog_causal"
+"","","","","","html-button-response","71","1330543","0.0-71.0","","5390","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","7","10","true","package_causal"
+"","","","","","html-button-response","72","1354255","0.0-72.0","","23712","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","9","10","true","physical_activity_semantic"
+"","","","","","html-button-response","73","1363077","0.0-73.0","","8820","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","3","9","true","physical_activity_semantic"
+"","","","","","html-button-response","74","1368466","0.0-74.0","","5388","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","10","5","true","physical_activity_semantic"
+"","","","","","html-button-response","75","1373833","0.0-75.0","","5367","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","2","5","true","dog_causal"
+"","","","","","html-button-response","76","1382197","0.0-76.0","","8363","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","10","1","true","dog_causal"
+"","","","","","html-button-response","77","1390640","0.0-77.0","","8442","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","4","6","true","physical_activity_semantic"
+"","","","","","html-button-response","78","1399235","0.0-78.0","","8594","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","9","3","true","package_causal"
+"","","","","","html-button-response","79","1404643","0.0-79.0","","5408","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","6","1","true","package_causal"
+"","","","","","html-button-response","80","1431535","0.0-80.0","","26891","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","6","3","true","package_causal"
+"","","","","","html-button-response","81","1436990","0.0-81.0","","5454","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","8","2","true","package_causal"
+"","","","","","html-button-response","82","1445754","0.0-82.0","","8763","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","4","10","true","package_causal"
+"","","","","","html-button-response","83","1452708","0.0-83.0","","6954","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","9","2","true","package_causal"
+"","","","","","html-button-response","84","1458275","0.0-84.0","","5565","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","6","2","true","package_causal"
+"","","","","","html-button-response","85","1463682","0.0-85.0","","5407","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","3","2","true","package_causal"
+"","","","","","html-button-response","86","1469273","0.0-86.0","","5590","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","1","4","true","physical_activity_semantic"
+"","","","","","html-button-response","87","1474673","0.0-87.0","","5400","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","1","8","true","physical_activity_semantic"
+"","","","","","html-button-response","88","1481137","0.0-88.0","","6463","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","1","3","true","physical_activity_semantic"
+"","","","","","html-button-response","89","1494683","0.0-89.0","","13547","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","8","10","true","package_causal"
+"","","","","","html-button-response","90","1506819","0.0-90.0","","12135","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","3","4","true","dog_causal"
+"","","","","","html-button-response","91","1512250","0.0-91.0","","5430","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","6","4","true","package_causal"
+"","","","","","html-button-response","92","1517882","0.0-92.0","","5631","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","5","1","true","dog_causal"
+"","","","","","html-button-response","93","1523427","0.0-93.0","","5544","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","3","7","true","package_causal"
+"","","","","","html-button-response","94","1531277","0.0-94.0","","7848","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","7","6","true","physical_activity_semantic"
+"","","","","","html-button-response","95","1537756","0.0-95.0","","6479","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","6","9","true","package_causal"
+"","","","","","html-button-response","96","1543150","0.0-96.0","","5393","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","5","3","true","dog_causal"
+"","","","","","html-button-response","97","1556382","0.0-97.0","","13230","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","10","6","true","package_causal"
+"","","","","","html-button-response","98","1564827","0.0-98.0","","8444","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","7","4","true","package_causal"
+"","","","","","html-button-response","99","1570217","0.0-99.0","","5390","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","7","2","true","dog_causal"
+"","","","","","html-button-response","100","1579125","0.0-100.0","","8907","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","9","3","true","dog_causal"
+"","","","","","html-button-response","101","1587096","0.0-101.0","","7971","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","6","1","true","physical_activity_semantic"
+"","","","","","html-button-response","102","1592528","0.0-102.0","","5431","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","9","6","true","dog_causal"
+"","","","","","html-button-response","103","1599458","0.0-103.0","","6929","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","5","10","true","package_causal"
+"","","","","","html-button-response","104","1604978","0.0-104.0","","5519","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","10","2","true","package_causal"
+"","","","","","html-button-response","105","1631435","0.0-105.0","","26456","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","6","5","true","package_causal"
+"","","","","","html-button-response","106","1636834","0.0-106.0","","5398","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","6","3","true","dog_causal"
+"","","","","","html-button-response","107","1646095","0.0-107.0","","9260","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","3","8","true","package_causal"
+"","","","","","html-button-response","108","1654442","0.0-108.0","","8347","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","4","5","true","dog_causal"
+"","","","","","html-button-response","109","1660273","0.0-109.0","","5831","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","3","2","true","physical_activity_semantic"
+"","","","","","html-button-response","110","1695785","0.0-110.0","","35511","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","9","1","true","physical_activity_semantic"
+"","","","","","html-button-response","111","1701233","0.0-111.0","","5447","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","1","6","true","dog_causal"
+"","","","","","html-button-response","112","1706664","0.0-112.0","","5431","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","3","8","true","dog_causal"
+"","","","","","html-button-response","113","1712047","0.0-113.0","","5382","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","2","7","true","package_causal"
+"","","","","","html-button-response","114","1720154","0.0-114.0","","8106","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","3","2","true","dog_causal"
+"","","","","","html-button-response","115","1725209","0.0-115.0","","5055","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","7","3","true","dog_causal"
+"","","","","","html-button-response","116","1730368","0.0-116.0","","5159","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","2","8","true","physical_activity_semantic"
+"","","","","","html-button-response","117","1735743","0.0-117.0","","5374","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","9","5","true","dog_causal"
+"","","","","","html-button-response","118","1741447","0.0-118.0","","5704","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","5","1","true","physical_activity_semantic"
+"","","","","","html-button-response","119","1751540","0.0-119.0","","10092","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","4","8","true","physical_activity_semantic"
+"","","","","","html-button-response","120","1757644","0.0-120.0","","6103","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","2","4","true","physical_activity_semantic"
+"","","","","","html-button-response","121","1763076","0.0-121.0","","5431","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","4","9","true","physical_activity_semantic"
+"","","","","","html-button-response","122","1773466","0.0-122.0","","10390","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","2","10","true","physical_activity_semantic"
+"","","","","","html-button-response","123","1778841","0.0-123.0","","5374","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","5","8","true","dog_causal"
+"","","","","","html-button-response","124","1784264","0.0-124.0","","5423","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","6","4","true","dog_causal"
+"","","","","","html-button-response","125","1789719","0.0-125.0","","5454","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","1","10","true","physical_activity_semantic"
+"","","","","","html-button-response","126","1795104","0.0-126.0","","5385","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","1","4","true","dog_causal"
+"","","","","","html-button-response","127","1800494","0.0-127.0","","5389","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","2","1","true","package_causal"
+"","","","","","html-button-response","128","1806294","0.0-128.0","","5800","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","9","7","true","dog_causal"
+"","","","","","html-button-response","129","1816634","0.0-129.0","","10340","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","6","7","true","package_causal"
+"","","","","","html-button-response","130","1822004","0.0-130.0","","5369","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","9","8","true","package_causal"
+"","","","","","html-button-response","131","1827401","0.0-131.0","","5396","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","6","3","true","physical_activity_semantic"
+"","","","","","html-button-response","132","1842150","0.0-132.0","","14748","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","3","1","true","dog_causal"
+"","","","","","html-button-response","133","1849954","0.0-133.0","","7804","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","5","2","true","physical_activity_semantic"
+"","","","","","html-button-response","134","1858354","0.0-134.0","","8399","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","7","5","true","dog_causal"
+"","","","","","html-button-response","135","1876972","0.0-135.0","","18617","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","9","2","true","dog_causal"
+"","","","","","html-button-response","136","1882932","0.0-136.0","","5959","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","9","10","true","dog_causal"
+"","","","","","html-button-response","137","1897463","0.0-137.0","","14531","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","7","1","true","dog_causal"
+"","","","","","html-button-response","138","1933937","0.0-138.0","","36473","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","9","2","true","physical_activity_semantic"
+"","","","","","html-button-response","139","1939359","0.0-139.0","","5421","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","6","8","true","package_causal"
+"","","","","","html-button-response","140","1951904","0.0-140.0","","12545","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/cat_care_semantic/cat_care_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","2","4","3","true","physical_activity_semantic"
+"","","","","","html-button-response","141","1957367","0.0-141.0","","5462","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/saving_a_cat_causal/saving_a_cat_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","7","8","true","package_causal"
+"","","","","","html-button-response","142","1962718","0.0-142.0","","5351","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","1","4","8","true","dog_causal"
+"","","","","","html-button-response","143","1968671","0.0-143.0","","5952","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/flight_scheme/flight_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Does Event 1 lead to Event 2?</p>","0","2","4","true","dog_causal"
+"","","","","","instructions","144","1977891","0.0-144.0","[{""page_index"":0,""viewing_time"":9220}]","9220","","","","","",""
