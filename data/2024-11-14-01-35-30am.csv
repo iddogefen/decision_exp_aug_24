@@ -1,0 +1,1706 @@
+"success","timeout","failed_images","failed_audio","failed_video","trial_type","trial_index","time_elapsed","internal_node_id","view_history","rt","stimulus","response","firstImageNumber","secondImageNumber","response_made","stimulus_type"
+"true","false","[]","[]","[]","preload","0","18940","0.0-0.0","","","","","","","",""
+"","","","","","instructions","1","40530","0.0-1.0","[{""page_index"":0,""viewing_time"":21588}]","21589","","","","","",""
+"","","","","","html-button-response","2","48047","0.0-2.0","","7515","
+        <div style=""display: flex; justify-content: center; align-items: center;"">
+          <div style=""text-align: center; margin-right: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+            <img src=""images/instructions/1.png"" style=""width: 300px; height: auto;"">
+          </div>
+          <div style=""text-align: center; margin-left: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+            <img src=""images/instructions/2.png"" style=""width: 300px; height: auto;"">
+          </div>
+        </div>
+        <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","","","",""
+"","","","","","html-button-response","3","49375","0.0-3.0","","1326","
+        <div style=""display: flex; justify-content: center; align-items: center;"">
+          <div style=""text-align: center; margin-right: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+            <img src=""images/instructions/1.png"" style=""width: 300px; height: auto;"">
+          </div>
+          <div style=""text-align: center; margin-left: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+            <img src=""images/instructions/2.png"" style=""width: 300px; height: auto;"">
+          </div>
+        </div>
+        <h2>Correct Answer</h2>
+        <p>The correct answer is: <strong>event 1 causes event 2</strong>.</p>
+        <p>Click ""Next"" to proceed to the next example.</p>","0","","","",""
+"","","","","","html-button-response","4","56299","0.0-4.0","","6923","
+   <div style=""display: flex; justify-content: center; align-items: center;"">
+          <div style=""text-align: center; margin-right: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+            <img src=""images/instructions/1.png"" style=""width: 300px; height: auto;"">
+          </div>
+          <div style=""text-align: center; margin-left: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+            <img src=""images/instructions/2.png"" style=""width: 300px; height: auto;"">
+          </div>
+        </div>
+        <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","","","",""
+"","","","","","html-button-response","5","57494","0.0-5.0","","1193","
+        <div style=""display: flex; justify-content: center; align-items: center;"">
+          <div style=""text-align: center; margin-right: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+            <img src=""images/instructions/2.png"" style=""width: 300px; height: auto;"">
+          </div>
+          <div style=""text-align: center; margin-left: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+            <img src=""images/instructions/1.png"" style=""width: 300px; height: auto;"">
+          </div>
+        </div>
+        <h2>Correct Answer</h2>
+        <p>The correct answer is: <strong>event 2 causes event 1</strong>.</p>
+        <p>Click ""Next"" to proceed to the next example.</p>","0","","","",""
+"","","","","","html-button-response","6","63011","0.0-6.0","","5517","
+        <div style=""display: flex; justify-content: center; align-items: center;"">
+          <div style=""text-align: center; margin-right: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+            <img src=""images/instructions/5.png"" style=""width: 300px; height: auto;"">
+          </div>
+          <div style=""text-align: center; margin-left: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+            <img src=""images/instructions/6.png"" style=""width: 300px; height: auto;"">
+          </div>
+        </div>
+        <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","","","",""
+"","","","","","html-button-response","7","64136","0.0-7.0","","1124","
+        <div style=""display: flex; justify-content: center; align-items: center;"">
+          <div style=""text-align: center; margin-right: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+            <img src=""images/instructions/5.png"" style=""width: 300px; height: auto;"">
+          </div>
+          <div style=""text-align: center; margin-left: 20px;"">
+            <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+            <img src=""images/instructions/6.png"" style=""width: 300px; height: auto;"">
+          </div>
+        </div>
+        <h2>Correct Answer</h2>
+        <p>The correct answer is: <strong>events are unrelated</strong>.</p>
+        <p>Click ""Next"" to proceed to the experiment.</p>","0","","","",""
+"","","","","","html-button-response","8","65420","0.0-8.0","","1283","
+        <h2>Get Ready!</h2>
+        <p>You have completed the examples. The experiment is about to begin.</p>
+        <p>Click ""Start"" to begin the experiment.</p>","0","","","",""
+"","","","","","html-button-response","9","72558","0.0-9.0","","7137","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","6","4","true","the_performance_causal"
+"","","","","","html-button-response","10","79457","0.0-10.0","","6898","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","7","3","true","the_performance_causal"
+"","","","","","html-button-response","11","98702","0.0-11.0","","19244","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","2","8","true","dinner_party_scheme"
+"","","","","","html-button-response","12","104326","0.0-12.0","","5623","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","2","4","true","physical_activity_semantic"
+"","","","","","html-button-response","13","120624","0.0-13.0","","16297","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","3","6","true","dinner_party_scheme"
+"","","","","","html-button-response","14","126504","0.0-14.0","","5879","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","10","9","true","the_performance_causal"
+"","","","","","html-button-response","15","132514","0.0-15.0","","6008","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","7","3","true","physical_activity_semantic"
+"","","","","","html-button-response","16","138046","0.0-16.0","","5531","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","6","3","true","physical_activity_semantic"
+"","","","","","html-button-response","17","143511","0.0-17.0","","5464","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","1","4","true","physical_activity_semantic"
+"","","","","","html-button-response","18","150252","0.0-18.0","","6740","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","6","1","true","dinner_party_scheme"
+"","","","","","html-button-response","19","157721","0.0-19.0","","7468","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","2","3","true","physical_activity_semantic"
+"","","","","","html-button-response","20","163945","0.0-20.0","","6223","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","5","2","true","physical_activity_semantic"
+"","","","","","html-button-response","21","170659","0.0-21.0","","6713","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","8","9","true","dinner_party_scheme"
+"","","","","","html-button-response","22","176470","0.0-22.0","","5809","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","1","8","true","dinner_party_scheme"
+"","","","","","html-button-response","23","181994","0.0-23.0","","5524","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","4","6","true","dinner_party_scheme"
+"","","","","","html-button-response","24","187611","0.0-24.0","","5615","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","3","7","true","dinner_party_scheme"
+"","","","","","html-button-response","25","193111","0.0-25.0","","5499","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","8","10","true","the_performance_causal"
+"","","","","","html-button-response","26","198585","0.0-26.0","","5474","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","8","5","true","the_performance_causal"
+"","","","","","html-button-response","27","204244","0.0-27.0","","5658","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","2","1","true","physical_activity_semantic"
+"","","","","","html-button-response","28","210260","0.0-28.0","","6014","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","9","6","true","physical_activity_semantic"
+"","","","","","html-button-response","29","219161","0.0-29.0","","8900","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","4","3","true","the_performance_causal"
+"","","","","","html-button-response","30","224645","0.0-30.0","","5484","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","3","10","true","physical_activity_semantic"
+"","","","","","html-button-response","31","234277","0.0-31.0","","9630","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","8","10","true","dinner_party_scheme"
+"","","","","","html-button-response","32","240027","0.0-32.0","","5749","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","6","2","true","physical_activity_semantic"
+"","","","","","html-button-response","33","248711","0.0-33.0","","8682","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","10","7","true","dinner_party_scheme"
+"","","","","","html-button-response","34","254814","0.0-34.0","","6102","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","7","5","true","the_performance_causal"
+"","","","","","html-button-response","35","260501","0.0-35.0","","5686","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","10","9","true","dinner_party_scheme"
+"","","","","","html-button-response","36","265984","0.0-36.0","","5482","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","1","4","true","the_performance_causal"
+"","","","","","html-button-response","37","271601","0.0-37.0","","5616","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","7","6","true","physical_activity_semantic"
+"","","","","","html-button-response","38","277102","0.0-38.0","","5500","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","3","1","true","dinner_party_scheme"
+"","","","","","html-button-response","39","282623","0.0-39.0","","5520","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","3","1","true","physical_activity_semantic"
+"","","","","","html-button-response","40","289096","0.0-40.0","","6473","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","2","9","true","dinner_party_scheme"
+"","","","","","html-button-response","41","294578","0.0-41.0","","5480","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","5","1","true","physical_activity_semantic"
+"","","","","","html-button-response","42","306805","0.0-42.0","","12226","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","7","9","true","the_performance_causal"
+"","","","","","html-button-response","43","312261","0.0-43.0","","5454","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","8","4","true","the_performance_causal"
+"","","","","","html-button-response","44","317865","0.0-44.0","","5604","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","4","7","true","dinner_party_scheme"
+"","","","","","html-button-response","45","323556","0.0-45.0","","5690","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","6","1","true","the_performance_causal"
+"","","","","","html-button-response","46","329150","0.0-46.0","","5593","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","9","7","true","dinner_party_scheme"
+"","","","","","html-button-response","47","336520","0.0-47.0","","7369","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","5","8","true","physical_activity_semantic"
+"","","","","","html-button-response","48","342743","0.0-48.0","","6222","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","4","5","true","physical_activity_semantic"
+"","","","","","html-button-response","49","348313","0.0-49.0","","5569","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","4","9","true","physical_activity_semantic"
+"","","","","","html-button-response","50","353868","0.0-50.0","","5553","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","10","2","true","dinner_party_scheme"
+"","","","","","html-button-response","51","359356","0.0-51.0","","5487","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","10","4","true","dinner_party_scheme"
+"","","","","","html-button-response","52","364961","0.0-52.0","","5604","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","3","8","true","the_performance_causal"
+"","","","","","html-button-response","53","370470","0.0-53.0","","5508","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","4","10","true","physical_activity_semantic"
+"","","","","","html-button-response","54","376043","0.0-54.0","","5573","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","2","9","true","physical_activity_semantic"
+"","","","","","html-button-response","55","383496","0.0-55.0","","7451","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","6","2","true","the_performance_causal"
+"","","","","","html-button-response","56","390245","0.0-56.0","","6748","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","7","5","true","dinner_party_scheme"
+"","","","","","html-button-response","57","396041","0.0-57.0","","5795","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","5","1","true","the_performance_causal"
+"","","","","","html-button-response","58","401551","0.0-58.0","","5510","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","6","9","true","the_performance_causal"
+"","","","","","html-button-response","59","407017","0.0-59.0","","5465","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","2","10","true","physical_activity_semantic"
+"","","","","","html-button-response","60","412546","0.0-60.0","","5526","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","2","5","true","dinner_party_scheme"
+"","","","","","html-button-response","61","419263","0.0-61.0","","6715","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","2","9","true","the_performance_causal"
+"","","","","","html-button-response","62","425465","0.0-62.0","","6202","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","2","3","true","the_performance_causal"
+"","","","","","html-button-response","63","431434","0.0-63.0","","5968","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","5","9","true","the_performance_causal"
+"","","","","","html-button-response","64","437297","0.0-64.0","","5861","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","7","8","true","the_performance_causal"
+"","","","","","html-button-response","65","443033","0.0-65.0","","5735","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","4","9","true","the_performance_causal"
+"","","","","","html-button-response","66","448728","0.0-66.0","","5694","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","2","6","true","dinner_party_scheme"
+"","","","","","html-button-response","67","455035","0.0-67.0","","6307","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","8","7","true","physical_activity_semantic"
+"","","","","","html-button-response","68","460716","0.0-68.0","","5680","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","6","7","true","the_performance_causal"
+"","","","","","html-button-response","69","466307","0.0-69.0","","5589","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","9","3","true","dinner_party_scheme"
+"","","","","","html-button-response","70","477906","0.0-70.0","","11599","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","8","4","true","dinner_party_scheme"
+"","","","","","html-button-response","71","483873","0.0-71.0","","5966","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","4","6","true","physical_activity_semantic"
+"","","","","","html-button-response","72","494492","0.0-72.0","","10618","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","8","7","true","dinner_party_scheme"
+"","","","","","html-button-response","73","500815","0.0-73.0","","6322","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","7","5","true","physical_activity_semantic"
+"","","","","","html-button-response","74","509888","0.0-74.0","","9072","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","7","1","true","dinner_party_scheme"
+"","","","","","html-button-response","75","515744","0.0-75.0","","5855","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","7","10","true","physical_activity_semantic"
+"","","","","","html-button-response","76","521200","0.0-76.0","","5455","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","7","2","true","the_performance_causal"
+"","","","","","html-button-response","77","526686","0.0-77.0","","5485","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","6","5","true","physical_activity_semantic"
+"","","","","","html-button-response","78","534106","0.0-78.0","","7419","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","4","5","true","the_performance_causal"
+"","","","","","html-button-response","79","539746","0.0-79.0","","5639","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","5","1","true","dinner_party_scheme"
+"","","","","","html-button-response","80","545237","0.0-80.0","","5490","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","9","7","true","physical_activity_semantic"
+"","","","","","html-button-response","81","550725","0.0-81.0","","5485","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","1","10","true","the_performance_causal"
+"","","","","","html-button-response","82","556174","0.0-82.0","","5449","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","3","4","true","dinner_party_scheme"
+"","","","","","html-button-response","83","561655","0.0-83.0","","5480","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","7","2","true","physical_activity_semantic"
+"","","","","","html-button-response","84","567203","0.0-84.0","","5547","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","9","5","true","dinner_party_scheme"
+"","","","","","html-button-response","85","572853","0.0-85.0","","5649","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","6","10","true","physical_activity_semantic"
+"","","","","","html-button-response","86","579777","0.0-86.0","","6923","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","2","1","true","dinner_party_scheme"
+"","","","","","html-button-response","87","593017","0.0-87.0","","13239","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","1","7","true","physical_activity_semantic"
+"","","","","","html-button-response","88","601215","0.0-88.0","","8197","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","10","9","true","physical_activity_semantic"
+"","","","","","html-button-response","89","618429","0.0-89.0","","17214","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","10","6","true","dinner_party_scheme"
+"","","","","","html-button-response","90","625001","0.0-90.0","","6572","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","9","1","true","physical_activity_semantic"
+"","","","","","html-button-response","91","632128","0.0-91.0","","7125","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","3","5","true","the_performance_causal"
+"","","","","","html-button-response","92","647224","0.0-92.0","","15096","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","6","10","true","the_performance_causal"
+"","","","","","html-button-response","93","658090","0.0-93.0","","10864","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","6","5","true","dinner_party_scheme"
+"","","","","","html-button-response","94","664198","0.0-94.0","","6106","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","9","1","true","the_performance_causal"
+"","","","","","html-button-response","95","669661","0.0-95.0","","5463","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","10","1","true","physical_activity_semantic"
+"","","","","","html-button-response","96","675133","0.0-96.0","","5471","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","4","7","true","physical_activity_semantic"
+"","","","","","html-button-response","97","726808","0.0-97.0","","51675","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","1","3","true","the_performance_causal"
+"","","","","","html-button-response","98","732338","0.0-98.0","","5530","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","8","1","true","the_performance_causal"
+"","","","","","html-button-response","99","753993","0.0-99.0","","21654","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","9","1","true","dinner_party_scheme"
+"","","","","","html-button-response","100","762216","0.0-100.0","","8222","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","8","9","true","the_performance_causal"
+"","","","","","html-button-response","101","768063","0.0-101.0","","5846","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","6","8","true","physical_activity_semantic"
+"","","","","","html-button-response","102","784946","0.0-102.0","","16881","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","8","6","true","dinner_party_scheme"
+"","","","","","html-button-response","103","791670","0.0-103.0","","6723","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","7","6","true","dinner_party_scheme"
+"","","","","","html-button-response","104","798117","0.0-104.0","","6445","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","4","9","true","dinner_party_scheme"
+"","","","","","html-button-response","105","810578","0.0-105.0","","12461","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","10","3","true","dinner_party_scheme"
+"","","","","","html-button-response","106","828022","0.0-106.0","","17442","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","1","7","true","the_performance_causal"
+"","","","","","html-button-response","107","836545","0.0-107.0","","8523","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","4","8","true","physical_activity_semantic"
+"","","","","","html-button-response","108","841904","0.0-108.0","","5358","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","4","2","true","the_performance_causal"
+"","","","","","html-button-response","109","849568","0.0-109.0","","7662","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","3","2","true","dinner_party_scheme"
+"","","","","","html-button-response","110","856272","0.0-110.0","","6703","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","8","2","true","physical_activity_semantic"
+"","","","","","html-button-response","111","866039","0.0-111.0","","9766","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","9","3","true","the_performance_causal"
+"","","","","","html-button-response","112","872379","0.0-112.0","","6338","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","4","7","true","the_performance_causal"
+"","","","","","html-button-response","113","878416","0.0-113.0","","6036","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","9","3","true","physical_activity_semantic"
+"","","","","","html-button-response","114","883816","0.0-114.0","","5400","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","10","5","true","dinner_party_scheme"
+"","","","","","html-button-response","115","889379","0.0-115.0","","5562","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","10","5","true","the_performance_causal"
+"","","","","","html-button-response","116","900372","0.0-116.0","","10992","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","6","5","true","the_performance_causal"
+"","","","","","html-button-response","117","907436","0.0-117.0","","7064","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","1","4","true","dinner_party_scheme"
+"","","","","","html-button-response","118","913339","0.0-118.0","","5902","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","2","1","true","the_performance_causal"
+"","","","","","html-button-response","119","919289","0.0-119.0","","5948","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","4","10","true","the_performance_causal"
+"","","","","","html-button-response","120","925024","0.0-120.0","","5735","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","8","3","true","dinner_party_scheme"
+"","","","","","html-button-response","121","933770","0.0-121.0","","8745","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","6","9","true","dinner_party_scheme"
+"","","","","","html-button-response","122","941827","0.0-122.0","","8056","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","2","5","true","the_performance_causal"
+"","","","","","html-button-response","123","954331","0.0-123.0","","12502","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","5","10","true","physical_activity_semantic"
+"","","","","","html-button-response","124","967891","0.0-124.0","","13558","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","5","4","true","dinner_party_scheme"
+"","","","","","html-button-response","125","981030","0.0-125.0","","13138","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","8","2","true","the_performance_causal"
+"","","","","","html-button-response","126","986524","0.0-126.0","","5493","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","1","10","true","dinner_party_scheme"
+"","","","","","html-button-response","127","999457","0.0-127.0","","12932","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","6","3","true","the_performance_causal"
+"","","","","","html-button-response","128","1005331","0.0-128.0","","5873","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","1","8","5","true","dinner_party_scheme"
+"","","","","","html-button-response","129","1012782","0.0-129.0","","7450","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","3","10","true","the_performance_causal"
+"","","","","","html-button-response","130","1018550","0.0-130.0","","5767","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","3","5","true","dinner_party_scheme"
+"","","","","","html-button-response","131","1026239","0.0-131.0","","7688","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","8","10","true","physical_activity_semantic"
+"","","","","","html-button-response","132","1032921","0.0-132.0","","6681","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","8","6","true","the_performance_causal"
+"","","","","","html-button-response","133","1039883","0.0-133.0","","6961","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","2","7","true","dinner_party_scheme"
+"","","","","","html-button-response","134","1045425","0.0-134.0","","5542","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","4","3","true","physical_activity_semantic"
+"","","","","","html-button-response","135","1053795","0.0-135.0","","8368","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","9","5","true","physical_activity_semantic"
+"","","","","","html-button-response","136","1060558","0.0-136.0","","6763","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","10","2","true","the_performance_causal"
+"","","","","","html-button-response","137","1067639","0.0-137.0","","7080","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_6.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","1","6","true","physical_activity_semantic"
+"","","","","","html-button-response","138","1075574","0.0-138.0","","7933","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_2.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/dinner_party_scheme/dinner_party_scheme_4.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","0","2","4","true","dinner_party_scheme"
+"","","","","","html-button-response","139","1082567","0.0-139.0","","6992","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_5.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","3","5","true","physical_activity_semantic"
+"","","","","","html-button-response","140","1088062","0.0-140.0","","5495","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_9.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","8","9","true","physical_activity_semantic"
+"","","","","","html-button-response","141","1093469","0.0-141.0","","5407","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_1.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","8","1","true","physical_activity_semantic"
+"","","","","","html-button-response","142","1099419","0.0-142.0","","5949","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1<p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_10.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/the_performance_causal/the_performance_causal_7.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","10","7","true","the_performance_causal"
+"","","","","","html-button-response","143","1105143","0.0-143.0","","5722","
+      <div style=""display: flex; justify-content: center; align-items: center;"">
+        <div style=""text-align: center; margin-right: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 1</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_3.png"" style=""width: 300px; height: auto;"">
+        </div>
+        <div style=""text-align: center; margin-left: 20px;"">
+          <p style=""font-size: 24px; font-weight: bold;"">Event 2</p>
+          <img src=""images/causal/physical_activity_semantic/physical_activity_semantic_8.png"" style=""width: 300px; height: auto;"">
+        </div>
+      </div>
+      <p style=""text-align: center; margin-top: 20px;"">Did one event cause the other?</p>","2","3","8","true","physical_activity_semantic"
+"","","","","","instructions","144","1109679","0.0-144.0","[{""page_index"":0,""viewing_time"":4536}]","4536","","","","","",""
