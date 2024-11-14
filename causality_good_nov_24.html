@@ -83,6 +83,16 @@
         'images/causal/the_performance_causal/the_performance_causal_8.png',
         'images/causal/the_performance_causal/the_performance_causal_9.png',
         'images/causal/the_performance_causal/the_performance_causal_10.png',
+        'images/causal/coin_causal/coin_causal_1.png',
+        'images/causal/coin_causal/coin_causal_2.png',
+        'images/causal/coin_causal/coin_causal_3.png',
+        'images/causal/coin_causal/coin_causal_4.png',
+        'images/causal/coin_causal/coin_causal_5.png',
+        'images/causal/coin_causal/coin_causal_6.png',
+        'images/causal/coin_causal/coin_causal_7.png',
+        'images/causal/coin_causal/coin_causal_8.png',
+        'images/causal/coin_causal/coin_causal_9.png',
+        'images/causal/coin_causal/coin_causal_10.png',
         'images/causal/dog_causal/dog_causal_1.png',
         'images/causal/dog_causal/dog_causal_2.png',
         'images/causal/dog_causal/dog_causal_3.png',
@@ -389,11 +399,11 @@ physicalPairs.forEach(pair => {
       <div style="display: flex; justify-content: center; align-items: center;">
         <div style="text-align: center; margin-right: 20px;">
           <p style="font-size: 24px; font-weight: bold;">Event 1</p>
-          <img src="images/causal/physical_activity_semantic/physical_activity_semantic_${pair[0]}.png" style="width: 300px; height: auto;">
+          <img src="images/causal/cat_care_semantic/cat_care_semantic_${pair[0]}.png" style="width: 300px; height: auto;">
         </div>
         <div style="text-align: center; margin-left: 20px;">
           <p style="font-size: 24px; font-weight: bold;">Event 2</p>
-          <img src="images/causal/physical_activity_semantic/physical_activity_semantic_${pair[1]}.png" style="width: 300px; height: auto;">
+          <img src="images/causal/cat_care_semantic/cat_care_semantic_${pair[1]}.png" style="width: 300px; height: auto;">
         </div>
       </div>
       <p style="text-align: center; margin-top: 20px;">Did one event cause the other?</p>`,
@@ -411,7 +421,7 @@ physicalPairs.forEach(pair => {
       data.firstImageNumber = pair[0];
       data.secondImageNumber = pair[1];
       data.response_made = typeof data.response !== 'undefined';
-      data.stimulus_type = 'physical_activity_semantic';
+      data.stimulus_type = 'cat_care_semantic';
     }
   });
 });
@@ -425,12 +435,12 @@ dogPairs.forEach(pair => {
     stimulus: `
       <div style="display: flex; justify-content: center; align-items: center;">
         <div style="text-align: center; margin-right: 20px;">
-          <p style="font-size: 24px; font-weight: bold;">Event 2</p>
-          <img src="images/causal/dinner_party_scheme/dinner_party_scheme_${pair[0]}.png" style="width: 300px; height: auto;">
+          <p style="font-size: 24px; font-weight: bold;">Event 1</p>
+          <img src="images/causal/restaurant_scheme/restaurant_scheme_${pair[0]}.png" style="width: 300px; height: auto;">
         </div>
         <div style="text-align: center; margin-left: 20px;">
           <p style="font-size: 24px; font-weight: bold;">Event 2</p>
-          <img src="images/causal/dinner_party_scheme/dinner_party_scheme_${pair[1]}.png" style="width: 300px; height: auto;">
+          <img src="images/causal/restaurant_scheme/restaurant_scheme_${pair[1]}.png" style="width: 300px; height: auto;">
         </div>
       </div>
       <p style="text-align: center; margin-top: 20px;">Did one event cause the other?</p>`,
@@ -448,7 +458,7 @@ dogPairs.forEach(pair => {
       data.firstImageNumber = pair[0];
       data.secondImageNumber = pair[1];
       data.response_made = typeof data.response !== 'undefined';
-      data.stimulus_type = 'dinner_party_scheme';
+      data.stimulus_type = 'restaurant_scheme';
     }
   });
 });
@@ -463,11 +473,11 @@ packagePairs.forEach(pair => {
       <div style="display: flex; justify-content: center; align-items: center;">
         <div style="text-align: center; margin-right: 20px;">
           <p style="font-size: 24px; font-weight: bold;">Event 1<p>
-          <img src="images/causal/the_performance_causal/the_performance_causal_${pair[0]}.png" style="width: 300px; height: auto;">
+          <img src="images/causal/coin_causal/coin_causal_${pair[0]}.png" style="width: 300px; height: auto;">
         </div>
         <div style="text-align: center; margin-left: 20px;">
           <p style="font-size: 24px; font-weight: bold;">Event 2</p>
-          <img src="images/causal/the_performance_causal/the_performance_causal_${pair[1]}.png" style="width: 300px; height: auto;">
+          <img src="images/causal/coin_causal/coin_causal_${pair[1]}.png" style="width: 300px; height: auto;">
         </div>
       </div>
       <p style="text-align: center; margin-top: 20px;">Did one event cause the other?</p>`,
@@ -485,7 +495,7 @@ packagePairs.forEach(pair => {
       data.firstImageNumber = pair[0];
       data.secondImageNumber = pair[1];
       data.response_made = typeof data.response !== 'undefined';
-      data.stimulus_type = 'the_performance_causal';
+      data.stimulus_type = 'coin_causal';
     }
   });
 });
